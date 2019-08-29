@@ -25,10 +25,10 @@
 			<div class="app">
 				<div class="row justify-content-end">
 					<div class="col-md-4">
-						<p style=" font-size: 34px; " class="lang" key="Never"> Never stop listening</p>
-						<p style=" font-size: 22px; " class="lang" key="is"> SoundCloud is available on <br>
+						<p style=" font-size: 34px; " class="lang" key="Never"> Zuhören ohne Ende</p>
+						<p style=" font-size: 22px; " class="lang" key="is"> SoundCloud ist verfügbar für <br>
 							Web, iOS, Android, Sonos, <br>
-							Chromecast, and Xbox One.</p>
+							Chromecast und Xbox One.</p>
 						<a href="https://apps.apple.com/us/app/soundcloud/id336353151" target="_blank"><img src="image/appStore.png"></a>
 						<a href="https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=us" target="_blank"><img src="image/googlePlay.png"></a>
 					</div>
@@ -40,11 +40,11 @@
 			<div class="creators">
 				<div class="row ">
 					<div class="col-md-6 offset-md-1">
-						<p style="margin-top:60px; font-size: 32px; " > Calling all creators </p>
+						<p style="margin-top:60px; font-size: 32px; " > Aufruf an alle Ersteller </p>
 					</div>
 					<div class="col-md-6 offset-md-1">
-						<p style="font-size: 24px; " > Get on SoundCloud to connect with fans, share your <br>
-						sounds, and grow your audience. What are <br> you waiting for?</p>
+						<p style="font-size: 24px; " > Auf SoundCloud kannst du den Kontakt zu Fans  <br>
+							herstellen, deine Tracks teilen und dir ein  <br> Publikum aufbauen. Also worauf wartest du <br> noch?</p>
 					</div>
 				</div>
 			</div>
@@ -53,7 +53,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-2 ">
-						<p id="myBtn"  > <span  class="color" >Language:</span>English(US)</p>
+						<p id="myBtn"  > <span  class="color" >Sprache: </span>Deutsch</p>
 					</div>
 				</div>
 			</div>
@@ -65,12 +65,12 @@
 
   <div class="modal-content">
     <div class="modal-header">
-    	<h4>Select your language</h4>
+    	<h4>Wähle deine Sprache aus</h4>
     </div>
     <div class="modal-body">
 		<table style="width:100%">
 			<tr>
-				<td><a href="deu.html" > Deutsch</a></td>
+				<td><a href="deu.html" style="color:#333333; cursor: text;"> Deutsch</a></td>
 				<td><a href="Home.html"  >English (US)</a></td>
 			  </tr>
 			  <tr>
@@ -88,7 +88,7 @@
 		</table>    
 	</div>
     <div class="modal-footer">
-    	<button class="close1" style="cursor: pointer; background-color: white; border: 0px;">Cancel</button>
+    	<p class="close1">Abbrechen</p>
     </div>
   </div>
 
@@ -102,14 +102,14 @@
 			var span = document.getElementsByClassName("close")[0];
 			var cls = document.getElementsByClassName("close1")[0];
 			
+			cls.onclick = function(){
+			modal.style.display = "none";
+			}
 			btn.onclick = function() {
 			modal.style.display = "block";
 			}
 
 			span.onclick = function() {
-			modal.style.display = "none";
-			}
-			cls.onclick = function(){
 			modal.style.display = "none";
 			}
 			window.onclick = function(event) {

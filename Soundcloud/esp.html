@@ -74,7 +74,7 @@
 				<td><a href="Home.html"  >English (US)</a></td>
 			  </tr>
 			  <tr>
-				<td><a href="esp.html" >Español</a></td>
+				<td><a href="esp.html"  style="color:#333333; cursor: text;">Español</a></td>
 				<td><a href="fra.html" >Français</a></td>
 			  </tr>
 			  <tr>
@@ -88,7 +88,7 @@
 		</table>    
 	</div>
     <div class="modal-footer">
-    	<button class="close1" style="cursor: pointer; background-color: white; border: 0px;">Cancel</button>
+    	<p class="close1">Cancel</p>
     </div>
   </div>
 
@@ -101,15 +101,14 @@
 			var btn = document.getElementById("myBtn");
 			var span = document.getElementsByClassName("close")[0];
 			var cls = document.getElementsByClassName("close1")[0];
-			
+			cls.onclick = function(){
+			modal.style.display = "none";
+			}
 			btn.onclick = function() {
 			modal.style.display = "block";
 			}
 
 			span.onclick = function() {
-			modal.style.display = "none";
-			}
-			cls.onclick = function(){
 			modal.style.display = "none";
 			}
 			window.onclick = function(event) {
