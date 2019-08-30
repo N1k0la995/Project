@@ -25,10 +25,10 @@
 			<div class="app">
 				<div class="row justify-content-end">
 					<div class="col-md-4">
-						<p style=" font-size: 34px; " class="lang" key="Never"> Never stop listening</p>
-						<p style=" font-size: 22px; " class="lang" key="is"> SoundCloud is available on <br>
-							Web, iOS, Android, Sonos, <br>
-							Chromecast, and Xbox One.</p>
+						<p style=" font-size: 34px; " class="lang" key="Never"> Houd nooit meer op met luisteren</p>
+						<p style=" font-size: 22px; " class="lang" key="is"> SoundCloud is beschikbaar op  <br>
+							het web, iOS, Android, Sonos, <br>
+							Chromecast en Xbox One.</p>
 						<a href="https://apps.apple.com/us/app/soundcloud/id336353151" target="_blank"><img src="image/appStore.png"></a>
 						<a href="https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=us" target="_blank"><img src="image/googlePlay.png"></a>
 					</div>
@@ -40,11 +40,11 @@
 			<div class="creators">
 				<div class="row ">
 					<div class="col-md-6 offset-md-1">
-						<p style="margin-top:60px; font-size: 32px; " > Calling all creators </p>
+						<p style="margin-top:40px; font-size: 32px; " > Auteurs: opgelet!</p>
 					</div>
 					<div class="col-md-6 offset-md-1">
-						<p style="font-size: 24px; " > Get on SoundCloud to connect with fans, share your <br>
-						sounds, and grow your audience. What are <br> you waiting for?</p>
+						<p style="font-size: 24px; " > Download On SoundCloud om je te helpen  <br>
+							contact te leggen met fans, je tracks te delen en  <br> een groter publiek te bereiken. Waar wacht je nog op?</p>
 					</div>
 				</div>
 			</div>
@@ -53,46 +53,52 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-2 ">
-						<p id="myBtn"  > <span  class="color" >Language:</span>English(US)</p>
+						<p id="myBtn"  > <span  class="color" >Taal:</span>Nederlands</p>
 					</div>
 				</div>
 			</div>
 		</footer>
 		  
 
-<div id="myModal" class="modal">
-	<span class="close">&times;</span>
-
-  <div class="modal-content">
-    <div class="modal-header">
-    	<h4>Select your language</h4>
-    </div>
-    <div class="modal-body">
-		<table style="width:100%">
-			<tr>
-				<td><a href="deu.html" > Deutsch</a></td>
-				<td><a href="Home.html"  >English (US)</a></td>
-			  </tr>
-			  <tr>
-				<td><a href="esp.html" >Español</a></td>
-				<td><a href="fra.html" >Français</a></td>
-			  </tr>
-			  <tr>
-				<td><a href="ita.html" >Italiano</a></td>
-				<td><a href="ned.html" style="color:#333333; cursor: text;" >Nederlands</a></td>
-			  </tr>
-			  <tr>
-				<td><a href="por.html" >Português (Brasil)</a></td>
-				<td><a href="pol.html" >Polski</a></td>
-			  </tr>			  
-		</table>    
-	</div>
-    <div class="modal-footer">
-    	<p class="close1">Cancel</p>
-    </div>
-  </div>
-
-</div>
+		<div id="myModal" class="modal">
+				<span class="close">&times;</span>
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-6">
+							<div class="modal-content">
+								<div class="modal-header no-border">
+									<h4>Je taal selecteren</h4>
+								</div>
+								<hr style="width:90%">
+								<div class="modal-body">
+									<table style="width:100%">
+										<tr>
+											<td><a href="deu.html" > Deutsch</a></td>
+											<td><a href="Home.html"  >English (US)</a></td>
+											</tr>
+											<tr>
+											<td><a href="esp.html" >Español</a></td>
+											<td><a href="fra.html" >Français</a></td>
+											</tr>
+											<tr>
+											<td><a href="ita.html" >Italiano</a></td>
+											<td><a style="color:#333333; cursor: text;" >Nederlands</a></td>
+											</tr>
+											<tr>
+											<td><a href="por.html" >Português (Brasil)</a></td>
+											<td><a href="pol.html" >Polski</a></td>
+											</tr>			  
+									</table>    
+								</div>
+								<div class="modal-footer">
+									<button class="close1" style="cursor: pointer; background-color: white; border: 0px;">Annuleren</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	
 
 		<script >
 
@@ -101,20 +107,25 @@
 			var btn = document.getElementById("myBtn");
 			var span = document.getElementsByClassName("close")[0];
 			var cls = document.getElementsByClassName("close1")[0];
-			cls.onclick = function(){
-			modal.style.display = "none";
-			}
 			btn.onclick = function() {
 			modal.style.display = "block";
+			document.body.style.overflow="hidden";
 			}
 
 			span.onclick = function() {
 			modal.style.display = "none";
+			document.body.style.overflow="auto";
+			}
+			cls.onclick = function(){
+			modal.style.display = "none";
+			document.body.style.overflow="auto";
 			}
 			window.onclick = function(event) {
 			if (event.target == modal) {
 			modal.style.display = "none";
+			document.body.style.overflow="auto";
 			}}
+
 		</script>
 
     </body>

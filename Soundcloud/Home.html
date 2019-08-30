@@ -20,6 +20,27 @@
 				</div>
 			</div>
 		</header>
+		<div class="music">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+						<p style="font-size: 24px; color: #333333">Hear what’s trending for free in the SoundCloud community</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-12">
+						<iframe width="136" height="136" src="https://www.youtube.com/embed/videoseries?list=PLC8Ks0CgsKJNyw4-zQhzN8FO2x7D_dzai" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="136" height="136" src="https://www.youtube.com/embed/videoseries?list=PLC8Ks0CgsKJNyw4-zQhzN8FO2x7D_dzai" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
+						<iframe width="136" height="136" src="https://www.youtube.com/embed/videoseries?list=PLC8Ks0CgsKJNyw4-zQhzN8FO2x7D_dzai" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="136" height="136" src="https://www.youtube.com/embed/videoseries?list=PLC8Ks0CgsKJNyw4-zQhzN8FO2x7D_dzai" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="136" height="136" src="https://www.youtube.com/embed/videoseries?list=PLC8Ks0CgsKJNyw4-zQhzN8FO2x7D_dzai" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="136" height="136" src="https://www.youtube.com/embed/videoseries?list=PLC8Ks0CgsKJNyw4-zQhzN8FO2x7D_dzai" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div class="container-fluid">
 			<div class="app">
@@ -40,7 +61,7 @@
 			<div class="creators">
 				<div class="row ">
 					<div class="col-md-6 offset-md-1">
-						<p style="margin-top:60px; font-size: 32px; " > Calling all creators </p>
+						<p style="margin-top:40px; font-size: 32px; " > Calling all creators </p>
 					</div>
 					<div class="col-md-6 offset-md-1">
 						<p style="font-size: 24px; " > Get on SoundCloud to connect with fans, share your <br>
@@ -60,39 +81,45 @@
 		</footer>
 		  
 
-<div id="myModal" class="modal">
-	<span class="close">&times;</span>
+		<div id="myModal" class="modal">
+			<span class="close">&times;</span>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-6">
+						<div class="modal-content">
+							<div class="modal-header no-border">
+								<h4>Select your language</h4>
+							</div>
+							<hr style="width:90%">
 
-  <div class="modal-content">
-    <div class="modal-header">
-    	<h4>Select your language</h4>
-    </div>
-    <div class="modal-body">
-		<table style="width:100%">
-			<tr>
-				<td><a href="deu.html" > Deutsch</a></td>
-				<td><a href="Home.html"  >English (US)</a></td>
-			  </tr>
-			  <tr>
-				<td><a href="esp.html" >Español</a></td>
-				<td><a href="fra.html" >Français</a></td>
-			  </tr>
-			  <tr>
-				<td><a href="ita.html" >Italiano</a></td>
-				<td><a href="ned.html" >Nederlands</a></td>
-			  </tr>
-			  <tr>
-				<td><a href="por.html" >Português (Brasil)</a></td>
-				<td><a href="pol.html" >Polski</a></td>
-			  </tr>			  
-		</table>    
-	</div>
-    <div class="modal-footer">
-    	<button class="close1" style="cursor: pointer; background-color: white; border: 0px;">Cancel</button>
-    </div>
-  </div>
-
-</div>
+							<div class="modal-body">
+								<table style="width:100%">
+									<tr>
+										<td><a href="deu.html" > Deutsch</a></td>
+										<td><a  style="color:#333333; cursor: text;" >English (US)</a></td>
+										</tr>
+										<tr>
+										<td><a href="esp.html" >Español</a></td>
+										<td><a href="fra.html" >Français</a></td>
+										</tr>
+										<tr>
+										<td><a href="ita.html" >Italiano</a></td>
+										<td><a href="ned.html" >Nederlands</a></td>
+										</tr>
+										<tr>
+										<td><a href="por.html" >Português (Brasil)</a></td>
+										<td><a href="pol.html" >Polski</a></td>
+										</tr>			  
+								</table>    
+							</div>
+							<div class="modal-footer">
+								<button class="close1" style="cursor: pointer; background-color: white; border: 0px;">Cancel</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<script >
 
@@ -104,17 +131,21 @@
 			
 			btn.onclick = function() {
 			modal.style.display = "block";
+			document.body.style.overflow="hidden";
 			}
 
 			span.onclick = function() {
 			modal.style.display = "none";
+			document.body.style.overflow="auto";
 			}
 			cls.onclick = function(){
 			modal.style.display = "none";
+			document.body.style.overflow="auto";
 			}
 			window.onclick = function(event) {
 			if (event.target == modal) {
 			modal.style.display = "none";
+			document.body.style.overflow="auto";
 			}}
 		</script>
 
