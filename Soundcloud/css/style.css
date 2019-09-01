@@ -8,36 +8,57 @@ body{ margin: 0px 40px; background-color: rgb(238, 238, 238);}
 .creators { background: url("../image/hp_creator_image-e08dee4.jpg"); background-size: cover; border-radius: 0; height:350px;   
 -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  background-size: 100% 100%; }
 
-.container-fluid .creators .row .col-md-6 p { color: #ffffff; }
+.container-fluid .creators .row .col-md-6 .calling { color: #ffffff; margin-top:50px; font-size: 36px; font-stretch: 100%;  }    
+.container-fluid .creators .row .col-md-6 .Get { color: #ffffff;font-size: 24px; font-stretch: 100%; }       
 .container-fluid .app .row .col-md-4 a img { height:40px; width: 135px; margin: 30px 0px;}
-footer .container-fluid  p > .color{color: #3388DD; cursor: pointer; margin-left:15px; margin-right: 5px}
-footer .container-fluid p:hover  {color: #333333; cursor: pointer; }
-footer .container-fluid p:hover > .color {color: #333333; cursor: pointer; margin-left: 15px;margin-right: 5px}
+.container-fluid .app .row .col-md-4 .Never::after{content: "";  display: block; width: 70px; height: 3px;
+  background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50%, rgb(255, 85, 0)); margin-top: 15px;}
+footer .container-fluid  p > .color{color: #3388DD; cursor: pointer; margin-left:15px; margin-right: 5px; font-size:14px;}
+footer .container-fluid p:hover  {color: rgb(51, 51, 51); cursor: pointer; }
+footer .container-fluid p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; margin-left: 15px;margin-right: 5px; }
 
 
 
 .modal { display: none;  position: fixed;  z-index: 1;  padding-top: 80px;  left: 0; top: 0;
   width: 100%;  height: 100%;    background-color: rgba(211, 211, 211, 0.9);    }
 
-.modal-content {position: relative;  background-color: #fefefe; margin: auto; padding: 0; width: 100%; }
+.modal-content {position: relative;  background-color: #fefefe; margin: auto; padding: 10px; width: 100%; font-size: 14px;}
 
-.close { color: #333333;  position: absolute; top: 8px; right: 10px; font-size: 32px; font-weight: bold;}
+.close { color: #333333;  position: absolute; top: 8px; right: 10px; font-size: 14px; font-weight: bold;}
 
 .close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer;}
 
-.modal-header { margin-top:  10px; margin-bottom:  0px; margin-left: 16px; color: #333333;  }
+.modal-header { margin-top:  10px; margin-bottom:  0px; margin-left: 16px; color: #333333; font-size: 22px; }
 .no-border{ border:none; }
 
 .modal-body a{margin: 0px 16px; text-decoration: none; overflow:scroll;}
-.modal-body { height: 115px; overflow-y:scroll; padding: 10px;}
+.modal-body { height: 100px; overflow-y:scroll; padding: 10px;}
 .modal-body a:hover {color: #333333;text-decoration: none;}
 
 .modal-footer {  padding: 20px 16px; color: 333333;}
 
 .music {background-color: #ffffff; margin: -32px 15px 0px 15px;}
 
-.container .row .col-md-12 iframe{margin: 20px 10px;}
 
+
+
+
+.music .container .row .col-md-2 image { opacity: 1; display: block; width: 100%; height: auto;
+    transition: .5s ease; backface-visibility: hidden; }
+.middle {  transition: .5s ease; opacity: 0;  position: absolute; top: 40%;  left: 50%; 
+    transform: translate(-50%, -50%);  -ms-transform: translate(-50%, -50%); text-align: center; }
+.john:hover image { opacity: 0.8; }
+.john:hover .middle {  opacity: 1; }
+.text {  background-color: rgb(255, 88, 22);  color: white;  font-size: 20px;  
+    border-radius: 50%;  padding: 0px 8px; }  
+.text:hover {   background-color: rgb(255, 60, 0);  cursor: pointer; }
+
+
+
+
+.music .container .row .col-md-2 a{font-size: 13px; color: #6b6b6b; text-decoration: none;}
+.music .container .row .col-md-2 a:nth-child(4) {font-size: 14px; color: #9e9e9e; text-decoration: none;}
+.music .container .row .col-md-2 a:hover{ color: #333333; text-decoration: none;}
 .no-border{ border:none; }
 
 @media only screen   and (max-width: 1080px) {
@@ -49,7 +70,12 @@ footer .container-fluid p:hover > .color {color: #333333; cursor: pointer; margi
       margin: 0px 0px;
       margin-top: -32px;
   }
-
+  .container-fluid .creators .row .col-md-6 .calling{
+    font-size: 24px;
+  }
+  .container-fluid .creators .row .col-md-6 .Get{
+    font-size: 18px;
+  }
     .creators {
         width: 960px;
     }
