@@ -12,9 +12,9 @@ body{ margin: 0px 40px; background-color: rgb(238, 238, 238);}
 .container-fluid .creators .row .col-md-8 .calling { color: #ffffff; margin-top:50px; font-size: 36px; font-stretch: 100%;  }    
 .container-fluid .creators .row .col-md-8 .Get { color: #ffffff;font-size: 24px; font-stretch: 100%; } 
 
-.container-fluid .app .row .col-md-5 p{color: #333333}
-.container-fluid .app .row .col-md-5 a img { height:40px; width: 135px; margin: 30px 0px;}
-.container-fluid .app .row .col-md-5 .Never::after{content: "";  display: block; width: 70px; height: 3px;
+.container-fluid .app .row .col-lg-5 p{color: #333333}
+.container-fluid .app .row .col-lg-5 a img { height:40px; width: 135px; margin: 30px 0px;}
+.container-fluid .app .row .col-lg-5 .Never::after{content: "";  display: block; width: 70px; height: 3px;
   background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50%, rgb(255, 85, 0)); margin-top: 15px;}
 
 
