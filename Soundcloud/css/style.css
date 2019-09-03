@@ -1,18 +1,23 @@
 body{ margin: 0px 40px; background-color: rgb(238, 238, 238);}
 
-.jumbotron{ background: url("../image/sc_landing_header_web_b-447230e.jpg") ;background-size: cover;  border-radius: 0; height:450px;
--webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  background-size: 100% 100%; border-top: 4px solid rgb(255, 72, 0); }
+.jumbotron{ background: url("../image/sc_landing_header_web_b-447230e.jpg") ;background-position: center;  border-radius: 0; height:450px; 
+-webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  background-size: cover; border-top: 4px solid #f50; 
+}
     
 .logo{ color: #ffffff;   position: absolute; top: 25px;  }
 
-.creators { background: url("../image/hp_creator_image-e08dee4.jpg"); background-size: cover; border-radius: 0; height:350px;   
--webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  background-size: 100% 100%; }
+.creators { background: url("../image/hp_creator_image-e08dee4.jpg"); background-position: center;  background-size: cover; border-radius: 0; height:350px;   
+-webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  }
 
-.container-fluid .creators .row .col-md-6 .calling { color: #ffffff; margin-top:50px; font-size: 36px; font-stretch: 100%;  }    
-.container-fluid .creators .row .col-md-6 .Get { color: #ffffff;font-size: 24px; font-stretch: 100%; }       
-.container-fluid .app .row .col-md-4 a img { height:40px; width: 135px; margin: 30px 0px;}
-.container-fluid .app .row .col-md-4 .Never::after{content: "";  display: block; width: 70px; height: 3px;
+.container-fluid .creators .row .col-md-8 .calling { color: #ffffff; margin-top:50px; font-size: 36px; font-stretch: 100%;  }    
+.container-fluid .creators .row .col-md-8 .Get { color: #ffffff;font-size: 24px; font-stretch: 100%; } 
+
+.container-fluid .app .row .col-md-5 p{color: #333333}
+.container-fluid .app .row .col-md-5 a img { height:40px; width: 135px; margin: 30px 0px;}
+.container-fluid .app .row .col-md-5 .Never::after{content: "";  display: block; width: 70px; height: 3px;
   background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50%, rgb(255, 85, 0)); margin-top: 15px;}
+
+
 footer .container-fluid  p > .color{color: #3388DD; cursor: pointer; margin-left:15px; margin-right: 5px; font-size:14px;}
 footer .container-fluid p:hover  {color: rgb(51, 51, 51); cursor: pointer; }
 footer .container-fluid p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; margin-left: 15px;margin-right: 5px; }
@@ -49,16 +54,20 @@ footer .container-fluid p:hover > .color {color: rgb(51, 51, 51); cursor: pointe
     transform: translate(-50%, -50%);  -ms-transform: translate(-50%, -50%); text-align: center; }
 .john:hover image { opacity: 0.8; }
 .john:hover .middle {  opacity: 1; }
-.text {  background-color: rgb(255, 88, 22);  color: white;  font-size: 20px;  
-    border-radius: 50%;  padding: 0px 8px; }  
-.text:hover {   background-color: rgb(255, 60, 0);  cursor: pointer; }
+.container .row .col-md-2 .john img{  width: 153px;  height: 153px; }
+
+audio {display: none;}
+
+.text button{  background-color: #f50;  color: white;  font-size: 20px; border: 0px;  border-radius: 50%; 
+   padding: 0px 8px; }  
+.text button:hover {   background-color: rgb(255, 60, 0);  cursor: pointer; }
 
 
 
 
-.music .container .row .col-md-2 a{font-size: 13px; color: #6b6b6b; text-decoration: none;}
-.music .container .row .col-md-2 a:nth-child(4) {font-size: 14px; color: #9e9e9e; text-decoration: none;}
-.music .container .row .col-md-2 a:hover{ color: #333333; text-decoration: none;}
+.music .container .row .col-md-2 a{font-size: 13px; color: #333333; text-decoration: none;}
+.music .container .row .col-md-2 a:nth-child(4) {font-size: 14px; color: #999999; text-decoration: none;}
+.music .container .row .col-md-2 a:hover{ color: #2b2b2b; text-decoration: none;}
 .no-border{ border:none; }
 
 @media only screen   and (max-width: 1080px) {
@@ -70,10 +79,10 @@ footer .container-fluid p:hover > .color {color: rgb(51, 51, 51); cursor: pointe
       margin: 0px 0px;
       margin-top: -32px;
   }
-  .container-fluid .creators .row .col-md-6 .calling{
+  .container-fluid .creators .row .col-md-8 .calling{
     font-size: 24px;
   }
-  .container-fluid .creators .row .col-md-6 .Get{
+  .container-fluid .creators .row .col-md-8 .Get{
     font-size: 18px;
   }
     .creators {
@@ -81,6 +90,10 @@ footer .container-fluid p:hover > .color {color: rgb(51, 51, 51); cursor: pointe
     }
     body {
       margin:0px 0px;
+    }
+    .container .row .col-md-2 .john img{
+      width: 136px;
+      height: 136px;
     }
     .container-fluid .creators .row p{
       margin-left: 90px;
