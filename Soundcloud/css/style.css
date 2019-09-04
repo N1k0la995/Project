@@ -10,6 +10,7 @@ body{ margin: 0px 40px; background-color: rgb(238, 238, 238);}
 -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  }
 
 .container-fluid .creators .row .col-lg-8  .calling { color: #ffffff; margin-top:50px; font-size: 36px; font-stretch: 100%;  }    
+.container-fluid .creators .row .col-lg-8  .calling2 { color: #ffffff; margin-top:50px; font-size: 36px; font-stretch: 100%; display:none }    
 .container-fluid .creators .row .col-lg-8  .Get { color: #ffffff;font-size: 24px; font-stretch: 100%; } 
 .container-fluid .creators .row .col-lg-8  .Get1 { display: none; color: #ffffff;} 
 .container-fluid .creators .row .col-lg-8  .Get2 { color: #ffffff;font-size: 24px; font-stretch: 100%;  display: none;} 
@@ -78,6 +79,16 @@ audio {display: none;}
   .container-fluid .creators .row .col-lg-8 .Get2{
     display: inline-block;
   }
+   .container-fluid .creators .row .col-lg-8  .calling{
+    display:none
+
+  }
+   .container-fluid .creators .row .col-lg-8  .calling2{
+    font-size: 36px;
+    margin-left: 0px;
+	    display: inline-block;
+
+  }
 }
 @media only screen   and (max-width: 1080px) {
     .jumbotron {
@@ -90,9 +101,14 @@ audio {display: none;}
       width: 960px;
       margin-top: -32px;
   }
-  .container-fluid .creators .row .col-lg-8  .calling{
+     .container-fluid .creators .row .col-lg-8  .calling{
+    display:none
+
+  }
+   .container-fluid .creators .row .col-lg-8  .calling2{
     font-size: 24px;
-    margin-left: 0px;
+	
+	    display: inline-block;
 
   }
   .container-fluid .creators .row .col-lg-8  .Get{
@@ -140,10 +156,17 @@ audio {display: none;}
     width: 960px;
     margin-top: -32px;
 }
-.container-fluid .creators .row .col-lg-8  .calling{
-  font-size: 24px;
-  margin-left: 70px;
-}
+   .container-fluid .creators .row .col-lg-8  .calling{
+    display:none
+
+  }
+   .container-fluid .creators .row .col-lg-8  .calling2{
+    font-size: 24px;
+    margin-left: 70px;
+	    display: inline-block;
+
+  }
+
 .container-fluid .creators .row .col-lg-8  .Get{
   display: none;
 }
