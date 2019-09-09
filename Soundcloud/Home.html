@@ -3,96 +3,31 @@
     <head>
 		<title>SCloud</title>
 		<meta content="width=960" name="viewport">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/style.css">		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="js/script.js"></script>
+		<script src="https://apis.google.com/js/api.js"></script>
+
 	</head>
 		  
-	</head>
-    <body>
-		<header>
-			<div class="container-fluid">
-				<div class="jumbotron">
-					<div class="logo">
-						<h6> <img src="image/cloud.png" > SOUNDCLOUD </h6>
-					</div>
-				</div>
+	<body onload="authenticate().then(loadClient).then(execute) ">
+		
+		<div class="jumbotron">
+			<div class="logo">
+				<h6> <img src="image/cloud.png" > SOUNDCLOUD </h6>
 			</div>
-		</header>
+		</div>
+
 		<div class="music">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row justify-content-center">
-					<div class="col-md-8">
+					<div class="col-lg-8">
 						<p style="font-size: 24px; color: #333333">Hear what’s trending for free in the SoundCloud community</p>
 					</div>
 				</div>
 			</div>
-				<ul id="results"></ul>
-		
-		
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-2">
-						<div class="john">
-							<img src="image/artworks-000582585161-8dqnjm-t200x200.jpg" >
-							<div class="middle">
-																			
-								<div class="text">
-										<button >></button>
-								</div>
-							</div>
-						</div>
-						<a href="">	Lil Tecca feat. Juice WRLD...</a> <br> <a href="">Lil Tecca</a>
-					</div>
-					<div class="col-md-2">
-						<div class="john">
-								<img src="image/artworks-000582585161-8dqnjm-t200x200.jpg"  >				
-								<div class="middle">
-								<div class="text">
-								</div>
-							</div>
-						</div>						
-						<a href="">	Lil Tecca feat. Juice WRLD</a> <br> <a href="">Lil Tecca</a>
-					</div>
-					<div class="col-md-2">
-						<div class="john">
-								<img src="image/artworks-000582585161-8dqnjm-t200x200.jpg"  >						
-								<div class="middle">
-								<div class="text">
-								</div>
-							</div>
-						</div>						
-						<a href="">	Lil Tecca feat. Juice WRLD</a> <br> <a href="">Lil Tecca</a>
-					</div>
-					<div class="col-md-2">
-						<div class="john">
-								<img src="image/artworks-000582585161-8dqnjm-t200x200.jpg" >
-								<div class="middle">
-								<div class="text">
-								 </div>
-							</div>
-						</div>	
-						<a href="">	Lil Tecca feat. Juice WRLD</a> <br> <a href="">Lil Tecca</a>
-					</div>
-					<div class="col-md-2">
-						<div class="john">
-								<img src="image/artworks-000582585161-8dqnjm-t200x200.jpg"  >				
-								<div class="middle">
-								<div class="text">></div>
-							</div>
-						</div>	
-						<a href="">	Lil Tecca feat. Juice WRLD</a> <br> <a href="">Lil Tecca</a>
-					</div>
-					<div class="col-md-2">
-						<div class="john">
-								<img src="image/artworks-000582585161-8dqnjm-t200x200.jpg"  >			
-								<div class="middle">
-								<div class="text">></div>
-							</div>
-						</div>	
-						<a href="">	Lil Tecca feat. Juice WRLD</a> <br> <a href="">Lil Tecca</a>
-					</div>
+			<div class="container-fluid"> 
+				<div class="row" id="video-container"> 
 				</div>
 			</div>
 		</div>
@@ -111,8 +46,7 @@
 				</div>
 			</div>
 		</div>
-	
-		<div class="container-fluid">
+		
 			<div class="creators">
 				<div class="row ">
 					<div class="col-lg-8 offset-lg-1">
@@ -130,60 +64,52 @@
 					</div>
 				</div>
 			</div>
-		</div>
 		<footer>
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-2 ">
+					<div class="col-lg-2 ">
 						<p id="myBtn"  style="font-size: 14px"> <span  class="color" >Language:</span>English(US)</p>
 					</div>
 				</div>
 			</div>
 		</footer>
-		  
 
+			
 		<div id="myModal" class="modal">
 			<span class="close">&times;</span>
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-6">
-						<div class="modal-content">
-							<div class="modal-header no-border">
-								<h4>Select your language</h4>
-							</div>
-							<hr style="width:90%">
-
-							<div class="modal-body">
-								<table style="width:100%">
-									<tr>
-										<td><a href="deu.html" > Deutsch</a></td>
-										<td><a  style="color:#333333; cursor: text;" >English (US)</a></td>
-										</tr>
-										<tr>
-										<td><a href="esp.html" >Español</a></td>
-										<td><a href="fra.html" >Français</a></td>
-										</tr>
-										<tr>
-										<td><a href="ita.html" >Italiano</a></td>
-										<td><a href="ned.html" >Nederlands</a></td>
-										</tr>
-										<tr>
-										<td><a href="por.html" >Português (Brasil)</a></td>
-										<td><a href="pol.html" >Polski</a></td>
-										</tr>			  
-								</table>    
-							</div>
-							<div class="modal-footer">
-								<button class="close1" style="cursor: pointer; background-color: white; border: 0px;">Cancel</button>
-							</div>
-						</div>
-					</div>
+			<div class="modal-content">
+				<div class="modal-header no-border">
+					<h4>Select your language</h4> 
+				</div>
+				<hr style="width:90%">
+				<div class="modal-body">
+					<table style="width:100%">
+						<tr>
+							<td><a href="deu.html" > Deutsch</a></td>
+							<td><a  style="color:#333333; cursor: text;" >English (US)</a></td>
+							</tr>
+							<tr>
+							<td><a href="esp.html" >Español</a></td>
+							<td><a href="fra.html" >Français</a></td>
+							</tr>
+							<tr>
+							<td><a href="ita.html" >Italiano</a></td>
+							<td><a href="ned.html" >Nederlands</a></td>
+							</tr>
+							<tr>
+							<td><a href="por.html" >Português (Brasil)</a></td>
+							<td><a href="pol.html" >Polski</a></td>
+							</tr>			  
+					</table>    
+				</div>
+				<div class="modal-footer">
+					<button class="close1" style="cursor: pointer; background-color: white; border: 0px;">Cancel</button>
 				</div>
 			</div>
 		</div>
 
-		<script >
-					
+		</div>
+		<script>
 			var modal = document.getElementById("myModal");
 			var btn = document.getElementById("myBtn");
 			var span = document.getElementsByClassName("close")[0];
@@ -207,7 +133,76 @@
 			modal.style.display = "none";
 			document.body.style.overflow="auto";
 			}}
+			
+			function myFunction() {
+			document.getElementById("demo").innerHTML = "Hello World";
+			}
+
+
+
+			var videoContainer = document.getElementById('video-container');
+			const channel = 'Nikola Naranci'
+			function authenticate() {
+				return gapi.auth2.getAuthInstance()
+					.signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"})
+					.then(function() { console.log("Sign-in successful"); },
+						function(err) { console.error("Error signing in", err); });
+			}
+			function loadClient() {
+				gapi.client.setApiKey("AIzaSyCtffNfszKZii5EWz8SdxlQg424AcjIiTQ");
+				return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+					.then(function() { console.log("GAPI client loaded for API"); },
+						function(err) { console.error("Error loading GAPI client for API", err); });
+			}
+			// Make sure the client is loaded and sign-in is complete before calling this method.
+			function execute() {
+				return gapi.client.youtube.playlistItems.list({
+				"part": "snippet,contentDetails",
+				"maxResults": 12,
+				"playlistId": "PLC8Ks0CgsKJNyw4-zQhzN8FO2x7D_dzai"
+				})
+       		.then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+                const playlistItems=response.result.items;
+                let output = '';
+                playlistItems.forEach(item => {
+                  const videoId=item.snippet.resourceId.videoId;
+				  const title =item.snippet.title;
+				  const position =item.snippet.position;
+				 output +=  `
+				 <div class="col-lg-2">
+					<div class="john">
+					<img src=" https://img.youtube.com/vi/${videoId}/hqdefault.jpg" style="width: 153px;  height: 153px;">
+					<div class="middle">													
+						<div class="text">
+								<button> ></button>
+						</div>
+					</div>
+				</div>
+				   <a href="">	${title}</a> <br> <a href="">Lil Tecca</a>
+				</div>
+
+				   `;
+
+                });
+                videoContainer.innerHTML=output;
+              },
+
+              function(err) { console.error("Execute error", err); });
+			}
+			
+
+			gapi.load("client:auth2", function() {
+				gapi.auth2.init({client_id: "272099904269-22euf40hdr21i671lgjrsrgispea40cg.apps.googleusercontent.com"});
+			});
 		</script>
 
     </body>
 </html>
+
+
+
+
+
+
