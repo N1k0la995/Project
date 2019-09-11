@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
 		<title>SCloud</title>
-		<meta content="width=960" name="viewport">
+		<meta name="viewport">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -11,7 +11,6 @@
 	</head>
 		  
 	<body onload="authenticate().then(loadClient).then(execute) ">
-		
 		<div class="jumbotron">
 			<div class="logo">
 				<h6> <img src="image/cloud.png" > SOUNDCLOUD </h6>
@@ -64,23 +63,21 @@
 				</div>
 			</div>
 		<footer>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-2 ">
-						<p id="myBtn"  style="font-size: 14px"> <span  class="color" >Idioma:</span>Español</p>
-					</div>
-				</div>
-			</div>
+			<p id="myBtn"  style="font-size: 14px"> <span  class="color" >Idioma:</span>Español</p>
 		</footer>
 
 			
 		<div id="myModal" class="modal">
 			<span class="close">&times;</span>
 			<div class="modal-content">
-				<div class="modal-header no-border">
-					<h4>Selecciona tu idioma</h4> 
+				<div class="modal-header  no-border">
+					<h4 class="sel">Selecciona tu idioma</h4> 
+					<h4 class="sel1">Selecciona tu <br> idioma</h4> 
+
 				</div>
-				<hr style="width:90%">
+				
+				<hr style="width:90%" class="hr" >
+
 				<div class="modal-body">
 					<table style="width:100%">
 						<tr>
@@ -105,8 +102,6 @@
 					<button class="close1" style="cursor: pointer; background-color: white; border: 0px;">Cancelar</button>
 				</div>
 			</div>
-		</div>
-
 		</div>
 		<script>
 			var modal = document.getElementById("myModal");
