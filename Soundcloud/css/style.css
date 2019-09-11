@@ -1,7 +1,5 @@
 html {
   box-sizing: border-box;
-  margin:0px auto;
-
 }
 body{  background-color: rgb(238, 238, 238); padding: 0px 50px;}
 
@@ -20,9 +18,11 @@ body{  background-color: rgb(238, 238, 238); padding: 0px 50px;}
  .creators .row .col-lg-8  .Get1 { display: none; color: #ffffff;} 
  .creators .row .col-lg-8  .Get2 { color: #ffffff;font-size: 24px; font-stretch: 100%;  display: none;} 
 
- .container-fluid .app .row .col-lg-5 p{color: #333333}
-.container-fluid .app .row .col-lg-5 a img { height:40px; width: 135px; margin: 30px 0px;}
-.container-fluid .app .row .col-lg-5 .Never::after{content: "";  display: block; width: 70px; height: 3px;
+ .container-fluid .app .row .col-lg-4 p{color: #333333}
+ .container-fluid .app .row img{width: 100%; height: 100%;}
+
+.container-fluid .app .row .col-lg-4 a img { height:40px; width: 135px; margin: 30px 0px;}
+.container-fluid .app .row .col-lg-4 .Never::after{content: "";  display: block; width: 70px; height: 3px;
   background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50%, rgb(255, 85, 0)); margin-top: 15px;}
 
 
@@ -49,7 +49,7 @@ footer .container-fluid p:hover > .color {color: rgb(51, 51, 51); cursor: pointe
 .music {background-color: #ffffff; margin: 0px ;}
 .music .container-fluid .row .col-md-2 image {  display: block; width: 100%; height: auto;}
 
-.middle {  transition: .5s ease; opacity: 0;    position: absolute; top: 50%;  left: 50%;  transform: translate(-50%, -50%);}
+.middle {  transition: .5s ease; opacity: 0;    position: absolute; top: 20%;  left: 50%;}
 .john:hover image { opacity: 0.8; }
 .john:hover .middle {  opacity: 1; }
 .container-fluid .row .col-md-2 .john img{  width: 153px;  height: 153px; }
