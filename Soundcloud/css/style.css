@@ -1,16 +1,18 @@
 html {
   box-sizing: border-box;
 }
-body{  background-color: rgb(238, 238, 238); padding: 0px 50px;}
+body{  background-color: rgb(238, 238, 238);    width:1240px;
+  margin:0 auto;
+}
 
 
-.jumbotron{ background: url("../image/sc_landing_header_web_b-447230e.jpg") ;background-position: center;  border-radius: 0; height:450px;   
+.jumbotron{ background: url("../image/sc_landing_header_web_b-447230e.jpg") ;background-position: center;  border-radius: 0;   height:450px;   
 -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%; background-size: 100% 100%;   border-top: 4px solid #f50;   margin:0px auto;
 }
     
 .logo{ color: #ffffff;   position: absolute; top: 25px;  }
 .creators { background: url("../image/hp_creator_image-e08dee4.jpg"); background-position: center;  background-size: cover; border-radius: 0; height:350px;   
-  -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  background-size: 100% 100%;margin:0px auto;}
+  -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  background-size: 100% 100%;margin:0px auto; }
   
  .creators .row .col-lg-8  .calling { color: #ffffff; margin-top:50px; font-size: 36px; font-stretch: 100%;  }    
  .creators .row .col-lg-8  .calling2 { color: #ffffff; margin-top:50px; font-size: 36px; font-stretch: 100%; display:none; }    
@@ -18,23 +20,23 @@ body{  background-color: rgb(238, 238, 238); padding: 0px 50px;}
  .creators .row .col-lg-8  .Get1 { display: none; color: #ffffff;} 
  .creators .row .col-lg-8  .Get2 { color: #ffffff;font-size: 24px; font-stretch: 100%;  display: none;} 
 
- .container-fluid .app .row .col-lg-4 p{color: #333333}
+ .container-fluid .app .row .col-lg-4 p{color: rgb(51, 51, 51)}
  .container-fluid .app .row img{width: 100%; height: 100%;}
 
 .container-fluid .app .row .col-lg-4 a img { height:40px; width: 135px; margin: 30px 0px;}
 .container-fluid .app .row .col-lg-4 .Never::after{content: "";  display: block; width: 70px; height: 3px;
   background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50%, rgb(255, 85, 0)); margin-top: 15px;}
 
-
-footer .container-fluid  p > .color{color: #3388DD; cursor: pointer; margin-left:15px; margin-right: 5px; font-size:14px;}
-footer .container-fluid p:hover  {color: rgb(51, 51, 51); cursor: pointer; }
-footer .container-fluid p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; margin-left: 15px;margin-right: 5px; }
+  footer   p {color: rgb(51, 51, 51);  }
+footer   p > .color{color: #3388DD; cursor: pointer; margin-left:15px; margin-right: 5px; font-size:14px;}
+footer  p:hover  {color: rgb(51, 51, 51); cursor: pointer; }
+footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; margin-left: 15px;margin-right: 5px; }
 
 
 
 .modal { display: none;  position: fixed;  z-index: 1;  padding-top: 80px;  left: 0; top: 0;
-  width: 100%;  height: 100%;    background-color: rgba(211, 211, 211, 0.9);    }
-.modal-content {position: absolute center;  background-color: #fefefe; margin:0px auto; padding: 10px; width: 550px;  font-size: 14px;}
+  width: 100%;  height: 100%;    background-color: rgba(242,242,242,.9)    }
+.modal-content {position: absolute center;  background-color: #fefefe; margin:0px auto; padding: 10px; width: 550px;  font-size: 14px;  }
 .close { color: #000;  position: absolute; top: 8px; right: 10px; font-size: 34px; font-weight: bold;}
 .close:hover, .close:focus {  text-decoration: none; cursor: pointer;}
 .modal-header { margin-top:8px; margin-bottom:0px; margin-left:16px; color: #333333; font-size: 22px; height: 30px; }
@@ -44,7 +46,7 @@ footer .container-fluid p:hover > .color {color: rgb(51, 51, 51); cursor: pointe
 .modal-body a:hover {color: #333333;text-decoration: none;}
 .modal-footer {  padding: 20px 16px; color: 333333;}
 
-
+.sel1{display: none;}
 
 .music {background-color: #ffffff; margin: 0px ;}
 .music .container-fluid .row .col-md-2 image {  display: block; width: 100%; height: auto;}
@@ -68,13 +70,16 @@ footer .container-fluid p:hover > .color {color: rgb(51, 51, 51); cursor: pointe
 .no-border{ border:none; }
 
 @media only screen   and (max-width: 1240px) {
+
   body{
-    padding: 0px;
+    width: 1080px;
+    margin:0px auto;
   }
    .jumbotron {
      width: 1079px;
      padding: 0px 20px;
- 
+     background-size: cover;
+
    }
    .creators {
      width: 1079px;
@@ -99,18 +104,21 @@ footer .container-fluid p:hover > .color {color: rgb(51, 51, 51); cursor: pointe
    }
  }
 @media only screen   and (max-width: 1080px) {
-
+  body{
+    width: 960px;
+    margin:0px auto;
+  }
     .music {
       width: 960px;
   }
   .jumbotron {
     background-size: cover;
 
-    width: 989px;
+    width: 960px;
 padding: 0px 20px;
   }
   .creators {
-    width: 989px;
+    width: 960px;
     padding: 0px 20px;
 
 }
@@ -196,4 +204,14 @@ margin-left: 70px;
     margin-left:-15px;
   }
 
+}
+@media only screen   and (max-width: 550px) {
+  .modal-content{
+    width: auto;
+  }
+}@media only screen   and (max-width: 350px) {
+  .modal-body{
+    width: 350px;
+  }
+ .hr{margin-top: 15px;}
 }
