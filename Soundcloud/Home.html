@@ -21,8 +21,8 @@
 		<div class="music">
 			<div class="container-fluid">
 				<div class="row justify-content-center">
-					<div class="col-lg-8">
-						<p style="font-size: 24px; color: #333333">Hear what’s trending for free in the SoundCloud community</p>
+					<div class="col-sm-9">
+						<p style="font-size: 24px; color: rgb(51, 51, 51)">Hear what’s trending for free in the SoundCloud community</p>
 					</div>
 				</div>
 			</div>
@@ -51,7 +51,6 @@
 				<div class="row ">
 					<div class="col-lg-8 offset-lg-1">
 						<p  class="calling"> Calling all creators </p>
-						<p  class="calling2"> Calling all creators </p>
 
 					</div>
 					<div class="col-lg-8 offset-lg-1">
@@ -73,27 +72,15 @@
 			<span class="close">&times;</span>
 			<div class="modal-content">
 				<div class="modal-header no-border">
-					<h4>Select your language</h4> 
+					<p>Select your language</p> 
 				</div>
 				<hr style="width:90%">
 				<div class="modal-body">
 					<table style="width:100%">
 						<tr>
-							<td><a href="deu.html" > Deutsch</a></td>
-							<td><a  style="color:#333333; cursor: text;" >English (US)</a></td>
-							</tr>
-							<tr>
 							<td><a href="esp.html" >Español</a></td>
-							<td><a href="fra.html" >Français</a></td>
-							</tr>
-							<tr>
-							<td><a href="ita.html" >Italiano</a></td>
-							<td><a href="ned.html" >Nederlands</a></td>
-							</tr>
-							<tr>
-							<td><a href="por.html" >Português (Brasil)</a></td>
-							<td><a href="pol.html" >Polski</a></td>
-							</tr>			  
+							<td><a  style="color:rgb(51, 51, 51); cursor: text;" >English (US)</a></td>
+						</tr>
 					</table>    
 				</div>
 				<div class="modal-footer">
@@ -152,7 +139,7 @@
 			function execute() {
 				return gapi.client.youtube.playlistItems.list({
 				"part": "snippet,contentDetails",
-				"maxResults": 12,
+				"maxResults": 6,
 				"playlistId": "PLC8Ks0CgsKJNyw4-zQhzN8FO2x7D_dzai"
 				})
        		.then(function(response) {
@@ -165,16 +152,10 @@
 				  const title =item.snippet.title;
 				  const position =item.snippet.position;
 				 output +=  `
-				 <div class="col-lg-2">
-					<div class="john">
-					<img src=" https://img.youtube.com/vi/${videoId}/hqdefault.jpg" style="width: 153px;  height: 153px;">
-					<div class="middle">													
-						<div class="text">
-								<button> ></button>
-						</div>
-					</div>
-				</div>
-				   <a href="">	${title}</a> <br> <a href="">Lil Tecca</a>
+				 <div class="col-sm-2">
+				 <img id="img${position}" onclick="myFunction${position}(),playAudio()" src=" https://img.youtube.com/vi/${videoId}/hqdefault.jpg" style="width: 136px;  height: 136px; position:absolute; margin-left:30px;">
+				 <iframe id="ifr${position}" width="136" height="136" src="https://www.youtube.com/embed/${videoId}" frameborder="0"  allow="autoplay; encrypted-media" allowfullscreen style="margin-left:30px;"></iframe>
+
 				</div>
 
 				   `;
@@ -189,7 +170,76 @@
 
 			gapi.load("client:auth2", function() {
 				gapi.auth2.init({client_id: "272099904269-22euf40hdr21i671lgjrsrgispea40cg.apps.googleusercontent.com"});
-			});
+			})
+			
+			function myFunction0() {
+				document.getElementById("img1").style.display = "block";
+				document.getElementById("img2").style.display = "block";
+				document.getElementById("img3").style.display = "block";
+				document.getElementById("img4").style.display = "block";
+				document.getElementById("img5").style.display = "block";
+				document.getElementById("img0").style.display = "none"; 
+				document.getElementById("ifr0").src +="?autoplay=1";
+				document.getElementById("ifr1").currentTime = 0;
+				document.getElementById("ifr2").currentTime = 0;
+				document.getElementById("ifr3").currentTime = 0;
+				document.getElementById("ifr4").currentTime = 0;
+				document.getElementById("ifr5").currentTime = 0;
+
+			}
+			function myFunction1() {
+				document.getElementById("img0").style.display = "block";
+				document.getElementById("img2").style.display = "block";
+				document.getElementById("img3").style.display = "block";
+				document.getElementById("img4").style.display = "block";
+				document.getElementById("img5").style.display = "block";
+				document.getElementById("img1").style.display = "none";
+				document.getElementById("ifr1").src +="?autoplay=1";
+			}
+			function myFunction2() {
+				document.getElementById("img0").style.display = "block";
+				document.getElementById("img1").style.display = "block";
+				document.getElementById("img3").style.display = "block";
+				document.getElementById("img4").style.display = "block";
+				document.getElementById("img5").style.display = "block";
+				document.getElementById("img2").style.display = "none";
+				document.getElementById("ifr2").src +="?autoplay=1";
+
+			}
+			function myFunction3() {
+				document.getElementById("img0").style.display = "block";
+				document.getElementById("img1").style.display = "block";
+				document.getElementById("img2").style.display = "block";
+				document.getElementById("img4").style.display = "block";
+				document.getElementById("img5").style.display = "block";
+				document.getElementById("img3").style.display = "none";
+				document.getElementById("ifr3").src +="?autoplay=1";
+
+			}
+			function myFunction4() {
+				document.getElementById("img0").style.display = "block";
+				document.getElementById("img1").style.display = "block";
+				document.getElementById("img2").style.display = "block";
+				document.getElementById("img3").style.display = "block";
+				document.getElementById("img5").style.display = "block";
+				document.getElementById("img4").style.display = "none";
+				document.getElementById("ifr4").src +="?autoplay=1";
+
+			}
+			function myFunction5() {
+				document.getElementById("img0").style.display = "block";
+				document.getElementById("img1").style.display = "block";
+				document.getElementById("img2").style.display = "block";
+				document.getElementById("img3").style.display = "block";
+				document.getElementById("img4").style.display = "block";
+				document.getElementById("img5").style.display = "none";
+				document.getElementById("ifr5").src +="?autoplay=1";
+				document.getElementById("ifr4").pause();
+
+
+			}	
+
+;
 		</script>
 
     </body>
