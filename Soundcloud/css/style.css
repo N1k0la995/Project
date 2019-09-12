@@ -1,9 +1,5 @@
-html {
-  box-sizing: border-box;
-}
-body{  background-color: rgb(238, 238, 238);    width:1240px;
-  margin:0 auto;
-}
+html {  box-sizing: border-box; }
+body{  background-color: rgb(238, 238, 238); width:1240px; margin:0 auto; }
 
 
 .jumbotron{ background: url("../image/sc_landing_header_web_b-447230e.jpg") ;background-position: center;  border-radius: 0;   height:450px;   
@@ -14,11 +10,10 @@ body{  background-color: rgb(238, 238, 238);    width:1240px;
 .creators { background: url("../image/hp_creator_image-e08dee4.jpg"); background-position: center;  background-size: cover; border-radius: 0; height:350px;   
   -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  background-size: 100% 100%;margin:0px auto; }
   
- .creators .row .col-lg-8  .calling { color: #ffffff; margin-top:50px; font-size: 36px; font-stretch: 100%;  }    
- .creators .row .col-lg-8  .calling2 { color: #ffffff; margin-top:50px; font-size: 36px; font-stretch: 100%; display:none; }    
- .creators .row .col-lg-8  .Get { color: #ffffff;font-size: 24px; font-stretch: 100%; } 
- .creators .row .col-lg-8  .Get1 { display: none; color: #ffffff;} 
- .creators .row .col-lg-8  .Get2 { color: #ffffff;font-size: 24px; font-stretch: 100%;  display: none;} 
+ .creators .row .col-lg-8  .calling { color: #ffffff; margin-top:70px; font-size: 36px; font-stretch: 100%; margin-left:-30px; }    
+ .creators .row .col-lg-8  .Get { color: #ffffff;font-size: 24px; font-stretch: 100%;margin-left:-30px;}  
+ .creators .row .col-lg-8  .Get1 { display: none; color: #ffffff;     margin-left: -30px; } 
+ .creators .row .col-lg-8  .Get2 { color: #ffffff;font-size: 24px; font-stretch: 100%;  display: none;      margin-left: -30px; } 
 
  .container-fluid .app .row .col-lg-4 p{color: rgb(51, 51, 51)}
  .container-fluid .app .row img{width: 100%; height: 100%;}
@@ -26,7 +21,6 @@ body{  background-color: rgb(238, 238, 238);    width:1240px;
 .container-fluid .app .row .col-lg-4 a img { height:40px; width: 135px; margin: 30px 0px;}
 .container-fluid .app .row .col-lg-4 .Never::after{content: "";  display: block; width: 70px; height: 3px;
   background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50%, rgb(255, 85, 0)); margin-top: 15px;}
-
   footer   p {color: rgb(51, 51, 51);  }
 footer   p > .color{color: #3388DD; cursor: pointer; margin-left:15px; margin-right: 5px; font-size:14px;}
 footer  p:hover  {color: rgb(51, 51, 51); cursor: pointer; }
@@ -47,27 +41,7 @@ footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; margin-left: 
 .modal-body a:hover {color: rgb(51, 51, 51);text-decoration: none;}
 .modal-footer {  padding: 20px 16px; color: rgb(51, 51, 51);}
 
-.sel1{display: none;}
-
 .music {background-color: #ffffff; margin: 0px ;}
-.music .container-fluid .row .col-md-2 image {  display: block; width: 100%; height: auto;}
-
-.middle {  transition: .5s ease; opacity: 0;    position: absolute; top: 20%;  left: 50%;}
-.john:hover image { opacity: 0.8; }
-.john:hover .middle {  opacity: 1; }
-.container-fluid .row .col-md-2 .john img{  width: 153px;  height: 153px; }
-
-
-.text button{  background-color: #f50;  color: white;  font-size: 20px; border: 0px;  border-radius: 50%; 
-   padding: 10px 12px; }  
-.text button:hover {   background-color: rgb(255, 60, 0);  cursor: pointer; }
-
-
-
-
-.music .container .row .col-md-2 a{font-size: 13px; color: rgb(51, 51, 51); text-decoration: none;}
-.music .container .row .col-md-2 a:nth-child(4) {font-size: 14px; color: #999999; text-decoration: none;}
-.music .container .row .col-md-2 a:hover{ color: #2b2b2b; text-decoration: none;}
 .no-border{ border:none; }
 
 @-webkit-keyframes animatetop {
@@ -88,13 +62,13 @@ footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; margin-left: 
     margin:0px auto;
   }
    .jumbotron {
-     width: 1079px;
+     width: 1080px;
      padding: 0px 20px;
      background-size: cover;
 
    }
    .creators {
-     width: 1079px;
+    width: 1080px;
      padding: 0px 20px;
  
  }
@@ -103,16 +77,6 @@ footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; margin-left: 
    }
     .creators .row .col-lg-8 .Get2{
      display: inline-block;
-   }
-     .creators .row .col-lg-8  .calling{
-     display:none
- 
-   }
-  .creators .row .col-lg-8  .calling2{
-     font-size: 36px;
-     margin-left: 0px;
-       display: inline-block;
- 
    }
  }
 @media only screen   and (max-width: 1080px) {
@@ -136,15 +100,11 @@ padding: 0px 20px;
 }
 
    .creators .row .col-lg-8  .calling{
-    display:none
-
-  }
-   .creators .row .col-lg-8  .calling2{
     font-size: 24px;
-  
-      display: inline-block;
+    margin-top: 70px;
 
   }
+   
  .creators .row .col-lg-8  .Get{
     display: none;
     font-size: 18px;
@@ -154,7 +114,6 @@ padding: 0px 20px;
   }
    .creators .row .col-lg-8 .Get1{
     display: inline-block;
-    margin: 0px;
     font-size: 18px;
   }
 
@@ -183,15 +142,11 @@ padding: 0px 20px;
   width: 960px;
 }
  .creators .row .col-lg-8  .calling{
-  display:none
-
-}
- .creators .row .col-lg-8  .calling2{
   font-size: 24px;
-  margin-left: 70px;
+  margin-left: 50px;
     display: inline-block;
-
 }
+ 
 
 .creators .row .col-lg-8  .Get{
 display: none;
@@ -202,7 +157,8 @@ display: none;
 .creators .row .col-lg-8 .Get1{
 display: inline-block;
 font-size: 18px;
-margin-left: 70px;
+margin-left: 50px;
+
 }
 
   .container .row .col-md-2 .john img{
@@ -228,9 +184,12 @@ margin-left: 70px;
     margin-left: 0px;
 
   }
+  .modal-body{
+    overflow-x: hidden;
+  }
 }
 
-@media only screen   and (max-width: 322px) {
+@media only screen   and (max-width: 298px) {
   .modal-body{
     width: auto;
   }
@@ -238,14 +197,14 @@ margin-left: 70px;
     margin-top: 0px;
     margin-left: 0px;
 
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 }
-@media only screen   and (max-width: 215px) {
+@media only screen   and (max-width: 201px) {
  
   .modal-header{
 margin-top: 0px;
     margin-left: 0px;
-    margin-bottom: 55px;
+    margin-bottom: 65px;
   }
 }
