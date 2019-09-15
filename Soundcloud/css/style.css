@@ -6,8 +6,8 @@ body{  background-color: #e0e0e0; width:1240px; margin:0 auto;  font-family:  'L
 -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%; background-size: 100% 100%;   border-top: 4px solid #f50;   margin:0px auto;
 }
 
-.logo{ color: #ffffff;   position: absolute; top: 23px; font-weight: bold;}
-.crea{   position: absolute; top: 23px; right: 30px;  background-color: transparent; font-size:14px; }
+.logo{ color: #ffffff;   position: absolute; top: 24px; font-weight:400; font-size:32px; display: inline-block;}
+.crea{   position: absolute; top: 24px; right: 30px;  background-color: transparent; font-size:14px;  font-weight:400;}
 
 
 
