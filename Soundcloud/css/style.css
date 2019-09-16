@@ -33,15 +33,15 @@ background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50
 
 
   footer   p {color: rgb(51, 51, 51);  }
-footer   p > .color{color: #3388DD; cursor: pointer; margin-left:15px; margin-right: 5px; font-size:14px;}
+footer   p > .color{color: #3388DD; cursor: pointer; margin-left:20px; margin-right: 5px; font-size:14px;}
 footer  p:hover  {color: rgb(51, 51, 51); cursor: pointer; }
-footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; margin-left: 15px;margin-right: 5px; }
+footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; }
 
 
 
 .modal { display: none;  position: fixed;  z-index: 1;  padding-top: 80px;  left: 0; top: 0; border:none;
   width: 100%;  height: 100%;    background-color: rgba(242,242,242,.9)    }
-.modal-content {position: absolute center;  background-color: #fefefe; margin:0px auto; padding: 10px; width: 550px;  font-size: 14px;  
+.modal-content {position: relative center;  background-color: #fefefe; margin:0px auto; padding: 10px; width: 550px;  font-size: 14px;  
   -webkit-animation-name: animatetop;  -webkit-animation-duration: 0.4s;  animation-name: animatetop;  animation-duration: 0.4s;  }
 .close { color: #000;  position: absolute; top: 8px; right: 10px; font-size: 34px; font-weight: bold;}
 .close:hover, .close:focus {  text-decoration: none; cursor: pointer;}
@@ -55,6 +55,12 @@ footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; margin-left: 
 .music {background-color: #ffffff; margin: 0px ;}
 
 .no-border{ border:none; }
+
+
+.video {width: 1200px; position: relative; margin:0px 10px;}
+.video  .row img { width: 180px; height: 180px; margin: 0px 10px}
+.video  .row iframe {width: 180px; height: 180px; margin: 0px 10px}
+
 
 @-webkit-keyframes animatetop {
   from {top:-300px; opacity:0} 
@@ -79,10 +85,14 @@ footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; margin-left: 
      background-size: cover;
 
    }
+   .video {width: 1040px; position: relative; margin:0px 10px;}
+
+   .video  .row img {width: 153px; height: 153px;  margin: 0px 10px}
+   .video  .row iframe {width: 153px; height: 153px;  margin: 0px 10px }
+ 
    .creators {
     width: 1080px;
      padding: 0px 20px;
-     background-size: cover;
 
  }
     .creators .row .col-lg-8  .Get{
@@ -104,6 +114,7 @@ footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; margin-left: 
       width: 960px;
   }
 
+  .video {width: 920px; position: relative; margin:0px 10px;}
 
   .jumbotron {
     background-size: cover;
@@ -116,13 +127,15 @@ padding: 0px 20px;
     width: 960px;
 padding: 0px 20px;
   }
-
+  
    .creators .row .col-lg-8  .calling{
     font-size: 24px;
     margin-top: 70px;
 
   }
-   
+  .video  .row img {width: 136px; height: 136px;  margin: 0px 10px}
+  .video  .row iframe {width: 136px; height: 136px;  margin: 0px 10px}
+  
  .creators .row .col-lg-8  .Get{
     display: none;
     font-size: 18px;
@@ -159,6 +172,7 @@ padding: 0px 20px;
   width: 960px;
 }
 
+.video {width: 920px; position: relative;}
 
  .creators .row .col-lg-8  .calling{
   font-size: 24px;
