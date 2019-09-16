@@ -29,10 +29,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="container-fluid"> 
-				<div class="row" id="video-container"> 
+			<div class="video">
+					<div class="row justify-content-center" id="video-container"> 
+
+					</div>
 				</div>
-			</div>
 		</div>
 		<div class="app1">
 			<div class="app">
@@ -150,8 +151,8 @@
 				  const position =item.snippet.position;
 				 output +=  `
 				 <div class="col-2">
-				 <img id="img${position}" onclick="myFunction${position}(),playAudio()" src=" https://img.youtube.com/vi/${videoId}/hqdefault.jpg" style="width: 153px; height: 153px; position:absolute; ">
-				 <iframe id="ifr${position}"  src="https://www.youtube.com/embed/${videoId}" frameborder="0"  allow="autoplay; encrypted-media" style="width: 153px; height: 153px"  ></iframe>
+				 <img id="img${position}" onclick="myFunction${position}()" src=" https://img.youtube.com/vi/${videoId}/hqdefault.jpg" style=" position:absolute; ">
+				 <iframe  id="ifr${position}"  src="https://www.youtube.com/embed/${videoId}" frameborder="0"  allow="autoplay; encrypted-media"   ></iframe>
 				<p id="vid${position}" style="display:none;">https://www.youtube.com/embed/${videoId}</p>
 				</div>
 
@@ -187,7 +188,6 @@
 				document.getElementById("ifr3").src=x2;
 				document.getElementById("ifr4").src=x3;
 				document.getElementById("ifr5").src=x4;
-
 				document.getElementById("ifr0").src +="?autoplay=1";
 
 			}
@@ -233,7 +233,6 @@
 			function myFunction3() {
 				document.getElementById("img3").style.display = "none";
 				document.getElementById("ifr3").src +="?autoplay=1";
-
 				document.getElementById("img1").style.display = "block"; 
 				document.getElementById("img2").style.display = "block"; 
 				document.getElementById("img0").style.display = "block"; 
@@ -254,7 +253,6 @@
 			function myFunction4() {
 				document.getElementById("img4").style.display = "none";
 				document.getElementById("ifr4").src +="?autoplay=1";
-
 				document.getElementById("img1").style.display = "block"; 
 				document.getElementById("img2").style.display = "block"; 
 				document.getElementById("img3").style.display = "block"; 
@@ -270,12 +268,10 @@
 				document.getElementById("ifr3").src=x2;
 				document.getElementById("ifr0").src=x3;
 				document.getElementById("ifr5").src=x4;
-
 			}
 			function myFunction5() {
 				document.getElementById("img5").style.display = "none";
 				document.getElementById("ifr5").src +="?autoplay=1";
-
 				document.getElementById("img1").style.display = "block"; 
 				document.getElementById("img2").style.display = "block"; 
 				document.getElementById("img3").style.display = "block"; 
@@ -291,7 +287,6 @@
 				document.getElementById("ifr3").src=x2;
 				document.getElementById("ifr4").src=x3;
 				document.getElementById("ifr0").src=x4;
-
 			};
 		</script>
 
