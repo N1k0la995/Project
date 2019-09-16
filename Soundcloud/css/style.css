@@ -32,8 +32,13 @@ body{  background-color: #f2f2f2; width:1240px; margin:0 auto;  font-family:  "L
 background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50%, rgb(255, 85, 0)); margin-top: 15px;}
 
 
+footer { margin-left:20px; margin-top: 10px; font-size:14px;}
+.line{ color: #ccc}
+footer a { color: #ccc}
+footer a:hover { cursor: pointer;  text-decoration: none;color: #999}
+
   footer   p {color: rgb(51, 51, 51);  }
-footer   p > .color{color: #3388DD; cursor: pointer; margin-left:20px; margin-right: 5px; font-size:14px;}
+footer   p > .color{color: #3388DD; cursor: pointer;  margin-right: 5px; }
 footer  p:hover  {color: rgb(51, 51, 51); cursor: pointer; }
 footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; }
 
