@@ -1,4 +1,3 @@
-html {  box-sizing: border-box; }
 body{  background-color: #f2f2f2; width:1240px; margin:0 auto;  font-family:  "Lucida Grande" sans-serif;}
 
 
@@ -6,7 +5,7 @@ body{  background-color: #f2f2f2; width:1240px; margin:0 auto;  font-family:  "L
 -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%; background-size: 100% 100%;   border-top: 4px solid #f50;   margin:0px auto;
 }
 
-.logo{ color: #ffffff;   position: absolute; top: 24px; left: 30px; font-size:32px; font-weight: 600; }
+.logo{ color: #ffffff;   position: absolute; top: 24px; left: 30px; font-size:32px; font-weight: 600;}
 .crea{   position: absolute; top: 24px; right: 30px;  background-color: transparent; font-size:14px;  font-weight: 600; -moz-font-weight:400}
 
 
@@ -14,7 +13,7 @@ body{  background-color: #f2f2f2; width:1240px; margin:0 auto;  font-family:  "L
 .crea button{   border: none;  background-color: transparent; }
 .crea button a{color: #ffff; text-decoration: none;} 
 
-.creators { background: url("../image/hp_creator_image-e08dee4.jpg"); background-position: center;  position: relative;  border-radius: 0; height:350px;   
+.creators { background: url("../image/hp_creator_image-e08dee4.jpg") ; background-position: center;  position: relative;  border-radius: 0; height:350px;   
   -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  background-size: 100% 100%;margin:0px auto; }
   
  .creators .row .col-lg-8  .calling { color: #ffffff; margin-top:70px; font-size: 36px; font-stretch: 100%; margin-left:-30px; }    
@@ -23,13 +22,13 @@ body{  background-color: #f2f2f2; width:1240px; margin:0 auto;  font-family:  "L
  .creators .row .col-lg-8  .Get2 { color: #ffffff;font-size: 24px; font-stretch: 100%;  display: none;      margin-left: -30px; } 
 
 
-.app1 { height: 450px;  position: relative;  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  }
-.app{position: absolute; right:50px; margin: 50px 0px;}
+.app1 { height: 450px;  position: relative; }
+.app{position: absolute; right:75px; margin-top: 100px ;}
 .app  p{color: rgb(51, 51, 51)}
 .app .row img{width: 100%; height: 100%;}
-.app a img { height:40px; width: 135px; margin: 30px 0px;}
+.app a img { height:40px; width: 135px; margin-top: 25px;}
 .app .Never::after{content: "";  display: block; width: 70px; height: 3px;
-background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50%, rgb(255, 85, 0)); margin-top: 15px;}
+background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50%, rgb(255, 85, 0)); margin-top: 10px;}
 
 
 footer { margin-left:20px; margin-top: 10px; font-size:14px;}
@@ -52,10 +51,11 @@ footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; }
 .close:hover, .close:focus {  text-decoration: none; cursor: pointer;}
 .modal-header { margin-top:8px; margin-bottom:0px; margin-left:16px; color: rgb(51, 51, 51); font-size: 22px; height: 30px; }
 .no-border{ border:none; }
-.modal-body a{margin: 3px 16px; text-decoration: none; overflow:scroll;}
-.modal-body { height: 100px; overflow-y:scroll; padding: 10px;}
+.modal-body a{margin: 3px 16px; text-decoration: none; }
+.modal-body { height: 100px;  padding: 10px;}
 .modal-body a:hover {color: rgb(51, 51, 51);text-decoration: none;}
-.modal-footer {  padding: 20px 16px; color: rgb(51, 51, 51);}
+.modal-footer {  height: 70px; position: relative ; }
+.modal-footer  button{  font-size: 14px;position: absolute ; top:25px; right: 20px; color: rgb(51, 51, 51);}
 
 .music {background-color: #ffffff; margin: 0px ;}
 
@@ -97,7 +97,6 @@ footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; }
  
    .creators {
     width: 1080px;
-     padding: 0px 20px;
 
  }
     .creators .row .col-lg-8  .Get{
@@ -130,7 +129,6 @@ padding: 0px 20px;
   .creators {
 
     width: 960px;
-padding: 0px 20px;
   }
   
    .creators .row .col-lg-8  .calling{
@@ -227,21 +225,27 @@ margin-left: 50px;
   }
 }
 
-@media only screen   and (max-width: 315px) {
+@media only screen   and (max-width: 297px) {
   .modal-body{
     width: auto;
   }
+
+  .modal{width: auto;}
   .modal-header{
+    width: auto;
     margin-top: 0px;
     margin-left: 0px;
 
     margin-bottom: 30px;
   }
 }
-@media only screen   and (max-width: 210px) {
- 
+@media only screen   and (max-width: 201px) {
+   .modal{width: auto;}
+
   .modal-header{
 margin-top: 0px;
+width: auto;
+
     margin-left: 0px;
     margin-bottom: 65px;
   }
