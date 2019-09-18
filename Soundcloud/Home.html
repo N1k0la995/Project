@@ -12,12 +12,15 @@
 		  
 	<body onload="authenticate().then(loadClient).then(execute) ">
 		
-		<div class="jumbotron">
+		<div class="jumbotron" id="jumbotron">
 			<div class="logo">
 				<h6> <img src="image/cloud.png" > SOUNDCLOUD </h6>
 			</div>
 			<div class="crea">
 				<button>	<a href="https://creators.soundcloud.com/" target="_blank" > For Creators</a></button>
+			</div>
+			<div class="sing">
+				<button>Sign up for free</button>
 			</div>
 		</div>
 
@@ -101,6 +104,19 @@
 
 		</div>
 		<script>
+
+
+			function randomImage(){
+				var images = ["image/head1.jpg","image/head2.jpg","image/head3.jpg"];
+				var size = images.length;
+				var x = Math.floor(size * Math.random());
+				console.log(x);
+				document.getElementById("jumbotron").style.backgroundImage = 
+				"url("+images[x] +")";
+			}
+			document.addEventListener("DOMContentLoaded", randomImage);
+
+
 			var modal = document.getElementById("myModal");
 			var btn = document.getElementById("myBtn");
 			var span = document.getElementsByClassName("close")[0];
