@@ -20,7 +20,7 @@
 				<button>	<a href="https://creators.soundcloud.com/" target="_blank" > For Creators</a></button>
 			</div>
 			<div class="sing">
-				<button>Sign up for free</button>
+				<button id="mod2">Sign up for free</button>
 			</div>
 		</div>
 
@@ -80,7 +80,32 @@
 			<p id="myBtn"  style="font-size: 14px"> <span  class="color" >Language:</span>English(US)</p>
 		</footer>
 
-			
+
+					
+		<div id="myModal1" class="modal1">
+			<span class="close2">&times;</span>
+			<div class="modal-content1">
+				<div class="modal-body1">
+					<form name="myForm">
+						<input type="text" id="uname" name="uname" placeholder="Username">
+						<input type="text" id="password" name="password" placeholder="Password">
+					</form> 
+					<button onclick="FunkcijaAlert()">Login</button>
+					<span class="help">
+					<a href="https://help.soundcloud.com/hc/en-us"  target="_blank">Need help? </a>
+					</span>
+					<p>We may use your email and devices for updates and tips on <br>
+						SoundCloud's products and services, and for activities notifications. <br>
+						You can unsubscribe for free at any time in your notification <br>
+						settings. <br>
+						We may use information you provide us in order to show you <br>
+						targeted ads as described in our <span class="privacy"><a href="https://soundcloud.com/pages/privacy" target="_blank">Privacy Policy.</a>  </span></p>
+				</div>
+			</div>
+		</div>
+
+
+
 		<div id="myModal" class="modal">
 			<span class="close">&times;</span>
 			<div class="modal-content">
@@ -105,7 +130,25 @@
 		</div>
 		<script>
 
-
+function FunkcijaAlert() {
+         var x = document.forms["myForm"]["uname"].value;
+		  var y = document.forms["myForm"]["password"].value;
+ if (x == null || x == "") {
+        alert("Enter username");
+        return false;
+    }		 
+	
+	  else if(y == null || y == "") {
+        alert("Enter password  ");
+        return false;
+    } 
+	  
+	
+	else
+	{
+		alert("Your message is sent.");
+	}
+}
 			function randomImage(){
 				var images = ["image/head1.jpg","image/head2.jpg","image/head3.jpg"];
 				var size = images.length;
@@ -116,7 +159,18 @@
 			}
 			document.addEventListener("DOMContentLoaded", randomImage);
 
+			var modal1 = document.getElementById("myModal1");
+			var btn1 = document.getElementById("mod2");
+			var span1 = document.getElementsByClassName("close2")[0];
 
+			btn1.onclick = function() {
+			modal1.style.display = "block";
+			document.body.style.overflow="hidden";
+			}
+			span1.onclick = function() {
+			modal1.style.display = "none";
+			document.body.style.overflow="auto";
+			}
 			var modal = document.getElementById("myModal");
 			var btn = document.getElementById("myBtn");
 			var span = document.getElementsByClassName("close")[0];
@@ -136,10 +190,12 @@
 			document.body.style.overflow="auto";
 			}
 			window.onclick = function(event) {
-			if (event.target == modal) {
+			if (event.target == modal ||	event.target == modal1 ) {
 			modal.style.display = "none";
+			modal1.style.display = "none";
 			document.body.style.overflow="auto";
 			}}
+
 			
 			function myFunction() {
 			document.getElementById("demo").innerHTML = "Hello World";
