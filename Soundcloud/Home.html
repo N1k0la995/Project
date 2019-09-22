@@ -45,7 +45,7 @@
 							Web, iOS, Android, Sonos, <br>
 							Chromecast, and Xbox One.</p>
 						<a href="https://apps.apple.com/us/app/soundcloud/id336353151" target="_blank"><img src="image/appStore.png"></a>
-						<a href="https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=us" target="_blank"><img src="image/googlePlay.png"></a>
+						<a href="https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=us" target="_blank"><img src="image/google-play-logo.jpg"></a>
 			</div>
 		</div>
 			<div class="creators">
@@ -88,7 +88,9 @@
 				<div class="modal-body1">
 					<form name="myForm">
 						<input type="text" id="uname" name="uname" placeholder="Username">
-						<input type="text" id="password" name="password" placeholder="Password">
+						<p id="username" style="color: red; font-size: 12px; "></p>
+						<input type="password" id="password" name="password" placeholder="Password">
+						<p id="passw" style="color: red; font-size: 12px; "></p>
 					</form> 
 					<button onclick="FunkcijaAlert()">Login</button>
 					<span class="help">
@@ -133,21 +135,31 @@
 function FunkcijaAlert() {
          var x = document.forms["myForm"]["uname"].value;
 		  var y = document.forms["myForm"]["password"].value;
+		  document.getElementById("passw").innerHTML =  "";
+		  document.getElementById("username").innerHTML =  "";
+
  if (x == null || x == "") {
-        alert("Enter username");
+	document.getElementById("username").innerHTML =  "Enter a username";
+	document.getElementById("passw").innerHTML =  "";
+
         return false;
     }		 
 	
 	  else if(y == null || y == "") {
-        alert("Enter password  ");
+		document.getElementById("username").innerHTML =  "";
+		document.getElementById("passw").innerHTML =  "Enter a password";
         return false;
     } 
 	  
-	
+
 	else
 	{
-		alert("Your message is sent.");
+		document.getElementById("passw").innerHTML = "";
+		document.getElementById("username").innerHTML = "";
+		alert("Welcome username: password:");
 	}
+
+
 }
 			function randomImage(){
 				var images = ["image/head1.jpg","image/head2.jpg","image/head3.jpg"];
@@ -171,6 +183,7 @@ function FunkcijaAlert() {
 			modal1.style.display = "none";
 			document.body.style.overflow="auto";
 			}
+
 			var modal = document.getElementById("myModal");
 			var btn = document.getElementById("myBtn");
 			var span = document.getElementsByClassName("close")[0];
@@ -195,12 +208,6 @@ function FunkcijaAlert() {
 			modal1.style.display = "none";
 			document.body.style.overflow="auto";
 			}}
-
-			
-			function myFunction() {
-			document.getElementById("demo").innerHTML = "Hello World";
-			}
-
 
 
 			var videoContainer = document.getElementById('video-container');
