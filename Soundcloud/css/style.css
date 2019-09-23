@@ -44,8 +44,7 @@ footer  p:hover  {color: rgb(51, 51, 51); cursor: pointer; }
 footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; }
 
 
-.close3 { color: #000;  position: absolute; top: -5px; right: 15px; font-size: 36px;}
-
+.close3 { color: #000;  position: absolute; top: -5px; right: 15px; font-size: 36px;text-decoration: none; cursor: pointer;}
 .modal1 { display: none;  position: fixed;  z-index: 1;  padding-top: 80px; padding-bottom: 30px;  left: 0; top: 0; border:none;
   width: 100%;  height: 100%;    background-color: rgba(242,242,242,.9);  overflow-y:scroll;  }
 .modal-content1 {position: relative center;  background-color: #fefefe; margin:0px auto; padding: 10px; width: 440px; height: 620px; font-size: 14px;  
