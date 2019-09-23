@@ -17,8 +17,10 @@
 				<h6> <img src="image/cloud.png" > SOUNDCLOUD </h6>
 			</div>
 			<div class="crea">
-				<button>	<a href="https://creators.soundcloud.com/" target="_blank" > For Creators</a></button>
+				<button class="creabt1" id="mod3">Create account</button>
+				<button class="creabt2">	<a href="https://creators.soundcloud.com/" target="_blank" > For Creators</a></button>
 			</div>
+
 			<div class="sing">
 				<button id="mod2">Sign up for free</button>
 			</div>
@@ -80,27 +82,50 @@
 			<p id="myBtn"  style="font-size: 14px"> <span  class="color" >Language:</span>English(US)</p>
 		</footer>
 
-
+		<div id="myModal2" class="modal1">
+				<span class="close2">&times;</span>
+				<div class="modal-content1">
+					<div class="modal-body1">
+						<form name="myForm">
+							<input type="text" id="uname" name="uname" placeholder="Username" oninput="myCheck()" required>
+							<p id="username" style="color: red; font-size: 12px; "></p>
+							<input type="password" id="password" name="password" placeholder="Password" oninput="myCheck1()" required>
+							<p id="passw" style="color: red; font-size: 12px; "></p>
+						</form> 
+						<button onclick="FunkcijaAlert1()">Create account</button>
+						<div class="help">
+						<a href="https://help.soundcloud.com/hc/en-us"  target="_blank">Need help? </a>
+						</div>
+						<p>We may use your email and devices for updates and tips on 
+							SoundCloud's products and services, and for activities notifications. 
+							You can unsubscribe for free at any time in your notification 
+							settings. </p>
+						<p>	We may use information you provide us in order to show you
+							targeted ads as described in our <span class="privacy"><a href="https://soundcloud.com/pages/privacy" target="_blank">Privacy Policy.</a>  </span></p>
+					</div>
+				</div>
+			</div>
+	
 					
 		<div id="myModal1" class="modal1">
 			<span class="close2">&times;</span>
 			<div class="modal-content1">
 				<div class="modal-body1">
 					<form name="myForm">
-						<input type="text" id="uname" name="uname" placeholder="Username">
+						<input type="text" id="uname" name="uname" placeholder="Username" oninput="myCheck()" required>
 						<p id="username" style="color: red; font-size: 12px; "></p>
-						<input type="password" id="password" name="password" placeholder="Password">
+						<input type="password" id="password" name="password" placeholder="Password" oninput="myCheck1()" required>
 						<p id="passw" style="color: red; font-size: 12px; "></p>
 					</form> 
 					<button onclick="FunkcijaAlert()">Login</button>
-					<span class="help">
+					<div class="help">
 					<a href="https://help.soundcloud.com/hc/en-us"  target="_blank">Need help? </a>
-					</span>
-					<p>We may use your email and devices for updates and tips on <br>
-						SoundCloud's products and services, and for activities notifications. <br>
-						You can unsubscribe for free at any time in your notification <br>
-						settings. <br>
-						We may use information you provide us in order to show you <br>
+					</div>
+					<p>We may use your email and devices for updates and tips on 
+						SoundCloud's products and services, and for activities notifications. 
+						You can unsubscribe for free at any time in your notification 
+						settings. </p>
+					<p>	We may use information you provide us in order to show you
 						targeted ads as described in our <span class="privacy"><a href="https://soundcloud.com/pages/privacy" target="_blank">Privacy Policy.</a>  </span></p>
 				</div>
 			</div>
@@ -130,7 +155,45 @@
 		</div>
 
 		</div>
-		<script>
+		<script> 
+		function myCheck() {
+			document.getElementById("username").innerHTML =  "";
+
+		}
+		function myCheck1() {
+			document.getElementById("passw").innerHTML =  "";
+
+		}
+		function FunkcijaAlert1() {
+         var x = document.forms["myForm"]["uname"].value;
+		  var y = document.forms["myForm"]["password"].value;
+		  document.getElementById("passw").innerHTML =  "";
+		  document.getElementById("username").innerHTML =  "";
+
+		if (x == null || x == "") {
+			document.getElementById("username").innerHTML =  "Enter a username";
+
+				return true;
+			}		 
+			
+			else if(y == null || y == "") {
+				document.getElementById("passw").innerHTML =  "Enter a password";
+				return true;
+			} 
+			
+
+			else  
+			{
+				var u=document.forms["myForm"]["uname"].value;
+				var p= document.forms["myForm"]["password"].value;
+
+			alert("Dear username:  "   +   u   +"  you successfully created account on Sound Cloud.");
+
+
+			}
+
+
+		}
 
 function FunkcijaAlert() {
          var x = document.forms["myForm"]["uname"].value;
@@ -140,23 +203,24 @@ function FunkcijaAlert() {
 
  if (x == null || x == "") {
 	document.getElementById("username").innerHTML =  "Enter a username";
-	document.getElementById("passw").innerHTML =  "";
 
-        return false;
+        return true;
     }		 
 	
 	  else if(y == null || y == "") {
-		document.getElementById("username").innerHTML =  "";
 		document.getElementById("passw").innerHTML =  "Enter a password";
-        return false;
+        return true;
     } 
 	  
 
-	else
+	else  
 	{
-		document.getElementById("passw").innerHTML = "";
-		document.getElementById("username").innerHTML = "";
-		alert("Welcome username: password:");
+		var u=document.forms["myForm"]["uname"].value;
+		var p= document.forms["myForm"]["password"].value;
+
+	alert("Welcome  username:"   +   u   +" password:"+   p   +"");
+
+
 	}
 
 
@@ -170,6 +234,13 @@ function FunkcijaAlert() {
 				"url("+images[x] +")";
 			}
 			document.addEventListener("DOMContentLoaded", randomImage);
+			var modal2 = document.getElementById("myModal2");
+			var btn2 = document.getElementById("mod3");
+			btn2.onclick = function() {
+			modal2.style.display = "block";
+			document.body.style.overflow="hidden";
+			}
+
 
 			var modal1 = document.getElementById("myModal1");
 			var btn1 = document.getElementById("mod2");
@@ -181,7 +252,10 @@ function FunkcijaAlert() {
 			}
 			span1.onclick = function() {
 			modal1.style.display = "none";
+			modal2.style.display = "none";
+
 			document.body.style.overflow="auto";
+
 			}
 
 			var modal = document.getElementById("myModal");
@@ -203,10 +277,12 @@ function FunkcijaAlert() {
 			document.body.style.overflow="auto";
 			}
 			window.onclick = function(event) {
-			if (event.target == modal ||	event.target == modal1 ) {
+			if (event.target == modal ||	event.target == modal1 ||	event.target == modal2 ) {
 			modal.style.display = "none";
 			modal1.style.display = "none";
+			modal2.style.display = "none";
 			document.body.style.overflow="auto";
+
 			}}
 
 
