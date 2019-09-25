@@ -39,12 +39,19 @@
 			<div class="video">
 				<div class="row justify-content-center" id="video-container"> 
 				</div>
+
+				<div class="control" id="control">
+					<button onclick="forward()"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgNmgydjEySDdWNnptMiA2bDggNlY2bC04IDZ6Ii8+PC9zdmc+Cg==" ></button>
+					<button onclick="backward()"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgMThsOC02LTgtNnYxMnptOC0xMnYxMmgyVjZoLTJ6Ii8+PC9zdmc+Cg==" ></button>
+				</div>
+
 			</div>
 
 			<div class="playlist">
 					<button >	<a href="https://soundcloud.com/discover"  > Explore trending playlists</a></button>
 			</div>
 		</div>
+
 		<div class="app1">
 					<img class="appImg" src="image/mobile.jpg" >
 			<div class="app">
@@ -149,7 +156,11 @@
 			<span class="close">&times;</span>
 			<div class="modal-content">
 				<div class="modal-header no-border">
-					<p >Select your language</p> 
+						<table style="width:100%">
+					 <tr>
+						 <td><p >Select your language</p></td>
+					</tr> 
+					</table>
 				</div>
 				<hr style="width:90%">
 				<div class="modal-body">
@@ -168,6 +179,7 @@
 
 		</div>
 		<script> 
+		
 
 		function myCheckCreate(){	
 			document.getElementById("username1").innerHTML =  "";
@@ -377,7 +389,7 @@
 				gapi.auth2.init({client_id: "272099904269-22euf40hdr21i671lgjrsrgispea40cg.apps.googleusercontent.com"});
 			})
 			
-
+			var p=0;
 			function myFunction0() {
 				document.getElementById("img0").style.display = "none"; 
 				document.getElementById("img1").style.display = "block"; 
@@ -396,6 +408,14 @@
 				document.getElementById("ifr4").src=x3;
 				document.getElementById("ifr5").src=x4;
 				document.getElementById("ifr0").src +="?autoplay=1";
+				if (p==1){
+					var cont =	document.getElementById("control");
+		 cont.style.display = "block";
+
+				}
+				else{
+					p=p+1;
+				}
 
 			}
 			function myFunction1() {
@@ -416,6 +436,14 @@
 				document.getElementById("ifr3").src=x2;
 				document.getElementById("ifr4").src=x3;
 				document.getElementById("ifr5").src=x4;
+				if (p==1){
+					var cont =	document.getElementById("control");
+		 cont.style.display = "block";
+
+				}
+				else{
+					p=p+1;
+				}
 			}
 			function myFunction2() {
 				document.getElementById("img2").style.display = "none";
@@ -435,6 +463,14 @@
 				document.getElementById("ifr3").src=x2;
 				document.getElementById("ifr4").src=x3;
 				document.getElementById("ifr5").src=x4;
+				if (p==1){
+					var cont =	document.getElementById("control");
+		 cont.style.display = "block";
+
+				}
+				else{
+					p=p+1;
+				}
 
 			}
 			function myFunction3() {
@@ -455,6 +491,14 @@
 				document.getElementById("ifr0").src=x2;
 				document.getElementById("ifr4").src=x3;
 				document.getElementById("ifr5").src=x4;
+				if (p==1){
+					var cont =	document.getElementById("control");
+		 cont.style.display = "block";
+
+				}
+				else{
+					p=p+1;
+				}
 
 			}
 			function myFunction4() {
@@ -475,6 +519,14 @@
 				document.getElementById("ifr3").src=x2;
 				document.getElementById("ifr0").src=x3;
 				document.getElementById("ifr5").src=x4;
+				if (p==1){
+					var cont =	document.getElementById("control");
+		 cont.style.display = "block";
+
+				}
+				else{
+					p=p+1;
+				}
 			}
 			function myFunction5() {
 				document.getElementById("img5").style.display = "none";
@@ -494,6 +546,14 @@
 				document.getElementById("ifr3").src=x2;
 				document.getElementById("ifr4").src=x3;
 				document.getElementById("ifr0").src=x4;
+				if (p==1){
+					var cont =	document.getElementById("control");
+		 cont.style.display = "block";
+
+				}
+				else{
+					p=p+1;
+				}
 			};
 		</script>
 
