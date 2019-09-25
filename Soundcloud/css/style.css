@@ -94,7 +94,8 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
 .playlist a{color:#FFFFFF; font-size: 18px; text-decoration: none}
 
 
-
+.video .control{ width: 1200px;  height: 50px; background-color: rgb(206,206,206); display:none;}
+.video .control button{height: 50px; position: relative; left: 48%; }
 .video {width: 1200px; position: relative; margin:0px 10px;}
 .video  .row img { width: 180px; height: 180px; margin: 0px 10px}
 .video  .row iframe {width: 180px; height: 180px; margin: 0px 10px}
@@ -124,6 +125,7 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
 
    }
    .video {width: 1040px; position: relative; margin:0px 10px;}
+   .video .control{ width: 1040px;  }
 
    .video  .row img {width: 153px; height: 153px;  margin: 0px 10px}
    .video  .row iframe {width: 153px; height: 153px;  margin: 0px 10px }
@@ -156,6 +158,7 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
   }
 
   .video {width: 920px; position: relative; margin:0px 10px;}
+  .video .control{ width: 920px;  }
 
   .app1   .appImg{width: 450px; height: 325px; margin-top: 75px;}
 
@@ -303,7 +306,7 @@ input[type=password] {  width: 320px}
 
 
 }
-@media only screen   and (max-width: 297px) {
+@media only screen   and (max-width: 299px) {
   .modal-body{
     width: auto;
   }
@@ -317,13 +320,13 @@ input[type=password] {  width: 320px}
     margin-bottom: 30px;
   }
 }
-@media only screen   and (max-width: 201px) {
+@media only screen   and (max-width: 203px) {
    .modal{width: auto;}
 
   .modal-header{
   margin-top: 0px;
-
+font-size:16px;
     margin-left: 0px;
-    margin-bottom: 65px;
+    margin-bottom: 40px;
   }
 }
