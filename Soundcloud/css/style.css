@@ -5,10 +5,10 @@ body{  background-color: #f2f2f2; width:1240px; margin:0 auto;  font-family:  "L
 -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%; background-size: 100% 100%;   border-top: 4px solid #f50;   margin:0px auto;
 }
 
-.logo h1{ color: #ffffff;   position: absolute; top: 24px; left: 30px; font-size:15px; font-weight: 600;     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;}
+.logo h1{ color: #ffffff;   position: absolute; top: 24px; left: 30px; font-size:16px; font-weight: 600;     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;}
 .crea{   position: absolute; top: 24px; right: 30px;  background-color: transparent; font-size:14px;  font-weight: 600;}
 .sing button{   position: absolute; top: 60%; left: 40%; width: 210px; height: 46px; border:none; border-radius: 3px; cursor: pointer;  background-color:  #FF5500; font-size:18px; color: #fff  }
-.sing p{text-align: center; color:  #FFFFFF; font-size: 36px; }
+.sing p{text-align: center; color:  #FFFFFF; font-size: 36px;position: absolute; top: 40%; left: 30%; }
 .crea .creabt2{   border: none;  background-color: transparent; }
 .crea .creabt2 a{color: #ffff; text-decoration: none;} 
 .crea .creabt1{  color: #ffff; text-decoration: none;  width: 130px; height: 30px; border:none; border-radius: 3px; cursor: pointer;  background-color:  #FF5500;}
@@ -25,9 +25,9 @@ body{  background-color: #f2f2f2; width:1240px; margin:0 auto;  font-family:  "L
  .creators .row .col-lg-8  .Get2 { color: #ffffff;font-size: 24px; font-stretch: 100%;  display: none;      margin-left: -30px; } 
 
 
-.app1 { height: 500px;  position: relative; }
-.app1   .appImg{width: 730px; height: 450px;  margin: 50px 50px 0px 50px; position: absolute;}
-.app{position: absolute;  top: 20px;right:80px; margin-top: 80px ;}
+.app1 { height: 450px;  position: relative; }
+.app1   .appImg{width: 730px; height: 400px;  margin: 50px 50px 0px 50px; position: absolute;}
+.app{position: absolute;  top: 20px;right:80px; margin-top: 50px ;}
 .app  p{color: rgb(51, 51, 51)}
 .app .row img{width: 100%; height: 100%;}
 .app a img { height:40px; width: 135px; margin-top: 25px;}
@@ -53,7 +53,8 @@ footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; }
 .close3 { color: #000;  position: absolute; top: -5px; right: 15px; font-size: 36px;text-decoration: none; cursor: pointer;}
 .modal1 { display: none;  position: fixed;  z-index: 1;  padding-top: 80px; padding-bottom: 30px;  left: 0; top: 0; border:none;
   width: 100%;  height: 100%;    background-color: rgba(242,242,242,.9);  overflow-y:scroll;  }
-  .modal1 h1 { font-size: 32px; color:#333333; font-weight: 600; text-align: center;}
+  .modal1 h1 { font-size: 32px; color:#333333; font-weight: 400; text-align: center;}
+
 .modal-content1 {position: relative center;  background-color: #fefefe; margin:0px auto; padding: 10px; width: 440px; height: 620px; font-size: 14px;  
   -webkit-animation-name: animatetop;  -webkit-animation-duration: 0.4s;  animation-name: animatetop;  animation-duration: 0.4s;  }
 .close2 { color: #000;  position: absolute; top: -5px; right: 15px; font-size: 36px;}
@@ -90,7 +91,7 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
 .no-border{ border:none; }
 
 .playlist{padding: 50px 0px;}
-.playlist button{width: 252px; height:46px;background-color: #FF5500; margin-left:40%; border: none;  }
+.playlist button{width: 252px; height:46px;background-color: #FF5500; margin-left:38%; border: none;  }
 .playlist a{color:#FFFFFF; font-size: 18px; text-decoration: none}
 
 
@@ -134,9 +135,11 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
     width: 1080px;
 
  }
- .app1{height: 400px}
- .app {margin-top: 30px;}
- .app1   .appImg{width: 570px; height: 350px;}
+ .app1{height: 350px}
+ .app {margin-top: 15px;}
+ .app1   .appImg{width: 570px; height: 300px;}
+ .app a img { height:40px; width: 135px; margin-top: 10px;}
+
 
     .creators .row .col-lg-8  .Get{
      display: none;
@@ -159,8 +162,8 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
 
   .video {width: 920px; position: relative; margin:0px 10px;}
   .video .control{ width: 920px;  }
-
-  .app1   .appImg{width: 450px; height: 325px; margin-top: 75px;}
+  .app1{height: 325px}
+  .app1   .appImg{width: 450px; height: 300px; margin-top: 75px;}
 
   .jumbotron {
     background-size: cover;
@@ -265,6 +268,7 @@ margin-left: 50px;
 
   }
   .modal-body{
+    width: auto;
     overflow-x: hidden;
   }
 }
@@ -274,22 +278,29 @@ margin-left: 50px;
     width: auto;
   margin: 0px 20px;
   }
+
   .modal-body1  button {
     width: 100%;
   }
   .help {
     width: 100%;
   }
-  
+  .modal-body1{
+    overflow-x: hidden;
+  }
 
 }
-@media only screen   and (max-width: 370px) {
+@media only screen   and (max-width: 391px) {
 
 .modal-content1{
   width: auto;
 margin: 0px 20px;
+}  .modal-body1   h1{
+  width: 320px;
 }
-
+  .modal-body1   h2{
+    width: 320px;
+  }
 .modal-body1  button {
   width: 320px;
 }
@@ -321,12 +332,13 @@ input[type=password] {  width: 320px}
   }
 }
 @media only screen   and (max-width: 203px) {
-   .modal{width: auto;}
+   .modal{width: auto;
+  }
 
-  .modal-header{
+  .modal-header {
   margin-top: 0px;
-font-size:16px;
+  font-size: 16px;
     margin-left: 0px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
 }
