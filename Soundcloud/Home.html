@@ -22,8 +22,8 @@
 			</div>
 
 			<div class="sing">
-				<p style="padding-top: 60px;">Connect on SoundCloud</p>
-				<p style="font-size: 18px; margin-top: -10px;">Discover, stream, and share a constantly expanding mix of music <br> from emerging and major artists around the world.</p>
+				<p style="margin-top: -60px; margin-left: 50px;" >Connect on SoundCloud</p>
+				<p style="font-size: 18px; ">Discover, stream, and share a constantly expanding mix of music <br> from emerging and major artists around the world.</p>
 				<button id="mod2">Sign up for free</button>
 			</div>
 		</div>
@@ -41,8 +41,8 @@
 				</div>
 
 				<div class="control" id="control">
-					<button onclick="forward()"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgNmgydjEySDdWNnptMiA2bDggNlY2bC04IDZ6Ii8+PC9zdmc+Cg==" ></button>
-					<button onclick="backward()"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgMThsOC02LTgtNnYxMnptOC0xMnYxMmgyVjZoLTJ6Ii8+PC9zdmc+Cg==" ></button>
+						<button id="button1" onclick="backward(); "><img src=" data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgNmgydjEySDdWNnptMiA2bDggNlY2bC04IDZ6Ii8+PC9zdmc+Cg==" ></button>
+					<button id="button2" onclick="forward()" disabled><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgMThsOC02LTgtNnYxMnptOC0xMnYxMmgyVjZoLTJ6Ii8+PC9zdmc+Cg==" ></button>
 				</div>
 
 			</div>
@@ -81,7 +81,7 @@
 			</div>
 				<div class="listen">
 					<p style="padding-top:50px;">Thanks for listening. Now join in. </p>
-					<p style="font-size: 24px">Save tracks, follow artists and build playlists. All for free.</p>
+					<p style="font-size: 24px; margin-top: -20px">Save tracks, follow artists and build playlists. All for free.</p>
 				</div>
 		<footer>
 			<a href="https://soundcloud.com/popular/searches" title="Popular searches" > Popular searches </a><span class="line">-</span>
@@ -103,7 +103,7 @@
 				<span class="close3">&times;</span>
 				<div class="modal-content1">
 					<div class="modal-body1">
-						<h1>Create your SoundCloud account</h1>
+						<h1 >Create your SoundCloud account</h1>
 						<form name="myForm1">
 							<input type="text" id="uname1" name="uname" placeholder="Username" oninput="myCheckCreate()" required>
 							<p id="username1" style="color: red; font-size: 12px; "></p>
@@ -180,6 +180,9 @@
 		</div>
 		<script> 
 		
+		function backward() {
+            document.getElementById("button2").disabled = false;
+        }
 
 		function myCheckCreate(){	
 			document.getElementById("username1").innerHTML =  "";
