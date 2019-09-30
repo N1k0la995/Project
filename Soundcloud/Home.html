@@ -11,7 +11,7 @@
 	</head>
 		  
 	<body onload="authenticate().then(loadClient).then(execute) ">
-		<header>
+		
 			<div class="jumbotron" id="jumbotron">
 				<div class="logo">
 					<h1> <img src="image/cloud.png" > SOUNDCLOUD </h1>
@@ -27,7 +27,6 @@
 					<button id="mod2">Sign up for free</button>
 				</div>
 			</div>
-		</header>
 		<div class="music">
 			<div class="container-fluid">
 				<div class="row justify-content-center">
@@ -108,9 +107,9 @@
 						<input type="text" id="uname1" name="uname" placeholder="Username" oninput="CreateAccountCheckUsername()" required>
 						<p id="username1" class="form"></p>
 						<input type="password" id="password1" name="password" placeholder="Password" oninput="CreateAccountCheckPassword()" required>
-						<p id="passw1"class="form" ></p>
+						<p id="passw1" class="form" ></p>
 					</form> 
-					<button onclick="CreateAccountModal()">Create account</button>
+					<button onclick="CreateAccount()">Create account</button>
 					<div class="help">
 					<a href="https://help.soundcloud.com/hc/en-us"  target="_blank">Need help? </a>
 					</div>
@@ -134,9 +133,9 @@
 						<input type="text" id="uname" name="uname" placeholder="Username" oninput="SingUpForFreeCheckUsername()" required>
 						<p id="username" class="form" ></p>
 						<input type="password" id="password" name="password" placeholder="Password" oninput="SingUpForFreeCheckPassword()" required>
-						<p id="passw"class="form" ></p>
+						<p id="passw" class="form" ></p>
 					</form> 
-					<button onclick="SingUpForFreeModal()">Login</button>
+					<button onclick="SingUpForFree()">Login</button>
 					<div class="help">
 					<a href="https://help.soundcloud.com/hc/en-us"  target="_blank">Need help? </a>
 					</div>
@@ -177,8 +176,8 @@
 			</div>
 		</div>
 
-		</div>
-		<script src="js/main.js"></script>
+		<script src="js/main.js">
+		</script>
 
     </body>
 </html>
