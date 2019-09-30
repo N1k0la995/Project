@@ -15,7 +15,7 @@
 
 		}
 		
-		function CreateAccountModal() {
+		function CreateAccount() {
 			var username = document.forms["myForm1"]["uname1"].value;
 			var password = document.forms["myForm1"]["password1"].value;
 			document.getElementById("passw1").innerHTML =  "";
@@ -38,7 +38,7 @@
 			else  
 			{
 				var username=document.forms["myForm1"]["uname1"].value;
-				var password= document.forms["myForm1"]["password1"].value;
+				var password=document.forms["myForm1"]["password1"].value;
 				alert("Dear username:  "   +   username   +"  you successfully created account on Sound Cloud.");
 			}
 		}
@@ -54,7 +54,7 @@
 			document.getElementById("passw").innerHTML =  "";
 			document.forms["myForm"]["password"].style.border="";
 		}
-		function SingUpForFreeModal() {
+		function SingUpForFree() {
 				var username = document.forms["myForm"]["uname"].value;
 				var password = document.forms["myForm"]["password"].value;
 				document.getElementById("passw").innerHTML =  "";
@@ -87,7 +87,7 @@
 			var size = images.length;
 			var x = Math.floor(size * Math.random());
 			console.log(x);
-			document.getElement("jumbotron").style.backgroundImage = 
+			document.getElementById("jumbotron").style.backgroundImage = 
 			"url("+images[x] +")";
 		}
 		document.addEventListener("DOMContentLoaded", randomImage);
