@@ -5,40 +5,40 @@
 
 		function CreateAccountCheckUsername(){	
 			document.getElementById("username1").innerHTML =  "";
-			document.forms["myForm1"]["uname1"].style.border="";
+			document.forms["FormCreateAccount"]["uname1"].style.border="";
 
 
 		}
 		function CreateAccountCheckPassword(){	
 			document.getElementById("passw1").innerHTML =  "";
-			document.forms["myForm1"]["password1"].style.border="";
+			document.forms["FormCreateAccount"]["password1"].style.border="";
 
 		}
 		
 		function CreateAccount() {
-			var username = document.forms["myForm1"]["uname1"].value;
-			var password = document.forms["myForm1"]["password1"].value;
+			var username = document.forms["FormCreateAccount"]["uname1"].value;
+			var password = document.forms["FormCreateAccount"]["password1"].value;
 			document.getElementById("passw1").innerHTML =  "";
 			document.getElementById("username1").innerHTML =  "";
 
 			if (username == null || username == "") {
 				document.getElementById("username1").innerHTML =  "Enter a username";
-				document.forms["myForm1"]["uname1"].style.border=" 1px solid red";
-				document.forms["myForm1"]["password1"].style.border="";
+				document.forms["FormCreateAccount"]["uname1"].style.border=" 1px solid red";
+				document.forms["FormCreateAccount"]["password1"].style.border="";
 				return true;
 				}		 
 				
 			else if(password == null || password == "") {
 				document.getElementById("passw1").innerHTML =  "Enter a password";
-				document.forms["myForm1"]["password1"].style.border=" 1px solid red";
-				document.forms["myForm1"]["uname1"].style.border="";
+				document.forms["FormCreateAccount"]["password1"].style.border=" 1px solid red";
+				document.forms["FormCreateAccount"]["uname1"].style.border="";
 				return true;
 			} 
 			
 			else  
 			{
-				var username=document.forms["myForm1"]["uname1"].value;
-				var password=document.forms["myForm1"]["password1"].value;
+				var username=document.forms["FormCreateAccount"]["uname1"].value;
+				var password=document.forms["FormCreateAccount"]["password1"].value;
 				alert("Dear username:  "   +   username   +"  you successfully created account on Sound Cloud.");
 			}
 		}
@@ -47,37 +47,37 @@
 
 		function SingUpForFreeCheckUsername() {
 			document.getElementById("username").innerHTML =  "";
-			document.forms["myForm"]["uname"].style.border="";
+			document.forms["FormSingUpForFree"]["uname"].style.border="";
 		}
 
 		function SingUpForFreeCheckPassword() {
 			document.getElementById("passw").innerHTML =  "";
-			document.forms["myForm"]["password"].style.border="";
+			document.forms["FormSingUpForFree"]["password"].style.border="";
 		}
 		function SingUpForFree() {
-				var username = document.forms["myForm"]["uname"].value;
-				var password = document.forms["myForm"]["password"].value;
+				var username = document.forms["FormSingUpForFree"]["uname"].value;
+				var password = document.forms["FormSingUpForFree"]["password"].value;
 				document.getElementById("passw").innerHTML =  "";
 				document.getElementById("username").innerHTML =  "";
 
 			if (username == null || username == "") {
 				document.getElementById("username").innerHTML =  "Enter a username";
-				document.forms["myForm"]["uname"].style.border=" 1px solid red";
-				document.forms["myForm"]["password"].style.border="";
+				document.forms["FormSingUpForFree"]["uname"].style.border=" 1px solid red";
+				document.forms["FormSingUpForFree"]["password"].style.border="";
 					return true;
 				}		 
 				
 			else if(password == null || password == "") {
 				document.getElementById("passw").innerHTML =  "Enter a password";
-				document.forms["myForm"]["password"].style.border=" 1px solid red";
-				document.forms["myForm"]["uname"].style.border="";
+				document.forms["FormSingUpForFree"]["password"].style.border=" 1px solid red";
+				document.forms["FormSingUpForFree"]["uname"].style.border="";
 				return true;
 			} 
 			
 			else  
 			{
-				var username=document.forms["myForm"]["uname"].value;
-				var password= document.forms["myForm"]["password"].value;
+				var username=document.forms["FormSingUpForFree"]["uname"].value;
+				var password= document.forms["FormSingUpForFree"]["password"].value;
 				alert("Welcome  username:  " + username +"  password:  "+ password +" ");
 			}
 		}
@@ -87,55 +87,55 @@
 			var size = images.length;
 			var x = Math.floor(size * Math.random());
 			console.log(x);
-			document.getElementById("jumbotron").style.backgroundImage = 
+			document.getElementById("randomImageHeader").style.backgroundImage = 
 			"url("+images[x] +")";
 		}
 		document.addEventListener("DOMContentLoaded", randomImage);
 
 
-		var CreateAccountModal = document.getElementById("CreateAccountModal");
-		var btn2 = document.getElementById("mod3");
-		var span2 = document.getElementsByClassName("close3")[0];
+		var CreateAccountModal= document.getElementById("CreateAccountModal");
+		var buttonCreateAccount= document.getElementById("CreateAccountButtonModal");
+		var spanCreateAccount= document.getElementsByClassName("close2")[0];
 
-		btn2.onclick = function() {
+		buttonCreateAccount.onclick = function() {
 		CreateAccountModal.style.display = "block";
 		document.body.style.overflow="hidden";
 		}
-		span2.onclick = function() {
+		spanCreateAccount.onclick = function() {
 		CreateAccountModal.style.display = "none";
 		document.body.style.overflow="auto";
 
 		}
 
 
-		var SingUpForFreeModal = document.getElementById("SingUpForFreeModal");
-		var btn1 = document.getElementById("mod2");
-		var span1 = document.getElementsByClassName("close2")[0];
+		var SingUpForFreeModal= document.getElementById("SingUpForFreeModal");
+		var buttonSingUpForFree= document.getElementById("SingUpForFreeButtonModal");
+		var spanSingUpForFree= document.getElementsByClassName("close3")[0];
 
-		btn1.onclick = function() {
+		buttonSingUpForFree.onclick = function() {
 		SingUpForFreeModal.style.display = "block";
 		document.body.style.overflow="hidden";
 		}
-		span1.onclick = function() {
+		spanSingUpForFree.onclick = function() {
 		SingUpForFreeModal.style.display = "none";
 		document.body.style.overflow="auto";
 		}
 
 		var Language = document.getElementById("Language");
-		var btn = document.getElementById("myBtn");
-		var span = document.getElementsByClassName("close")[0];
-		var cls = document.getElementsByClassName("close1")[0];
+		var buttonLanguage = document.getElementById("myBtn");
+		var spanLanguage = document.getElementsByClassName("close")[0];
+		var clsLanguage = document.getElementsByClassName("closeLanguageButton")[0];
 		
-		btn.onclick = function() {
+		buttonLanguage.onclick = function() {
 		Language.style.display = "block";
 		document.body.style.overflow="hidden";
 		}
 
-		span.onclick = function() {
+		spanLanguage.onclick = function() {
 		Language.style.display = "none";
 		document.body.style.overflow="auto";
 		}
-		cls.onclick = function(){
+		clsLanguage.onclick = function(){
 		Language.style.display = "none";
 		document.body.style.overflow="auto";
 		}
@@ -180,8 +180,8 @@
 				const position =item.snippet.position;
 				output +=  `
 				<div class="col-2">
-				<img  id="img${position}" onclick="myFunction${position}()" src=" https://img.youtube.com/vi/${videoId}/hqdefault.jpg" style=" position:absolute; ">
-				<iframe   id="ifr${position}"  src="https://www.youtube.com/embed/${videoId}" frameborder="0"  allow="autoplay; encrypted-media"   ></iframe>
+				<img class="VideoImage" id="img${position}" onclick="YouTubeVideo${position}()" src=" https://img.youtube.com/vi/${videoId}/hqdefault.jpg" style=" position:absolute; ">
+				<iframe class="IFrameYoutube"  id="ifr${position}"  src="https://www.youtube.com/embed/${videoId}" frameborder="0"  allow="autoplay; encrypted-media"   ></iframe>
 			<p id="vid${position}" style="display:none;">https://www.youtube.com/embed/${videoId}</p>
 			</div>
 
@@ -200,24 +200,24 @@
 		})
 		
 		var p=0;
-		function myFunction0() {
-			document.getElementById("img0").style.display = "none"; 
+		function YouTubeVideo0() {
+			var y= document.getElementsByClassName("VideoImage");
+			for(var i = 0; i < y.length; i++){
+				y[i].style.display = "block"; 
+				document.getElementById("img0").style.display = "none"; 
+			} 
 			document.getElementById("ifr0").src +="?autoplay=1";
-			document.getElementById("img1").style.display = "block"; 
-			document.getElementById("img2").style.display = "block"; 
-			document.getElementById("img3").style.display = "block"; 
-			document.getElementById("img4").style.display = "block"; 
-			document.getElementById("img5").style.display = "block"; 
 			var x = document.getElementById("vid1").innerHTML;
 			var x1 = document.getElementById("vid2").innerHTML;
 			var x2 = document.getElementById("vid3").innerHTML;
 			var x3 = document.getElementById("vid4").innerHTML;
 			var x4 = document.getElementById("vid5").innerHTML;
-			document.getElementById("ifr1").src=x;
-			document.getElementById("ifr2").src=x1;
-			document.getElementById("ifr3").src=x2;
-			document.getElementById("ifr4").src=x3;
-			document.getElementById("ifr5").src=x4;
+			var y1= document.getElementsByClassName("IFrameYoutube");
+				y1[1].src=x;
+				y1[2].src=x1;
+				y1[3].src=x2;
+				y1[4].src=x3;
+				y1[5].src=x4;				
 			if (p==1){
 				var cont =	document.getElementById("control");
 				cont.style.display = "block";
@@ -227,24 +227,27 @@
 			}
 
 		}
-		function myFunction1() {
-			document.getElementById("img1").style.display = "none";
+		function YouTubeVideo1() {
+			var y= document.getElementsByClassName("VideoImage");
+			for(var i = 0; i < y.length; i++){
+	
+				y[i].style.display = "block"; 
+				document.getElementById("img1").style.display = "none";
+
+			}				
 			document.getElementById("ifr1").src +="?autoplay=1";
-			document.getElementById("img0").style.display = "block"; 
-			document.getElementById("img2").style.display = "block"; 
-			document.getElementById("img3").style.display = "block"; 
-			document.getElementById("img4").style.display = "block"; 
-			document.getElementById("img5").style.display = "block"; 
 			var x = document.getElementById("vid0").innerHTML;
 			var x1 = document.getElementById("vid2").innerHTML;
 			var x2 = document.getElementById("vid3").innerHTML;
 			var x3 = document.getElementById("vid4").innerHTML;
 			var x4 = document.getElementById("vid5").innerHTML;
-			document.getElementById("ifr0").src=x;
-			document.getElementById("ifr2").src=x1;
-			document.getElementById("ifr3").src=x2;
-			document.getElementById("ifr4").src=x3;
-			document.getElementById("ifr5").src=x4;
+			var y1= document.getElementsByClassName("IFrameYoutube");
+				y1[0].src=x;
+				y1[2].src=x1;
+				y1[3].src=x2;
+				y1[4].src=x3;
+				y1[5].src=x4;
+			
 			if (p==1){
 				var cont =	document.getElementById("control");
 				cont.style.display = "block";
@@ -254,24 +257,26 @@
 				p=p+1;
 			}
 		}
-		function myFunction2() {
-			document.getElementById("img2").style.display = "none";
+		function YouTubeVideo2() {
+			var y= document.getElementsByClassName("VideoImage");
+			for(var i = 0; i < y.length; i++){
+				y[i].style.display = "block"; 
+				document.getElementById("img2").style.display = "none";
+
+			}
 			document.getElementById("ifr2").src +="?autoplay=1";
-			document.getElementById("img1").style.display = "block"; 
-			document.getElementById("img0").style.display = "block"; 
-			document.getElementById("img3").style.display = "block"; 
-			document.getElementById("img4").style.display = "block"; 
-			document.getElementById("img5").style.display = "block"; 
 			var x = document.getElementById("vid1").innerHTML;
 			var x1 = document.getElementById("vid0").innerHTML;
 			var x2 = document.getElementById("vid3").innerHTML;
 			var x3 = document.getElementById("vid4").innerHTML;
 			var x4 = document.getElementById("vid5").innerHTML;
-			document.getElementById("ifr1").src=x;
-			document.getElementById("ifr0").src=x1;
-			document.getElementById("ifr3").src=x2;
-			document.getElementById("ifr4").src=x3;
-			document.getElementById("ifr5").src=x4;
+			var y1= document.getElementsByClassName("IFrameYoutube");
+				y1[1].src=x;
+				y1[0].src=x1;
+				y1[3].src=x2;
+				y1[4].src=x3;
+				y1[5].src=x4;
+		
 			if (p==1){
 				var cont =	document.getElementById("control");
 				cont.style.display = "block";
@@ -282,24 +287,26 @@
 			}
 
 		}
-		function myFunction3() {
-			document.getElementById("img3").style.display = "none";
-			document.getElementById("ifr3").src +="?autoplay=1";
-			document.getElementById("img1").style.display = "block"; 
-			document.getElementById("img2").style.display = "block"; 
-			document.getElementById("img0").style.display = "block"; 
-			document.getElementById("img4").style.display = "block"; 
-			document.getElementById("img5").style.display = "block"; 
+		function YouTubeVideo3() {
+			var y= document.getElementsByClassName("VideoImage");
+			for(var i = 0; i < y.length; i++){
+				
+				y[i].style.display = "block"; 
+				document.getElementById("img3").style.display = "none";
+			}	
+			document.getElementById("ifr3").src +="?autoplay=1";	
 			var x = document.getElementById("vid1").innerHTML;
 			var x1 = document.getElementById("vid2").innerHTML;
 			var x2 = document.getElementById("vid0").innerHTML;
 			var x3 = document.getElementById("vid4").innerHTML;
 			var x4 = document.getElementById("vid5").innerHTML;
-			document.getElementById("ifr1").src=x;
-			document.getElementById("ifr2").src=x1;
-			document.getElementById("ifr0").src=x2;
-			document.getElementById("ifr4").src=x3;
-			document.getElementById("ifr5").src=x4;
+			var y1= document.getElementsByClassName("IFrameYoutube");
+				y1[1].src=x;
+				y1[2].src=x1;
+				y1[0].src=x2;
+				y1[4].src=x3;
+				y1[5].src=x4;
+		
 			if (p==1){
 				var cont =	document.getElementById("control");
 				cont.style.display = "block";
@@ -309,24 +316,26 @@
 			}
 
 		}
-		function myFunction4() {
-			document.getElementById("img4").style.display = "none";
-			document.getElementById("ifr4").src +="?autoplay=1";
-			document.getElementById("img1").style.display = "block"; 
-			document.getElementById("img2").style.display = "block"; 
-			document.getElementById("img3").style.display = "block"; 
-			document.getElementById("img0").style.display = "block"; 
-			document.getElementById("img5").style.display = "block"; 
+		function YouTubeVideo4() {
+			var y= document.getElementsByClassName("VideoImage");
+			for(var i = 0; i < y.length; i++){
+				y[i].style.display = "block"; 
+				document.getElementById("img4").style.display = "none";
+
+			}	
+			document.getElementById("ifr4").src +="?autoplay=1";		
 			var x = document.getElementById("vid1").innerHTML;
 			var x1 = document.getElementById("vid2").innerHTML;
 			var x2 = document.getElementById("vid3").innerHTML;
 			var x3 = document.getElementById("vid0").innerHTML;
 			var x4 = document.getElementById("vid5").innerHTML;
-			document.getElementById("ifr1").src=x;
-			document.getElementById("ifr2").src=x1;
-			document.getElementById("ifr3").src=x2;
-			document.getElementById("ifr0").src=x3;
-			document.getElementById("ifr5").src=x4;
+			var y1= document.getElementsByClassName("IFrameYoutube");
+				y1[1].src=x;
+				y1[2].src=x1;
+				y1[3].src=x2;
+				y1[0].src=x3;
+				y1[5].src=x4;
+
 			if (p==1){
 				var cont =	document.getElementById("control");
 				cont.style.display = "block";
@@ -336,24 +345,26 @@
 				p=p+1;
 			}
 		}
-		function myFunction5() {
-			document.getElementById("img5").style.display = "none";
+		function YouTubeVideo5() {
+			var y= document.getElementsByClassName("VideoImage");
+			for(var i = 0; i < y.length; i++){
+				
+				y[i].style.display = "block"; 			
+				document.getElementById("img5").style.display = "none";
+			}
 			document.getElementById("ifr5").src +="?autoplay=1";
-			document.getElementById("img1").style.display = "block"; 
-			document.getElementById("img2").style.display = "block"; 
-			document.getElementById("img3").style.display = "block"; 
-			document.getElementById("img4").style.display = "block"; 
-			document.getElementById("img0").style.display = "block"; 
 			var x = document.getElementById("vid1").innerHTML;
 			var x1 = document.getElementById("vid2").innerHTML;
 			var x2 = document.getElementById("vid3").innerHTML;
 			var x3 = document.getElementById("vid4").innerHTML;
 			var x4 = document.getElementById("vid0").innerHTML;
-			document.getElementById("ifr1").src=x;
-			document.getElementById("ifr2").src=x1;
-			document.getElementById("ifr3").src=x2;
-			document.getElementById("ifr4").src=x3;
-			document.getElementById("ifr0").src=x4;
+			var y1= document.getElementsByClassName("IFrameYoutube");
+				y1[1].src=x;
+				y1[2].src=x1;
+				y1[3].src=x2;
+				y1[4].src=x3;
+				y1[0].src=x4;
+			
 			if (p==1){
 				var cont =	document.getElementById("control");
 				cont.style.display = "block";
