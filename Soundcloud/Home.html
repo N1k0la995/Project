@@ -11,22 +11,23 @@
 	</head>
 		  
 	<body onload="authenticate().then(loadClient).then(execute) ">
-		
-			<div class="jumbotron" id="jumbotron">
+
+		<header id="randomImageHeader">
 				<div class="logo">
 					<h1> <img src="image/cloud.png" > SOUNDCLOUD </h1>
 				</div>
 				<div class="crea">
-					<button class="creabt1" id="mod3">Create account</button>
+					<button class="creabt1" id="CreateAccountButtonModal">Create account</button>
 					<button class="creabt2">	<a href="https://creators.soundcloud.com/" target="_blank" > For Creators</a></button>
 				</div>
 
 				<div class="sing">
 					<p  >Connect on SoundCloud</p>
 					<p >Discover, stream, and share a constantly expanding mix of music <br> from emerging and major artists around the world.</p>
-					<button id="mod2">Sign up for free</button>
+					<button id="SingUpForFreeButtonModal">Sign up for free</button>
 				</div>
-			</div>
+		</header>
+
 		<div class="music">
 			<div class="container-fluid">
 				<div class="row justify-content-center">
@@ -82,6 +83,7 @@
 			<p>Thanks for listening. Now join in. </p>
 			<p>Save tracks, follow artists and build playlists. All for free.</p>
 		</div>
+
 		<footer>
 			<a href="https://soundcloud.com/popular/searches" title="Popular searches" > Popular searches </a><span class="line">-</span>
 			<a href="https://soundcloud.com/people/directory" title="People directory">	Directory </a> <span class="line">-</span>
@@ -99,11 +101,11 @@
 		</footer>
 
 		<div id="CreateAccountModal" class="modal1">
-			<span class="close3">&times;</span>
+			<span class="close2" >&times;</span>
 			<div class="modal-content1">
 				<div class="modal-body1">
 					<h1 >Create your SoundCloud account</h1>
-					<form name="myForm1">
+					<form name="FormCreateAccount">
 						<input type="text" id="uname1" name="uname" placeholder="Username" oninput="CreateAccountCheckUsername()" required>
 						<p id="username1" class="form"></p>
 						<input type="password" id="password1" name="password" placeholder="Password" oninput="CreateAccountCheckPassword()" required>
@@ -125,11 +127,11 @@
 	
 					
 		<div id="SingUpForFreeModal" class="modal1">
-			<span class="close2">&times;</span>
+			<span class="close3" >&times;</span>
 			<div class="modal-content1">
 				<div class="modal-body1">
 					<h1>Sign up for free</h1>
-					<form name="myForm">
+					<form name="FormSingUpForFree">
 						<input type="text" id="uname" name="uname" placeholder="Username" oninput="SingUpForFreeCheckUsername()" required>
 						<p id="username" class="form" ></p>
 						<input type="password" id="password" name="password" placeholder="Password" oninput="SingUpForFreeCheckPassword()" required>
@@ -171,7 +173,7 @@
 					</table>    
 				</div>
 				<div class="modal-footer">
-					<button class="close1">Cancel</button>
+					<button class="closeLanguageButton">Cancel</button>
 				</div>
 			</div>
 		</div>
