@@ -7,7 +7,6 @@
 		<link rel="stylesheet" href="css/style.css">		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://apis.google.com/js/api.js"></script>
-
 	</head>
 		  
 	<body onload="authenticate().then(loadClient).then(execute) ">
@@ -16,18 +15,16 @@
 				<div class="logo">
 					<h1> <img src="image/cloud.png" > SOUNDCLOUD </h1>
 				</div>
-				<div class="crea">
-					<button class="creabt1" id="CreateAccountButtonModal">Create account</button>
-					<button class="creabt2">	<a href="https://creators.soundcloud.com/" target="_blank" > For Creators</a></button>
+				<div class="HeaderButtons">
+					<button class="CreateAccountButton"  onclick="ButtonCreateAccountModal()">Create account</button>
+					<button class="ForCreatorsButton">	<a href="https://creators.soundcloud.com/" target="_blank" > For Creators</a></button>
 				</div>
-
-				<div class="sing">
+				<div class="ConnectOnSoundCloud">
 					<p  >Connect on SoundCloud</p>
 					<p >Discover, stream, and share a constantly expanding mix of music <br> from emerging and major artists around the world.</p>
-					<button id="SingUpForFreeButtonModal">Sign up for free</button>
+					<button  onclick="ButtonSingUpForFreeModal()" >Sign up for free</button>
 				</div>
 		</header>
-
 		<div class="music">
 			<div class="container-fluid">
 				<div class="row justify-content-center">
@@ -36,24 +33,24 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="video">
 				<div class="row justify-content-center" id="video-container"> 
 				</div>
 				<div class="control" id="control">
-						<button id="button1" onclick="backward(); "><img src=" data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgNmgydjEySDdWNnptMiA2bDggNlY2bC04IDZ6Ii8+PC9zdmc+Cg==" ></button>
-					<button id="button2" onclick="forward()" disabled><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgMThsOC02LTgtNnYxMnptOC0xMnYxMmgyVjZoLTJ6Ii8+PC9zdmc+Cg==" ></button>
+					<button id="backward" onclick="backward(); "><img src=" data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgNmgydjEySDdWNnptMiA2bDggNlY2bC04IDZ6Ii8+PC9zdmc+Cg==" ></button>
+					<button id="forward" onclick="forward()" disabled><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgMThsOC02LTgtNnYxMnptOC0xMnYxMmgyVjZoLTJ6Ii8+PC9zdmc+Cg==" ></button>
 				</div>
 			</div>
-
 			<div class="playlist">
 				<button><a href="https://soundcloud.com/discover"> Explore trending playlists</a></button>
 			</div>
-		</div>
 
-		<div class="app1">
-				<img class="appImg" src="image/mobile.jpg" >
-			<div class="app">
+			<p id="demo"></p>
+
+		</div>
+		<div class="Mobile">
+				<img class="MobileImage" src="image/mobile.jpg" >
+			<div class="MobileText">
 				<p class="Never" > Never stop listening</p>
 				<p> SoundCloud is available on <br>
 					Web, iOS, Android, Sonos, <br>
@@ -62,7 +59,6 @@
 				<a href="https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=us" target="_blank"><img src="image/google-play-logo.jpg"></a>
 			</div>
 		</div>
-
 		<div class="creators">
 			<div class="row ">
 				<div class="col-lg-8 offset-lg-1">
@@ -78,12 +74,10 @@
 				</div>
 			</div>
 		</div>
-		
 		<div class="listen">
 			<p>Thanks for listening. Now join in. </p>
 			<p>Save tracks, follow artists and build playlists. All for free.</p>
 		</div>
-
 		<footer>
 			<a href="https://soundcloud.com/popular/searches" title="Popular searches" > Popular searches </a><span class="line">-</span>
 			<a href="https://soundcloud.com/people/directory" title="People directory">	Directory </a> <span class="line">-</span>
@@ -97,11 +91,10 @@
 			<a href="https://soundcloud.com/pages/cookies" title="Cookies policy"> Cookies  </a><span class="line">-</span>
 			<a href="https://soundcloud.com/imprint" title="Company information"> Imprint  </a><span class="line">-</span>
 			<a href="https://soundcloud.com/charts/top" title="Charts">Charts </a>
-			<p id="myBtn" > <span  class="color" >Language:</span>English(US)</p>
+			<p onclick="OpenLanguageModal()"> <span  class="color" >Language:</span>English(US)</p>
 		</footer>
-
 		<div id="CreateAccountModal" class="modal1">
-			<span class="close2" >&times;</span>
+			<span class="close2" onclick="CloseCreateAccount()" >&times;</span>
 			<div class="modal-content1">
 				<div class="modal-body1">
 					<h1 >Create your SoundCloud account</h1>
@@ -123,11 +116,9 @@
 						targeted ads as described in our <span class="privacy"><a href="https://soundcloud.com/pages/privacy" target="_blank">Privacy Policy.</a>  </span></p>
 				</div>
 			</div>
-		</div>
-	
-					
+		</div>					
 		<div id="SingUpForFreeModal" class="modal1">
-			<span class="close3" >&times;</span>
+			<span class="close3" onclick="CloseSingUpForFreeModal()"  >&times;</span>
 			<div class="modal-content1">
 				<div class="modal-body1">
 					<h1>Sign up for free</h1>
@@ -150,11 +141,8 @@
 				</div>
 			</div>
 		</div>
-
-
-
 		<div id="Language" class="modal">
-			<span class="close">&times;</span>
+			<span class="close" onclick="CloseLanguageModal()">&times;</span>
 			<div class="modal-content">
 				<div class="modal-header no-border">
 						<table style="width:100%">
@@ -173,13 +161,12 @@
 					</table>    
 				</div>
 				<div class="modal-footer">
-					<button class="closeLanguageButton">Cancel</button>
+					<button  onclick="CloseButtonLanguageModal()">Cancel</button>
 				</div>
 			</div>
 		</div>
 
-		<script src="js/main.js">
-		</script>
+		<script src="js/main.js"></script>
 
     </body>
 </html>
