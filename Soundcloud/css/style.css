@@ -1,81 +1,90 @@
 body{  background-color: #f2f2f2; width:1240px; margin:0 auto;  font-family:  "Lucida Grande" sans-serif;}
 
+header{ background: url("../image/head1.jpg") ;background-position: center;  border-radius: 0;  
+  height:450px; position: relative;  -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;
+  background-size: 100% 100%;   border-top: 4px solid #f50;   margin:0px auto; }
 
-header{ background: url("../image/head1.jpg") ;background-position: center;  border-radius: 0;   height:450px; position: relative;  
--webkit-background-size: 100% 100%; -moz-background-size: 100% 100%; background-size: 100% 100%;   border-top: 4px solid #f50;   margin:0px auto;
-}
+.logo h1{ color: #ffffff;   position: absolute; top: 24px; left: 30px; font-size:16px; font-weight: 600;     
+  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;}
+.HeaderButtons{   position: absolute; top: 24px; right: 30px;  background-color: transparent; font-size:14px;  font-weight: 600;}
+.ConnectOnSoundCloud button{   position: absolute; top: 60%; left: 40%; width: 210px; height: 46px; border:none; 
+  border-radius: 3px; cursor: pointer;  background-color:  #FF5500; font-size:18px; color:#FFFFFF ; }
+.ConnectOnSoundCloud p:first-child{margin-top: -60px; margin-left: 50px; text-align: center; 
+  color:  #FFFFFF; font-size: 36px;position: absolute; top: 43%; left: 29%; }
+.ConnectOnSoundCloud p{text-align: center; color:  #FFFFFF; font-size: 18px;position: absolute; top: 43%; left: 29%; }
 
-.logo h1{ color: #ffffff;   position: absolute; top: 24px; left: 30px; font-size:16px; font-weight: 600;     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;}
-.crea{   position: absolute; top: 24px; right: 30px;  background-color: transparent; font-size:14px;  font-weight: 600;}
+.HeaderButtons .ForCreatorsButton{   border: none;  background-color: transparent; }
+.HeaderButtons .ForCreatorsButton a{color: #FFFFFF; text-decoration: none;} 
+.HeaderButtons .CreateAccountButton{  color: #FFFFFF; text-decoration: none;  width: 130px; height: 30px; 
+  border:none; border-radius: 3px; cursor: pointer;  background-color:  #FF5500;}
 
-.sing button{   position: absolute; top: 60%; left: 40%; width: 210px; height: 46px; border:none; border-radius: 3px; cursor: pointer;  background-color:  #FF5500; font-size:18px; color: #fff  }
-.sing p:first-child{margin-top: -60px; margin-left: 50px; text-align: center; color:  #FFFFFF; font-size: 36px;position: absolute; top: 43%; left: 29%; }
-.sing p{text-align: center; color:  #FFFFFF; font-size: 18px;position: absolute; top: 43%; left: 29%; }
+.music {background-color: #ffffff; margin: 0px ;}
+.music p {font-size: 24px;margin-top: 30px; text-align: center; color: rgb(51, 51, 51)}
+.no-border{ border:none; }
+.playlist{padding: 50px 0px;}
+.playlist button{width: 252px; height:46px;background-color: #FF5500; margin-left:38%; border: none;  }
+.playlist a{color:#FFFFFF; font-size: 18px; text-decoration: none}
+.video .control{ width: 1200px;  height: 50px; background-color: rgb(206,206,206); display:none;}
+.video .control button{height: 50px; position: relative; left: 48%; }
+.video {width: 1200px; position: relative; margin:0px 10px;}
+.video  .row img { width: 180px; height: 180px; margin: 0px 10px}
+.video  .row iframe {width: 180px; height: 180px; margin: 0px 10px}
 
 
-.crea .creabt2{   border: none;  background-color: transparent; }
-.crea .creabt2 a{color: #ffff; text-decoration: none;} 
-.crea .creabt1{  color: #ffff; text-decoration: none;  width: 130px; height: 30px; border:none; border-radius: 3px; cursor: pointer;  background-color:  #FF5500;}
-
-
-
+.Mobile { height: 450px;  position: relative; }
+.Mobile   .MobileImage{width: 730px; height: 400px;  margin: 50px 50px 0px 50px; position: absolute;}
+.MobileText{position: absolute;  top: 20px;right:95px; margin-top: 50px ;}
+.MobileText  p{color: rgb(51, 51, 51)}
+.MobileText .row img{width: 100%; height: 100%;}
+.MobileText a img { height:40px; width: 135px; margin-top: 25px;}
+.MobileText .Never {font-size: 36px; }
+.MobileText p {font-size: 24px; font-stretch: 100%;}
+.MobileText .Never::after{content: "";  display: block; width: 70px; height: 3px; margin-top: 10px;
+  background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50%, rgb(255, 85, 0)); }
 
 .creators { background: url("../image/hp_creator_image-e08dee4.jpg") ; background-position: center;  position: relative;  border-radius: 0; height:350px;   
-  -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  background-size: 100% 100%;margin:0px auto; }
-  
- .creators .row .col-lg-8  .calling { color: #ffffff; margin-top:70px; font-size: 36px; font-stretch: 100%; margin-left:-30px; }    
- .creators .row .col-lg-8  .Get { color: #ffffff;font-size: 24px; font-stretch: 100%;margin-left:-30px;}  
- .creators .row .col-lg-8  .Get1 { display: none; color: #ffffff;     margin-left: -30px; } 
- .creators .row .col-lg-8  .Get2 { color: #ffffff;font-size: 24px; font-stretch: 100%;  display: none;      margin-left: -30px; } 
-
-
-.app1 { height: 450px;  position: relative; }
-.app1   .appImg{width: 730px; height: 400px;  margin: 50px 50px 0px 50px; position: absolute;}
-.app{position: absolute;  top: 20px;right:95px; margin-top: 50px ;}
-.app  p{color: rgb(51, 51, 51)}
-.app .row img{width: 100%; height: 100%;}
-.app a img { height:40px; width: 135px; margin-top: 25px;}
-.app .Never {font-size: 36px; }
-.app p {font-size: 24px; font-stretch: 100%;}
-.app .Never::after{content: "";  display: block; width: 70px; height: 3px;
-background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50%, rgb(255, 85, 0)); margin-top: 10px;}
-
-
-footer { font-size:14px;  background-color: #FFFFFF; padding: 50px 30px 50px 30px;}
-.line{ color: #ccc; }
-footer a { color: #ccc; }
-footer a:hover { cursor: pointer;  text-decoration: none;color: #999}
-
-  footer   p {color: rgb(51, 51, 51);font-size: 14px  }
-footer   p > .color{color: #3388DD; cursor: pointer;  margin-right: 5px; }
-footer  p:hover  {color: rgb(51, 51, 51); cursor: pointer; }
-footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; }
+-webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  background-size: 100% 100%;margin:0px auto; }
+.creators .row .col-lg-8  .calling { color: #ffffff; margin-top:70px; font-size: 36px; font-stretch: 100%; margin-left:-30px; }    
+.creators .row .col-lg-8  .Get { color: #ffffff;font-size: 24px; font-stretch: 100%;margin-left:-30px;}  
+.creators .row .col-lg-8  .Get1 { display: none; color: #ffffff;     margin-left: -30px; } 
+.creators .row .col-lg-8  .Get2 { color: #ffffff;font-size: 24px; font-stretch: 100%;  display: none;  margin-left: -30px; } 
 
 .listen{ background-color: #FFFFFF; height: 450px; position: relative;}
 .listen p:first-child{padding-top:50px;font-size: 36px; text-align: center; color: #333333}
 .listen p{ color: #333333; font-size: 24px; margin-top: -20px; text-align: center;}
 
 
+footer { font-size:14px;  background-color: #FFFFFF; padding: 50px 30px 50px 30px;}
+footer a { color: #ccc; }
+footer a:hover { cursor: pointer;  text-decoration: none;color: #999}
+footer   p {color: rgb(51, 51, 51);font-size: 14px  }
+footer   p > .color{color: #3388DD; cursor: pointer;  margin-right: 5px; }
+footer  p:hover  {color: rgb(51, 51, 51); cursor: pointer; }
+footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; }
+.line{ color: #ccc; }
+
+
+
 .close3 { color: #000;  position: absolute; top: -5px; right: 15px; font-size: 36px;text-decoration: none; cursor: pointer;}
 .modal1 { display: none;  position: fixed;  z-index: 1;  padding-top: 80px; padding-bottom: 30px;  left: 0; top: 0; border:none;
   width: 100%;  height: 100%;    background-color: rgba(242,242,242,.9);  overflow-y:scroll;  }
-  .modal1 h1 { font-size: 32px; color:#333333; font-weight: 400; text-align: center;}
-
-.modal-content1 {position: relative center;  background-color: #fefefe; margin:0px auto; padding: 10px; width: 440px; height: 620px; font-size: 14px;  
-  -webkit-animation-name: animatetop;  -webkit-animation-duration: 0.4s;  animation-name: animatetop;  animation-duration: 0.4s;  }
+.modal1 h1 { font-size: 32px; color:#333333; font-weight: 400; text-align: center;}
+.modal-content1 {position: relative center;  background-color: #fefefe; margin:0px auto; padding: 10px;
+   width: 440px; height: 620px; font-size: 14px;  -webkit-animation-name: animatetop; 
+   -webkit-animation-duration: 0.4s;  animation-name: animatetop;  animation-duration: 0.4s;  }
 .close2 { color: #000;  position: absolute; top: -5px; right: 15px; font-size: 36px;}
 .close2:hover, .close2:focus {  text-decoration: none; cursor: pointer;}
 .modal-body1 { height: auto;  padding: 10px; position: relative;}
-.modal-body1  button{ background-color: #FF5500;border:none;  width: 400px; height: 40px; color: #FFFFFF; font-size: 16px}
-.modal-body1 p{color: #999999; font-size: 12px; display: block; margin: 10px 0px;     font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
-}
+.modal-body1  button{ background-color: #FF5500;border:none;  width: 400px; height: 40px; 
+  color: #FFFFFF; font-size: 16px}
+.modal-body1 p{color: #999999; font-size: 12px; display: block; margin: 10px 0px;    
+   font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;}
 .modal-body1 form{margin: 70px 0px;}
 .help {width: 400px; margin: 10px 0px 40px 0px;  }
-
 .help a{color: #3388DD; font-size: 12px; font-weight:600 ;  text-decoration: none;   float: right;   }
 .privacy  a{ color: #3388DD;  margin: 0px; font-size: 12px; text-decoration: none; }
-input[type=text] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-sizing: border-box; }
-input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-sizing: border-box;}
+input[type=text] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-sizing: border-box; border:1px solid #ccc;   box-shadow: 0px 0px ;}
+input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-sizing: border-box; border:1px solid #ccc;  box-shadow: 0px 0px ;} 
 
 .modal-body1 .form {color: red; font-size: 12px;}
 
@@ -85,7 +94,6 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
 .modal-content {position: relative center;  background-color: #fefefe; margin:0px auto; padding: 10px; width: 550px;  font-size: 14px;  
   -webkit-animation-name: animatetop;  -webkit-animation-duration: 0.4s;  animation-name: animatetop;  animation-duration: 0.4s;  }
   .modal button{cursor: pointer; background-color: white; border: 0px;}
-
   .modal-body .english{color:rgb(51, 51, 51); cursor: text;}
 .close { color: #000;  position: absolute; top: 8px; right: 10px; font-size: 34px; font-weight: bold; }
 .close:hover, .close:focus {  text-decoration: none; cursor: pointer; }
@@ -97,20 +105,7 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
 .modal-footer {  height: 70px; position: relative ; }
 .modal-footer  button{  font-size: 14px;position: absolute ; top:25px; right: 20px; color: rgb(51, 51, 51);}
 
-.music {background-color: #ffffff; margin: 0px ;}
-.music p {font-size: 24px;margin-top: 30px; text-align: center; color: rgb(51, 51, 51)}
-.no-border{ border:none; }
 
-.playlist{padding: 50px 0px;}
-.playlist button{width: 252px; height:46px;background-color: #FF5500; margin-left:38%; border: none;  }
-.playlist a{color:#FFFFFF; font-size: 18px; text-decoration: none}
-
-
-.video .control{ width: 1200px;  height: 50px; background-color: rgb(206,206,206); display:none;}
-.video .control button{height: 50px; position: relative; left: 48%; }
-.video {width: 1200px; position: relative; margin:0px 10px;}
-.video  .row img { width: 180px; height: 180px; margin: 0px 10px}
-.video  .row iframe {width: 180px; height: 180px; margin: 0px 10px}
 
 
 @-webkit-keyframes animatetop {
@@ -146,10 +141,10 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
     width: 1080px;
 
  }
- .app1{height: 350px}
- .app {margin-top: 15px;}
- .app1   .appImg{width: 570px; background-size: 100%; height: 300px;}
- .app a img { height:40px; width: 135px; margin-top: 10px;}
+ .Mobile{height: 350px}
+ .MobileText {margin-top: 15px;}
+ .Mobile   .MobileImage{width: 570px; background-size: 100%; height: 300px;}
+ .MobileText a img { height:40px; width: 135px; margin-top: 10px;}
 
 
     .creators .row .col-lg-8  .Get{
@@ -173,8 +168,9 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
 
   .video {width: 920px; position: relative; margin:0px 10px;}
   .video .control{ width: 920px;  }
-  .app1{height: 325px}
-  .app1   .appImg{width: 450px;background-size: 100%; height: 300px; margin:30px 0px 0px 50px;}
+
+  .Mobile{height: 325px}
+  .Mobile   .MobileImage{width: 450px;background-size: 100%; height: 300px; margin:30px 0px 0px 50px;}
 
   .jumbotron {
     background-size: cover;
