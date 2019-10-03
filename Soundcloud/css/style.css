@@ -7,11 +7,11 @@ header{ background: url("../image/head1.jpg") ;background-position: center;  bor
 .logo h1{ color: #ffffff;   position: absolute; top: 24px; left: 30px; font-size:16px; font-weight: 600;     
   font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;}
 .HeaderButtons{   position: absolute; top: 24px; right: 30px;  background-color: transparent; font-size:14px;  font-weight: 600;}
-.ConnectOnSoundCloud button{   position: absolute; top: 60%; left: 40%; width: 210px; height: 46px; border:none; 
+.ConnectOnSoundCloud button{   position: absolute; top: 65%; left: 42%; width: 210px; height: 46px; border:none; 
   border-radius: 3px; cursor: pointer;  background-color:  #FF5500; font-size:18px; color:#FFFFFF ; }
 .ConnectOnSoundCloud p:first-child{margin-top: -60px; margin-left: 50px; text-align: center; 
-  color:  #FFFFFF; font-size: 36px;position: absolute; top: 43%; left: 29%; }
-.ConnectOnSoundCloud p{text-align: center; color:  #FFFFFF; font-size: 18px;position: absolute; top: 43%; left: 29%; }
+  color:  #FFFFFF; font-size: 36px;position: absolute; top: 43%; left: 30%; }
+.ConnectOnSoundCloud p{text-align: center; color:  #FFFFFF; font-size: 18px;position: absolute; top: 43%; left: 29%;text-align: center;  }
 
 .HeaderButtons .ForCreatorsButton{   border: none;  background-color: transparent; }
 .HeaderButtons .ForCreatorsButton a{color: #FFFFFF; text-decoration: none;} 
@@ -30,7 +30,6 @@ header{ background: url("../image/head1.jpg") ;background-position: center;  bor
 .video  .row img { width: 180px; height: 180px; margin: 0px 10px}
 .video  .row iframe {width: 180px; height: 180px; margin: 0px 10px}
 
-
 .Mobile { height: 450px;  position: relative; }
 .Mobile   .MobileImage{width: 730px; height: 400px;  margin: 50px 50px 0px 50px; position: absolute;}
 .MobileText{position: absolute;  top: 20px;right:95px; margin-top: 50px ;}
@@ -42,17 +41,25 @@ header{ background: url("../image/head1.jpg") ;background-position: center;  bor
 .MobileText .Never::after{content: "";  display: block; width: 70px; height: 3px; margin-top: 10px;
   background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50%, rgb(255, 85, 0)); }
 
+.MobileTextSpanish{position: absolute;  top: 20px;right:95px; margin-top: 50px ;}
+.MobileTextSpanish  p{color: rgb(51, 51, 51)}
+.MobileTextSpanish .row img{width: 100%; height: 100%;}
+.MobileTextSpanish a img { height:40px; width: 135px; margin-top: 25px;}
+.MobileTextSpanish .Never {font-size: 36px; }
+.MobileTextSpanish p {font-size: 24px; font-stretch: 100%;}
+.MobileTextSpanish .Never::after{content: "";  display: block; width: 70px; height: 3px; margin-top: 10px;
+  background-image: linear-gradient(to right, rgb(125, 1, 161), rgb(255, 51, 0) 50%, rgb(255, 85, 0)); }
+
 .creators { background: url("../image/hp_creator_image-e08dee4.jpg") ; background-position: center;  position: relative;  border-radius: 0; height:350px;   
 -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  background-size: 100% 100%;margin:0px auto; }
 .creators .row .col-lg-8  .calling { color: #ffffff; margin-top:70px; font-size: 36px; font-stretch: 100%; margin-left:-30px; }    
 .creators .row .col-lg-8  .Get { color: #ffffff;font-size: 24px; font-stretch: 100%;margin-left:-30px;}  
 .creators .row .col-lg-8  .Get1 { display: none; color: #ffffff;     margin-left: -30px; } 
 .creators .row .col-lg-8  .Get2 { color: #ffffff;font-size: 24px; font-stretch: 100%;  display: none;  margin-left: -30px; } 
-
+.creators .row .col-lg-8  .Llamada2{display: none; }
 .listen{ background-color: #FFFFFF; height: 450px; position: relative;}
 .listen p:first-child{padding-top:50px;font-size: 36px; text-align: center; color: #333333}
 .listen p{ color: #333333; font-size: 24px; margin-top: -20px; text-align: center;}
-
 
 footer { font-size:14px;  background-color: #FFFFFF; padding: 50px 30px 50px 30px;}
 footer a { color: #ccc; }
@@ -62,8 +69,6 @@ footer   p > .color{color: #3388DD; cursor: pointer;  margin-right: 5px; }
 footer  p:hover  {color: rgb(51, 51, 51); cursor: pointer; }
 footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; }
 .line{ color: #ccc; }
-
-
 
 .close3 { color: #000;  position: absolute; top: -5px; right: 15px; font-size: 36px;text-decoration: none; cursor: pointer;}
 .modal1 { display: none;  position: fixed;  z-index: 1;  padding-top: 80px; padding-bottom: 30px;  left: 0; top: 0; border:none;
@@ -85,28 +90,23 @@ footer  p:hover > .color {color: rgb(51, 51, 51); cursor: pointer; }
 .privacy  a{ color: #3388DD;  margin: 0px; font-size: 12px; text-decoration: none; }
 input[type=text] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-sizing: border-box; border:1px solid #ccc;   box-shadow: 0px 0px ;}
 input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-sizing: border-box; border:1px solid #ccc;  box-shadow: 0px 0px ;} 
-
 .modal-body1 .form {color: red; font-size: 12px;}
 
-
-.modal { display: none;  position: fixed;  z-index: 1;  padding-top: 80px;  left: 0; top: 0; border:none;
+.languageModal { display: none;  position: fixed;  z-index: 1;  padding-top: 80px;  left: 0; top: 0; border:none;
   width: 100%;  height: 100%;    background-color: rgba(242,242,242,.9)    }
-.modal-content {position: relative center;  background-color: #fefefe; margin:0px auto; padding: 10px; width: 550px;  font-size: 14px;  
+.modal-language-content {position: relative center;  background-color: #fefefe; margin:0px auto; padding: 10px; width: 550px;  font-size: 14px;  
   -webkit-animation-name: animatetop;  -webkit-animation-duration: 0.4s;  animation-name: animatetop;  animation-duration: 0.4s;  }
-  .modal button{cursor: pointer; background-color: white; border: 0px;}
-  .modal-body .english{color:rgb(51, 51, 51); cursor: text;}
+  .languageModal button{cursor: pointer; background-color: white; border: 0px;}
+  .modal-language-body .currentLanguage{color:rgb(51, 51, 51); cursor: text;}
 .close { color: #000;  position: absolute; top: 8px; right: 10px; font-size: 34px; font-weight: bold; }
 .close:hover, .close:focus {  text-decoration: none; cursor: pointer; }
-.modal-header { margin-top:8px; margin-bottom:0px; margin-left:16px; color: rgb(51, 51, 51); font-size: 22px; height: 30px; }
+.modal-language-header { margin-top:8px; margin-bottom:0px; margin-left:16px; color: rgb(51, 51, 51); font-size: 22px; height: 30px; }
 .no-border{ border:none; }
-.modal-body a{margin: 3px 16px; text-decoration: none;  }
-.modal-body { height: 100px;  padding: 10px; }
-.modal-body a:hover {color: rgb(51, 51, 51);text-decoration: none;}
-.modal-footer {  height: 70px; position: relative ; }
-.modal-footer  button{  font-size: 14px;position: absolute ; top:25px; right: 20px; color: rgb(51, 51, 51);}
-
-
-
+.modal-language-body a{margin: 3px 16px; text-decoration: none;  }
+.modal-language-body { height: 100px;  padding: 10px; }
+.modal-language-body a:hover {color: rgb(51, 51, 51);text-decoration: none;}
+.modal-language-footer {  height: 70px; position: relative ; }
+.modal-language-footer  button{  font-size: 14px;position: absolute ; top:25px; right: 20px; color: rgb(51, 51, 51);}
 
 @-webkit-keyframes animatetop {
   from {top:-300px; opacity:0} 
@@ -117,89 +117,143 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
   from {top:-300px; opacity:0}
   to {top:0; opacity:1}
 }
-
-
 @media only screen   and (max-width: 1240px) {
-
-  body{
-    width: 1080px;
-    margin:0px auto;
-  }
-   .jumbotron {
-     width: 1080px;
-     padding: 0px 20px;
-     background-size: cover;
-
-   }
-   .video {width: 1040px; position: relative; margin:0px 10px;}
-   .video .control{ width: 1040px;  }
-
-   .video  .row img {width: 153px; height: 153px;  margin: 0px 10px}
-   .video  .row iframe {width: 153px; height: 153px;  margin: 0px 10px }
- 
-   .creators {
-    width: 1080px;
-
- }
- .Mobile{height: 350px}
- .MobileText {margin-top: 15px;}
- .Mobile   .MobileImage{width: 570px; background-size: 100%; height: 300px;}
- .MobileText a img { height:40px; width: 135px; margin-top: 10px;}
-
-
+    body{
+      width: 1080px;
+      margin:0px auto;
+    }
+    .jumbotron {
+      width: 1080px;
+      padding: 0px 20px;
+      background-size: cover;
+    }
+    .video {width: 1040px; position: relative; margin:0px 10px;}
+    .video .control{ width: 1040px;  }
+    .video  .row img {width: 153px; height: 153px;  margin: 0px 10px}
+    .video  .row iframe {width: 153px; height: 153px;  margin: 0px 10px }
+    .creators { width: 1080px; }
+    .Mobile{height: 350px}
+    .MobileText {margin-top: 15px;}
+    .MobileTextSpanish { margin-top: -30px;}
+    .Mobile   .MobileImage{width: 570px; background-size: 100%; height: 300px;}
+    .MobileText a img { height:40px; width: 135px; margin-top: 10px;}
+    .MobileTextSpanish a img { height:40px; width: 135px; margin-top: 0px;}
+    .creators .row .col-lg-8  .Llamada2{
+      color: #ffffff; 
+      font-size: 36px;
+      font-stretch: 100%;
+      display: inline-block;
+        margin-left:-30px; 
+    }    
+    .creators .row .col-lg-8  .Llamada{
+    display: none
+    }
     .creators .row .col-lg-8  .Get{
-     display: none;
-   }
+      display: none;
+    }
     .creators .row .col-lg-8 .Get2{
-     display: inline-block;
-   }
- }
+      display: inline-block;
+    }
+}
 @media only screen   and (max-width: 1080px) {
-  body{
-    width: 960px;
-    margin:0px auto;
-  }
-  .logo{
-    margin-left: 8px;
-  }
+    body{
+      width: 960px;
+      margin:0px auto;
+    }
+    .logo{
+      margin-left: 8px;
+    }
+      .music {
+        width: 960px;
+    }
+    .video {width: 920px; position: relative; margin:0px 10px;}
+    .video .control{ width: 920px;  }
+    .Mobile{height: 325px}
+    .Mobile   .MobileImage{width: 450px;background-size: 100%; height: 300px; margin:30px 0px 0px 50px;}
+    .jumbotron {
+      background-size: cover;
+      width: 960px;
+    }
+    .creators {
+      width: 960px;
+    }
+    .creators .row .col-lg-8  .calling{
+      font-size: 24px;
+      margin-top: 70px;
+    }
+    .creators .row .col-lg-8  .Llamada{
+    display: none;
+    }
+    .creators .row .col-lg-8  .Llamada2{
+      font-size: 24px;
+      margin-top: 70px;
+      color: #ffffff;
+      display: inline-block; 
+    }
+    .video  .row img {width: 136px; height: 136px;  margin: 0px 10px}
+    .video  .row iframe {width: 136px; height: 136px;  margin: 0px 10px}
+    .creators .row .col-lg-8  .Get{
+      display: none;
+      font-size: 18px;
+    }
+    .creators .row .col-lg-8  .Get2{
+      display: none;
+    }
+    .creators .row .col-lg-8 .Get1{
+      display: inline-block;
+      font-size: 18px;
+    }
+    .container .row .col-md-2 .john img{
+      width: 136px;
+      height: 136px;
+    }
+    .container-fluid .creators .row p{
+      margin-left: 90px;
+    }
+    .container-fluid{
+      margin-left:-15px;
+    }
+}
+@media only screen   and (max-width: 992px) {
     .music {
       width: 960px;
-  }
-
-  .video {width: 920px; position: relative; margin:0px 10px;}
-  .video .control{ width: 920px;  }
-
-  .Mobile{height: 325px}
-  .Mobile   .MobileImage{width: 450px;background-size: 100%; height: 300px; margin:30px 0px 0px 50px;}
-
-  .jumbotron {
-    background-size: cover;
-
-    width: 960px;
-  }
-  .creators {
-    width: 960px;
-  }
-  
-   .creators .row .col-lg-8  .calling{
-    font-size: 24px;
-    margin-top: 70px;
-
-  }
-  .video  .row img {width: 136px; height: 136px;  margin: 0px 10px}
-  .video  .row iframe {width: 136px; height: 136px;  margin: 0px 10px}
-  
- .creators .row .col-lg-8  .Get{
-    display: none;
-    font-size: 18px;
-  }
-   .creators .row .col-lg-8  .Get2{
-    display: none;
-  }
-   .creators .row .col-lg-8 .Get1{
-    display: inline-block;
-    font-size: 18px;
-  }
+    }
+    body{
+      width: 960px;
+      margin:0px auto;
+    }
+    .jumbotron {
+      width: 960px;
+    }
+    .creators {
+      width: 960px;
+    }
+    .video {width: 920px; position: relative;}
+    .creators .row .col-lg-8  .calling{
+      font-size: 24px;
+      margin-left: 50px;
+      display: inline-block;
+    }
+    .creators .row .col-lg-8  .Llamada{
+      display: none;
+    }
+    .creators .row .col-lg-8  .Llamada2{
+      font-size: 24px;
+      margin-left: 50px;
+      display: inline-block;
+      color: #ffffff; 
+    }
+    .creators .row .col-lg-8  .Get{
+      display: none;
+    }
+    .creators .row .col-lg-8  .Get2{
+      display: none;
+    }
+    .creators .row .col-lg-8 .Get1{
+      display: inline-block;
+      font-size: 18px;
+      margin-left: 50px;
+    }
 
     .container .row .col-md-2 .john img{
       width: 136px;
@@ -213,78 +267,25 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
     }
 
 }
-@media only screen   and (max-width: 992px) {
-  .music {
-    width: 960px;
-}
-body{
-  width: 960px;
-  margin:0px auto;
-}
-.jumbotron {
-  width: 960px;
-}
-.creators {
-  width: 960px;
-}
-
-.video {width: 920px; position: relative;}
-
- .creators .row .col-lg-8  .calling{
-  font-size: 24px;
-  margin-left: 50px;
-    display: inline-block;
-}
- 
-
-.creators .row .col-lg-8  .Get{
-display: none;
-}
-.creators .row .col-lg-8  .Get2{
-display: none;
-}
-.creators .row .col-lg-8 .Get1{
-display: inline-block;
-font-size: 18px;
-margin-left: 50px;
-
-}
-
-  .container .row .col-md-2 .john img{
-    width: 136px;
-    height: 136px;
-  }
-  .container-fluid .creators .row p{
-    margin-left: 90px;
-  }
-  .container-fluid{
-    margin-left:-15px;
-  }
-
-}
 @media only screen   and (max-width: 600px) {
-  .modal-content{
+  .modal-language-content{
     width: auto;
-  margin: 0px 20px;
+    margin: 0px 20px;
   }
-  
-  .modal-header{
+  .modal-language-header{
     margin-top: 0px;
     margin-left: 0px;
-
   }
-  .modal-body{
+  .modal-language-body{
     width: auto;
     overflow-x: hidden;
   }
 }
 @media only screen   and (max-width: 500px) {
-
   .modal-content1{
     width: auto;
   margin: 0px 20px;
   }
-
   .modal-body1  button {
     width: 100%;
   }
@@ -294,56 +295,46 @@ margin-left: 50px;
   .modal-body1{
     overflow-x: hidden;
   }
-
 }
 @media only screen   and (max-width: 391px) {
-
-.modal-content1{
-  width: auto;
-margin: 0px 20px;
-}  .modal-body1   h1{
-  width: 320px;
-}
-  .modal-body1   h2{
+  .modal-content1{
+    width: auto;
+    margin: 0px 20px;
+  }  
+  .modal-body1   h1{
     width: 320px;
   }
-.modal-body1  button {
-  width: 320px;
-}
+  .modal-body1   h2{
+      width: 320px;
+   }
+  .modal-body1  button {
+    width: 320px;
+  }
+  .modal-body1{
+    overflow-x: hidden;
+  }
+  .help{width: 320px}
 
-.modal-body1{
-  overflow-x: hidden;
-}
-.help{width: 320px}
-
-.modal-body1 p{width: 320px}
-.privacy  a{ width: 320px }
-input[type=text] {  width: 320px}
-input[type=password] {  width: 320px}
-
-
+  .modal-body1 p{width: 320px}
+  .privacy  a{ width: 320px }
+  input[type=text] {  width: 320px}
+  input[type=password] {  width: 320px}
 }
 @media only screen   and (max-width: 299px) {
-  .modal-body{
+  .modal-language-body{
     width: auto;
   }
-
-  .modal{width: auto;}
-  .modal-header{
+  .modal-language-header{
     width: auto;
     margin-top: 0px;
     margin-left: 0px;
-
     margin-bottom: 30px;
   }
 }
 @media only screen   and (max-width: 203px) {
-   .modal{width: auto;
-  }
-
-  .modal-header {
-  margin-top: 0px;
-  font-size: 16px;
+  .modal-language-header {
+    margin-top: 0px;
+    font-size: 16px;
     margin-left: 0px;
     margin-bottom: 45px;
   }
