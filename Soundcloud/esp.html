@@ -1,196 +1,197 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
 		<title>SCloud</title>
-		<meta name="viewport">
+		<meta  name="viewport">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://apis.google.com/js/api.js"></script>
-
 	</head>
 		  
 	<body onload="authenticate().then(loadClient).then(execute) ">
-		<div class="jumbotron">
-			<div class="logo">
-				<h6> <img src="image/cloud.png" > SOUNDCLOUD </h6>
-			</div>
-		</div>
 
+		<header id="randomImageHeader">
+				<div class="logo">
+					<h1> <img src="image/cloud.png" > SOUNDCLOUD </h1>
+				</div>
+				<div class="HeaderButtons">
+					<button class="CreateAccountButton"  onclick="buttonCreateAccountModal()">Crea tu cuenta</button>
+					<button class="ForCreatorsButton">	<a href="https://creators.soundcloud.com/" target="_blank" > Para creadores</a></button>
+				</div>
+				<div class="ConnectOnSoundCloud">
+					<p  >Conectar en SoundCloud</p>
+					<p >Descubre, escucha y comparte un catálogo de música que no deja <br> de crecer con artistas emergentes y consolidados de todo el <br> mundo. </p>
+					<button  onclick="buttonSingUpForFreeModal()" >Registrarse gratis</button>
+				</div>
+		</header>
 		<div class="music">
 			<div class="container-fluid">
 				<div class="row justify-content-center">
-					<div class="col-lg-8">
-						<p style="font-size: 24px; color: #333333">Escucha la música del momento gratis en la comunidad SoundCloud</p>
+					<div class="col-9">
+						<p>Escucha la música del momento gratis en la comunidad SoundCloud</p>
 					</div>
 				</div>
 			</div>
-			<div class="container-fluid"> 
-				<div class="row" id="video-container"> 
+			<div class="video">
+				<div class="row justify-content-center" id="video-container"> 
+				</div>
+				<div class="control" id="control">
+					<button id="backward" onclick="backward(); "><img src=" data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgNmgydjEySDdWNnptMiA2bDggNlY2bC04IDZ6Ii8+PC9zdmc+Cg==" ></button>
+					<button id="forward" onclick="forward()" disabled><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgMThsOC02LTgtNnYxMnptOC0xMnYxMmgyVjZoLTJ6Ii8+PC9zdmc+Cg==" ></button>
 				</div>
 			</div>
-		</div>
-
-		<div class="container-fluid">
-			<div class="app">
-				<div class="row justify-content-end">
-					<div class="col-lg-4">
-						<p style=" font-size: 36px; " class="Never" > Llévate la música <br> contigo</p>
-						<p style=" font-size: 24px; font-stretch: 100%; " > SoundCloud está disponible <br>
-							en Web, iOS, Android, Sonos, <br>
-							Chromecast y Xbox One.</p>
-						<a href="https://apps.apple.com/us/app/soundcloud/id336353151" target="_blank"><img src="image/appStore.png"></a>
-						<a href="https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=us" target="_blank"><img src="image/googlePlay.png"></a>
-					</div>
-				</div>
+			<div class="playlist">
+				<button><a href="https://soundcloud.com/discover"> Explora las listas de moda</a></button>
 			</div>
 		</div>
-		
-			<div class="creators">
-				<div class="row ">
-					<div class="col-lg-8 offset-lg-1">
-						<p  class="calling"> Llamada a todos los creadores </p>
-						<p  class="calling2"> Llamada a todos los <br> creadores </p>
-					</div>
-					<div class="col-lg-8 offset-lg-1">
+		<div class="Mobile">
+				<img class="MobileImage" src="image/mobile.jpg" >
+			<div class="MobileTextSpanish"  >
+				<p class="Never" class="Llévate" > Llévate la música <br> contigo</p>
+				<p> SoundCloud está disponible <br>
+					en Web, iOS, Android, Sonos, <br>
+					Chromecast y Xbox One.</p>
+				<a href="https://apps.apple.com/us/app/soundcloud/id336353151" target="_blank"><img src="image/appStore.png"></a>
+				<a href="https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=us" target="_blank"><img src="image/google-play-logo.jpg"></a>
+			</div>
+		</div>
+		<div class="creators">
+			<div class="row ">
+				<div class="col-lg-8 offset-lg-1">
+					<p  class="calling Llamada"> Llamada a todos los creadores </p>
+					<p  class="calling2 Llamada2"> Llamada a todos los <br> creadores </p>
+				</div>
+				<div class="col-lg-8 offset-lg-1">
 						<p class="Get"> Hazte con SoundCloud para estar en contacto  <br>
-							con tus seguidores, compartir tus canciones y  <br> aumentar tu público. ¿A qué esperas?</p>
-							<p class="Get1"> Hazte con SoundCloud para estar en <br> contacto  
-							con tus seguidores, compartir <br> tus canciones y   aumentar tu público.<br> ¿A qué esperas?</p>
-							<p class="Get2"> Hazte con SoundCloud para estar en <br> contacto  
-							con tus seguidores, compartir <br> tus canciones y   aumentar tu público. ¿A <br> qué esperas?</p>
-					</div>
+						con tus seguidores, compartir tus canciones y  <br> aumentar tu público. ¿A qué esperas?</p>
+						<p class="Get1"> Hazte con SoundCloud para estar en <br> contacto  
+						con tus seguidores, compartir <br> tus canciones y   aumentar tu público.<br> ¿A qué esperas?</p>
+						<p class="Get2"> Hazte con SoundCloud para estar en <br> contacto  
+						con tus seguidores, compartir <br> tus canciones y   aumentar tu público. ¿A <br> qué esperas?</p>
 				</div>
 			</div>
+		</div>
+		<div class="listen">
+			<p>Gracias por escuchar, ahora únete.</p>
+			<p>Guarda pistas, sigue a artistas y crea tus listas. Y todo, gratis.</p>
+		</div>
 		<footer>
-			<p id="myBtn"  style="font-size: 14px"> <span  class="color" >Idioma:</span>Español</p>
+			<a href="https://soundcloud.com/popular/searches" title="Búsquedas populares" > Búsquedas populares </a><span class="line">-</span>
+			<a href="https://soundcloud.com/people/directory" title="Directorio ">	Directorio  </a> <span class="line">-</span>
+			<a href="https://soundcloud.com/pages/contact" title=" Quiénes somos">  Quiénes somos </a><span class="line">-</span>
+			<a href="https://blog.soundcloud.com/" target="_blank"  title="Blog de SoundCloud "> Blog </a><span class="line">-</span>
+			<a href="https://jobs.soundcloud.com" target="_blank"  title="Trabajo en SoundCloud">Trabajo </a><span class="line"> -</span>
+			<a href="https://developers.soundcloud.com/" target="_blank"  title="SoundCloud para desarrolladores"> Desarrolladores  </a><span class="line">-</span>
+			<a href="https://help.soundcloud.com/hc/en-us" target="_blank"  title="Ayuda de SoundCloud "> Ayuda  </a><span class="line">-</span>
+			<a href="https://soundcloud.com/terms-of-use" title="Condiciones de uso"> Legal </a><span class="line">-</span>
+			<a href="https://soundcloud.com/pages/privacy" title="Politica de privacidad">  Privacidad  </a><span class="line">-</span>
+			<a href="https://soundcloud.com/pages/cookies" title="Politica de cookies "> Cookies  </a><span class="line">-</span>
+			<a href="https://soundcloud.com/imprint" title="Informacion de la empresa"> SoundCloud Ltd  </a><span class="line">-</span>
+			<a href="https://soundcloud.com/charts/top" title="Listas de éxitos">Listas de éxitos </a>
+			<p onclick="openLanguageModal()"> <span  class="color" >Idioma:</span>Español</p>
 		</footer>
+		<div id="CreateAccountModal" class="modal1">
+			<span class="close2" onclick="closeCreateAccount()" >&times;</span>
+			<div class="modal-content1">
+				<div class="modal-body1">
+					<h1 >Crea tu cuenta de SoundCloud</h1>
+					<form name="FormCreateAccount">
+						<input type="text" id="uname1" name="uname" placeholder="Username" oninput="createAccountCheckUsername()" required>
+						<p id="username1" class="form"></p>
+						<input type="password" id="password1" name="password" placeholder="Password" oninput="createAccountCheckPassword()" required>
+						<p id="passw1" class="form" ></p>
+					</form> 
+					<button onclick="createAccount()">Aceptar y continuar</button>
+					<div class="help">
+					<a href="https://help.soundcloud.com/hc/en-us"  target="_blank">¿Necesitas ayuda? </a>
+					</div>
+					<p >Podemos usar tu email y tus dispositivos para enviarte
+							actualizaciones y consejos relativos a los productos y servicios de
+							SoundCloud, así como notificaciones sobre actividades. Puedes 
+							anular la suscripción gratuitamente en cualquier momento en la 
+							configuración de las notificaciones.
+	
+						</p>
+						<p>	Podríamos usar la información que nos facilitas para mostrarte
+							anuncios dirigidos, tal y como se describe en nuestra <span class="privacy">
+							<a href="https://soundcloud.com/pages/privacy" target="_blank">Política de privacidad.</a>  </span></p>
+					</div>
+			</div>
+		</div>					
+		<div id="SingUpForFreeModal" class="modal1">
+			<span class="close3" onclick="closeSingUpForFreeModal()"  >&times;</span>
+			<div class="modal-content1">
+				<div class="modal-body1">
+					<h1>Crea tu cuenta de SoundCloud</h1>
+					<form name="FormSingUpForFree">
+						<input type="text" id="uname" name="uname" placeholder="Username" oninput="singUpForFreeCheckUsername()" required>
+						<p id="username" class="form" ></p>
+						<input type="password" id="password" name="password" placeholder="Password" oninput="singUpForFreeCheckPassword()" required>
+						<p id="passw" class="form" ></p>
+					</form> 
+					<button onclick="singUpForFree()"> iniciar sesión</button>
+					<div class="help">
+					<a href="https://help.soundcloud.com/hc/en-us"  target="_blank">¿Necesitas ayuda?</a>
+					</div>
+					<p >Podemos usar tu email y tus dispositivos para enviarte
+						actualizaciones y consejos relativos a los productos y servicios de
+						SoundCloud, así como notificaciones sobre actividades. Puedes 
+						anular la suscripción gratuitamente en cualquier momento en la 
+						configuración de las notificaciones.
 
-			
-		<div id="myModal" class="modal">
-			<span class="close">&times;</span>
-			<div class="modal-content">
-				<div class="modal-header  no-border">
-					<h4 class="sel">Selecciona tu idioma</h4> 
-					<h4 class="sel1">Selecciona tu <br> idioma</h4> 
-
+					</p>
+					<p>	Podríamos usar la información que nos facilitas para mostrarte
+						anuncios dirigidos, tal y como se describe en nuestra <span class="privacy">
+						<a href="https://soundcloud.com/pages/privacy" target="_blank">Política de privacidad.</a> </span></p>
 				</div>
-				
-				<hr style="width:90%" class="hr" >
-
-				<div class="modal-body">
+			</div>
+		</div>
+		<div id="Language" class="languageModal">
+			<span class="close" onclick="closeLanguageModal()">&times;</span>
+			<div class="modal-language-content">
+				<div class="modal-language-header no-border">
 					<table style="width:100%">
 						<tr>
-							<td><a href="deu.html" > Deutsch</a></td>
-							<td><a  href="Home.html"  >English (US)</a></td>
-							</tr>
-							<tr>
-							<td><a  style="color:#333333; cursor: text;">Español</a></td>
-							<td><a href="fra.html" >Français</a></td>
-							</tr>
-							<tr>
-							<td><a href="ita.html" >Italiano</a></td>
-							<td><a href="ned.html" >Nederlands</a></td>
-							</tr>
-							<tr>
-							<td><a href="por.html" >Português (Brasil)</a></td>
-							<td><a href="pol.html" >Polski</a></td>
-							</tr>			  
+							<td><p >Selecciona tu idioma</p></td>
+						</tr> 
+					</table>
+				</div>
+				<hr style="width:90%">
+				<div class="modal-language-body">
+					<table style="width:400px">
+						<tr>
+							<td><a class="currentLanguage" >Español</a></td>
+							<td><a href="Home.html" >English (US)</a></td>
+						</tr>
 					</table>    
 				</div>
-				<div class="modal-footer">
-					<button class="close1" style="cursor: pointer; background-color: white; border: 0px;">Cancelar</button>
+				<div class="modal-language-footer">
+					<button  onclick="closeButtonLanguageModal()">Cancelar</button>
 				</div>
 			</div>
 		</div>
-		<script>
-			var modal = document.getElementById("myModal");
-			var btn = document.getElementById("myBtn");
-			var span = document.getElementsByClassName("close")[0];
-			var cls = document.getElementsByClassName("close1")[0];
-			
-			btn.onclick = function() {
-			modal.style.display = "block";
-			document.body.style.overflow="hidden";
-			}
 
-			span.onclick = function() {
-			modal.style.display = "none";
-			document.body.style.overflow="auto";
-			}
-			cls.onclick = function(){
-			modal.style.display = "none";
-			document.body.style.overflow="auto";
-			}
-			window.onclick = function(event) {
-			if (event.target == modal) {
-			modal.style.display = "none";
-			document.body.style.overflow="auto";
-			}}
-			
-			function myFunction() {
-			document.getElementById("demo").innerHTML = "Hello World";
-			}
-
-
-
-			var videoContainer = document.getElementById('video-container');
-			const channel = 'Nikola Naranci'
-			function authenticate() {
-				return gapi.auth2.getAuthInstance()
-					.signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"})
-					.then(function() { console.log("Sign-in successful"); },
-						function(err) { console.error("Error signing in", err); });
-			}
-			function loadClient() {
-				gapi.client.setApiKey("AIzaSyCtffNfszKZii5EWz8SdxlQg424AcjIiTQ");
-				return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-					.then(function() { console.log("GAPI client loaded for API"); },
-						function(err) { console.error("Error loading GAPI client for API", err); });
-			}
-			// Make sure the client is loaded and sign-in is complete before calling this method.
-			function execute() {
-				return gapi.client.youtube.playlistItems.list({
-				"part": "snippet,contentDetails",
-				"maxResults": 12,
-				"playlistId": "PLC8Ks0CgsKJNyw4-zQhzN8FO2x7D_dzai"
-				})
-       		.then(function(response) {
-                // Handle the results here (response.result has the parsed body).
-                console.log("Response", response);
-                const playlistItems=response.result.items;
-                let output = '';
-                playlistItems.forEach(item => {
-                  const videoId=item.snippet.resourceId.videoId;
-				  const title =item.snippet.title;
-				  const position =item.snippet.position;
-				 output +=  `
-				 <div class="col-lg-2">
-					<div class="john">
-					<img src=" https://img.youtube.com/vi/${videoId}/hqdefault.jpg" style="width: 153px;  height: 153px;">
-					<div class="middle">													
-						<div class="text">
-								<button> ></button>
-						</div>
-					</div>
-				</div>
-				   <a href="">	${title}</a> <br> <a href="">Lil Tecca</a>
-				</div>
-
-				   `;
-
-                });
-                videoContainer.innerHTML=output;
-              },
-
-              function(err) { console.error("Execute error", err); });
-			}
-			
-
-			gapi.load("client:auth2", function() {
-				gapi.auth2.init({client_id: "272099904269-22euf40hdr21i671lgjrsrgispea40cg.apps.googleusercontent.com"});
-			});
-		</script>
+		<script src="js/main.js"></script>
 
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

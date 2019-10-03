@@ -16,13 +16,13 @@
 					<h1> <img src="image/cloud.png" > SOUNDCLOUD </h1>
 				</div>
 				<div class="HeaderButtons">
-					<button class="CreateAccountButton"  onclick="ButtonCreateAccountModal()">Create account</button>
+					<button class="CreateAccountButton"  onclick="buttonCreateAccountModal()">Create account</button>
 					<button class="ForCreatorsButton">	<a href="https://creators.soundcloud.com/" target="_blank" > For Creators</a></button>
 				</div>
 				<div class="ConnectOnSoundCloud">
 					<p  >Connect on SoundCloud</p>
 					<p >Discover, stream, and share a constantly expanding mix of music <br> from emerging and major artists around the world.</p>
-					<button  onclick="ButtonSingUpForFreeModal()" >Sign up for free</button>
+					<button  onclick="buttonSingUpForFreeModal()" >Sign up for free</button>
 				</div>
 		</header>
 		<div class="music">
@@ -44,9 +44,6 @@
 			<div class="playlist">
 				<button><a href="https://soundcloud.com/discover"> Explore trending playlists</a></button>
 			</div>
-
-			<p id="demo"></p>
-
 		</div>
 		<div class="Mobile">
 				<img class="MobileImage" src="image/mobile.jpg" >
@@ -91,20 +88,20 @@
 			<a href="https://soundcloud.com/pages/cookies" title="Cookies policy"> Cookies  </a><span class="line">-</span>
 			<a href="https://soundcloud.com/imprint" title="Company information"> Imprint  </a><span class="line">-</span>
 			<a href="https://soundcloud.com/charts/top" title="Charts">Charts </a>
-			<p onclick="OpenLanguageModal()"> <span  class="color" >Language:</span>English(US)</p>
+			<p onclick="openLanguageModal()"> <span  class="color" >Language:</span>English(US)</p>
 		</footer>
 		<div id="CreateAccountModal" class="modal1">
-			<span class="close2" onclick="CloseCreateAccount()" >&times;</span>
+			<span class="close2" onclick="closeCreateAccount()" >&times;</span>
 			<div class="modal-content1">
 				<div class="modal-body1">
 					<h1 >Create your SoundCloud account</h1>
 					<form name="FormCreateAccount">
-						<input type="text" id="uname1" name="uname" placeholder="Username" oninput="CreateAccountCheckUsername()" required>
+						<input type="text" id="uname1" name="uname" placeholder="Username" oninput="createAccountCheckUsername()" required>
 						<p id="username1" class="form"></p>
-						<input type="password" id="password1" name="password" placeholder="Password" oninput="CreateAccountCheckPassword()" required>
+						<input type="password" id="password1" name="password" placeholder="Password" oninput="createAccountCheckPassword()" required>
 						<p id="passw1" class="form" ></p>
 					</form> 
-					<button onclick="CreateAccount()">Create account</button>
+					<button onclick="createAccount()">Create account</button>
 					<div class="help">
 					<a href="https://help.soundcloud.com/hc/en-us"  target="_blank">Need help? </a>
 					</div>
@@ -118,17 +115,17 @@
 			</div>
 		</div>					
 		<div id="SingUpForFreeModal" class="modal1">
-			<span class="close3" onclick="CloseSingUpForFreeModal()"  >&times;</span>
+			<span class="close3" onclick="closeSingUpForFreeModal()"  >&times;</span>
 			<div class="modal-content1">
 				<div class="modal-body1">
 					<h1>Sign up for free</h1>
 					<form name="FormSingUpForFree">
-						<input type="text" id="uname" name="uname" placeholder="Username" oninput="SingUpForFreeCheckUsername()" required>
+						<input type="text" id="uname" name="uname" placeholder="Username" oninput="singUpForFreeCheckUsername()" required>
 						<p id="username" class="form" ></p>
-						<input type="password" id="password" name="password" placeholder="Password" oninput="SingUpForFreeCheckPassword()" required>
+						<input type="password" id="password" name="password" placeholder="Password" oninput="singUpForFreeCheckPassword()" required>
 						<p id="passw" class="form" ></p>
 					</form> 
-					<button onclick="SingUpForFree()">Login</button>
+					<button onclick="singUpForFree()">Login</button>
 					<div class="help">
 					<a href="https://help.soundcloud.com/hc/en-us"  target="_blank">Need help? </a>
 					</div>
@@ -141,10 +138,10 @@
 				</div>
 			</div>
 		</div>
-		<div id="Language" class="modal">
-			<span class="close" onclick="CloseLanguageModal()">&times;</span>
-			<div class="modal-content">
-				<div class="modal-header no-border">
+		<div id="Language" class="languageModal">
+			<span class="close" onclick="closeLanguageModal()">&times;</span>
+			<div class="modal-language-content">
+				<div class="modal-language-header no-border">
 						<table style="width:100%">
 					 <tr>
 						 <td><p >Select your language</p></td>
@@ -152,16 +149,16 @@
 					</table>
 				</div>
 				<hr style="width:90%">
-				<div class="modal-body">
+				<div class="modal-language-body">
 					<table style="width:400px">
 						<tr>
 							<td><a href="esp.html" >Español</a></td>
-							<td><a class="english" >English (US)</a></td>
+							<td><a class="currentLanguage" >English (US)</a></td>
 						</tr>
 					</table>    
 				</div>
-				<div class="modal-footer">
-					<button  onclick="CloseButtonLanguageModal()">Cancel</button>
+				<div class="modal-language-footer">
+					<button  onclick="closeButtonLanguageModal()">Cancel</button>
 				</div>
 			</div>
 		</div>
