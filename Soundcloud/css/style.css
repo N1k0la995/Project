@@ -52,7 +52,7 @@ header{ background: url("../image/head1.jpg") ;background-position: center;  bor
 
 .creators { background: url("../image/hp_creator_image-e08dee4.jpg") ; background-position: center;  position: relative;  border-radius: 0; height:350px;   
 -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%;  background-size: 100% 100%;margin:0px auto; }
-.creators .row .col-lg-8  .calling { color: #ffffff; margin-top:70px; font-size: 36px; font-stretch: 100%; margin-left:-30px; }    
+.creators .row .col-lg-8  .callingAllCreators { color: #ffffff; margin-top:70px; font-size: 36px; font-stretch: 100%; margin-left:-30px; }    
 .creators .row .col-lg-8  .Get { color: #ffffff;font-size: 24px; font-stretch: 100%;margin-left:-30px;}  
 .creators .row .col-lg-8  .Get1 { display: none; color: #ffffff;     margin-left: -30px; } 
 .creators .row .col-lg-8  .Get2 { color: #ffffff;font-size: 24px; font-stretch: 100%;  display: none;  margin-left: -30px; } 
@@ -177,7 +177,7 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
     .creators {
       width: 960px;
     }
-    .creators .row .col-lg-8  .calling{
+    .creators .row .col-lg-8  .callingAllCreators{
       font-size: 24px;
       margin-top: 70px;
     }
@@ -229,7 +229,7 @@ input[type=password] {  width: 100%;  padding: 12px 20px;  margin: 8px 0;  box-s
       width: 960px;
     }
     .video {width: 920px; position: relative;}
-    .creators .row .col-lg-8  .calling{
+    .creators .row .col-lg-8  .callingAllCreators{
       font-size: 24px;
       margin-left: 50px;
       display: inline-block;
