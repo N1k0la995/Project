@@ -1,29 +1,65 @@
 		function backward() {
-            document.getElementById("forward").disabled = false;
-        }
+			document.getElementById("forward").disabled = false;
+			c=document.getElementById("demo").innerHTML;
+			removeImageAndPlayYouTubeVideo(c);
+		}
 		function createAccountCheckUsername(){	
 			document.getElementById("username1").innerHTML = "";
-			document.forms["FormCreateAccount"]["uname1"].style.border=" 1px solid gray ";
+			document.forms["FormCreateAccount"]["username"].style.border=" 1px solid gray ";
 		}
 		function createAccountCheckPassword(){	
 			document.getElementById("passw1").innerHTML = "";
-			document.forms["FormCreateAccount"]["password1"].style.border=" 1px solid gray ";
+			document.forms["FormCreateAccount"]["password"].style.border=" 1px solid gray ";
 		}
 		function createAccount() {
+			var username = document.forms["FormCreateAccount"]["username"].value;
+			var password = document.forms["FormCreateAccount"]["password"].value;
+			document.getElementById("passw1").innerHTML =  "";
+			document.getElementById("username1").innerHTML =  "";
+			if (username == null || username == "") 
+			{
+				document.getElementById("username1").innerHTML =  "Enter a username";
+				document.forms["FormCreateAccount"]["username"].style.border=" 1px solid red ";
+				document.forms["FormCreateAccount"]["password"].style.border=" 1px solid gray ";
+				return true;
+			}		 
+			else if(password == null || password == "") 
+			{
+				document.getElementById("passw1").innerHTML =  "Enter a password";
+				document.forms["FormCreateAccount"]["password"].style.border=" 1px solid red";
+				document.forms["FormCreateAccount"]["username"].style.border=" 1px solid gray ";
+				return true;
+			} 
+			else  
+			{
+				var username=document.forms["FormCreateAccount"]["username"].value;
+				var password=document.forms["FormCreateAccount"]["password"].value;
+				alert("Dear username:  "   +   username   +"  you successfully created account on Sound Cloud.");
+			}
+		}
+		function createAccountCheckUsernameSpanish(){	
+			document.getElementById("username1").innerHTML = "";
+			document.forms["FormCreateAccount"]["uname1"].style.border=" 1px solid gray ";
+		}
+		function createAccountCheckPasswordSpanish(){	
+			document.getElementById("passw1").innerHTML = "";
+			document.forms["FormCreateAccount"]["password1"].style.border=" 1px solid gray ";
+		}
+		function createAccountSpanish() {
 			var username = document.forms["FormCreateAccount"]["uname1"].value;
 			var password = document.forms["FormCreateAccount"]["password1"].value;
 			document.getElementById("passw1").innerHTML =  "";
 			document.getElementById("username1").innerHTML =  "";
 			if (username == null || username == "") 
 			{
-				document.getElementById("username1").innerHTML =  "Enter a username";
+				document.getElementById("username1").innerHTML =  "Introduzca un nombre de usuario";
 				document.forms["FormCreateAccount"]["uname1"].style.border=" 1px solid red ";
 				document.forms["FormCreateAccount"]["password1"].style.border=" 1px solid gray ";
 				return true;
 			}		 
 			else if(password == null || password == "") 
 			{
-				document.getElementById("passw1").innerHTML =  "Enter a password";
+				document.getElementById("passw1").innerHTML =  "Ingrese una contraseña";
 				document.forms["FormCreateAccount"]["password1"].style.border=" 1px solid red";
 				document.forms["FormCreateAccount"]["uname1"].style.border=" 1px solid gray ";
 				return true;
@@ -32,32 +68,68 @@
 			{
 				var username=document.forms["FormCreateAccount"]["uname1"].value;
 				var password=document.forms["FormCreateAccount"]["password1"].value;
-				alert("Dear username:  "   +   username   +"  you successfully created account on Sound Cloud.");
+				alert("querido nombre de usuario:  "   +   username   +  "   has creado una cuenta con éxito en Sound Cloud.");
 			}
 		}
 		function singUpForFreeCheckUsername() {
-			document.getElementById("username").innerHTML =  "";
-			document.forms["FormSingUpForFree"]["uname"].style.border="";
+			document.getElementById("uname1").innerHTML =  "";
+			document.forms["FormSingUpForFree"]["username"].style.border="";
 		}
 		function singUpForFreeCheckPassword() {
 			document.getElementById("passw").innerHTML =  "";
 			document.forms["FormSingUpForFree"]["password"].style.border="";
 		}
 		function singUpForFree() {
-				var username = document.forms["FormSingUpForFree"]["uname"].value;
+				var username = document.forms["FormSingUpForFree"]["username"].value;
 				var password = document.forms["FormSingUpForFree"]["password"].value;
 				document.getElementById("passw").innerHTML =  "";
-				document.getElementById("username").innerHTML =  "";
+				document.getElementById("uname1").innerHTML =  "";
 			if (username == null || username == "") 
 			{
-				document.getElementById("username").innerHTML =  "Enter a username";
-				document.forms["FormSingUpForFree"]["uname"].style.border=" 1px solid red";
+				document.getElementById("uname1").innerHTML =  "Enter a username";
+				document.forms["FormSingUpForFree"]["username"].style.border=" 1px solid red";
 				document.forms["FormSingUpForFree"]["password"].style.border="";
 				return true;
 			}		 
 			else if(password == null || password == "") 
 			{
 				document.getElementById("passw").innerHTML =  "Enter a password";
+				document.forms["FormSingUpForFree"]["password"].style.border=" 1px solid red";
+				document.forms["FormSingUpForFree"]["username"].style.border="";
+				return true;
+			} 
+			else  
+			{
+				var username=document.forms["FormSingUpForFree"]["uname"].value;
+				var password= document.forms["FormSingUpForFree"]["password"].value;
+				alert("Welcome  username:  " + username +"  password:  "+ password +" ");
+			}
+		}
+
+
+		function singUpForFreeCheckUsernameSpanish() {
+			document.getElementById("username").innerHTML =  "";
+			document.forms["FormSingUpForFree"]["uname"].style.border="";
+		}
+		function singUpForFreeCheckPasswordSpanish() {
+			document.getElementById("passw").innerHTML =  "";
+			document.forms["FormSingUpForFree"]["password"].style.border="";
+		}
+		function singUpForFreeSpanish() {
+				var username = document.forms["FormSingUpForFree"]["uname"].value;
+				var password = document.forms["FormSingUpForFree"]["password"].value;
+				document.getElementById("passw").innerHTML =  "";
+				document.getElementById("username").innerHTML =  "";
+			if (username == null || username == "") 
+			{
+				document.getElementById("username").innerHTML =  "Introduzca un nombre de usuario";
+				document.forms["FormSingUpForFree"]["uname"].style.border=" 1px solid red";
+				document.forms["FormSingUpForFree"]["password"].style.border="";
+				return true;
+			}		 
+			else if(password == null || password == "") 
+			{
+				document.getElementById("passw").innerHTML =  "Ingrese una contraseña";
 				document.forms["FormSingUpForFree"]["password"].style.border=" 1px solid red";
 				document.forms["FormSingUpForFree"]["uname"].style.border="";
 				return true;
@@ -66,7 +138,7 @@
 			{
 				var username=document.forms["FormSingUpForFree"]["uname"].value;
 				var password= document.forms["FormSingUpForFree"]["password"].value;
-				alert("Welcome  username:  " + username +"  password:  "+ password +" ");
+				alert("Bienvenidas  nombre de usuario:  " + username +"  contraseña:  "+ password +" ");
 			}
 		}
 		function randomImage() {
@@ -96,22 +168,22 @@
 			singUpForFreeModal.style.display = "none";
 			document.body.style.overflow="auto";
 		}
-		var language = document.getElementById("Language");
+		var languageModal = document.getElementById("Language");
 		function openLanguageModal() {
-			language.style.display = "block";
+			languageModal.style.display = "block";
 			document.body.style.overflow="hidden";
 		}
 		function closeLanguageModal() {
-			language.style.display = "none";
+			languageModal.style.display = "none";
 			document.body.style.overflow="auto";
 		}
 		function closeButtonLanguageModal(){
-			language.style.display = "none";
+			languageModal.style.display = "none";
 			document.body.style.overflow="auto";
 		}
 		window.onclick = function(event) {
-			if (event.target == language ||	event.target == singUpForFreeModal || event.target == createAccountModal ) {
-				language.style.display = "none";
+			if (event.target == languageModal ||	event.target == singUpForFreeModal || event.target == createAccountModal ) {
+				languageModal.style.display = "none";
 				singUpForFreeModal.style.display = "none";
 				createAccountModal.style.display = "none";
 				document.body.style.overflow="auto";
@@ -129,7 +201,7 @@
 			return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
 				.then(function() { console.log("GAPI client loaded for API"); },
 					function(err) { console.error("Error loading GAPI client for API", err); });
-		};	
+		};
 		// Make sure the client is loaded and sign-in is complete before calling this method.
 		function execute() {
 			return gapi.client.youtube.playlistItems.list({
@@ -157,10 +229,13 @@
 			},
 
 			function(err) { console.error("Execute error", err); });
-		};			
+		};
+
 		gapi.load("client:auth2", function() {
 			gapi.auth2.init({client_id: "272099904269-22euf40hdr21i671lgjrsrgispea40cg.apps.googleusercontent.com"});
 		})
+
+
 		var imageList=document.getElementsByClassName("VideoImage");
 		var videoList=document.getElementsByClassName("IFrameYoutube");
 		var imageClickValue;
@@ -171,7 +246,11 @@
 					imageList[i].style.display = "block";  
 				}
 				value.style.display = "none";
+				var c=value.getAttribute("id")
+				console.log(c);
+				document.getElementById("demo").innerHTML=c;
 				imageClickValue = value.getAttribute("value"); 
+				console.log(imageClickValue);
 			}
 			for(var u = 0; u < videoList.length; u++){
 				if (u != imageClickValue) {
@@ -180,7 +259,7 @@
 				else{
 					document.getElementById("ifr" + imageClickValue).src +="?autoplay=1";
 				}
-			}
+			} 
 			if (controlPanel==1){
 				var cont =	document.getElementById("control");
 				cont.style.display = "block";
@@ -188,4 +267,5 @@
 			else{
 				controlPanel=controlPanel+1;
 			}
-		};
+		}
+;
