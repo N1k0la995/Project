@@ -45,6 +45,7 @@
 				<button><a href="https://soundcloud.com/discover"> Explore trending playlists</a></button>
 			</div>
 		</div>
+		<p id="demo"></p>
 		<div class="Mobile">
 				<img class="MobileImage" src="image/mobile.jpg" >
 			<div class="MobileText">
@@ -59,7 +60,7 @@
 		<div class="creators">
 			<div class="row ">
 				<div class="col-lg-8 offset-lg-1">
-					<p  class="calling"> Calling all creators </p>
+					<p  class="callingAllCreators"> Calling all creators </p>
 				</div>
 				<div class="col-lg-8 offset-lg-1">
 					<p class="Get" > Get on SoundCloud to connect with fans, share <br> your
@@ -96,9 +97,9 @@
 				<div class="modal-body1">
 					<h1 >Create your SoundCloud account</h1>
 					<form name="FormCreateAccount">
-						<input type="text" id="uname1" name="uname" placeholder="Username" oninput="createAccountCheckUsername()" required>
+						<input type="text" id="username" name="uname" placeholder="Username" oninput="createAccountCheckUsername()" required>
 						<p id="username1" class="form"></p>
-						<input type="password" id="password1" name="password" placeholder="Password" oninput="createAccountCheckPassword()" required>
+						<input type="password" id="password" name="password" placeholder="Password" oninput="createAccountCheckPassword()" required>
 						<p id="passw1" class="form" ></p>
 					</form> 
 					<button onclick="createAccount()">Create account</button>
@@ -120,8 +121,8 @@
 				<div class="modal-body1">
 					<h1>Sign up for free</h1>
 					<form name="FormSingUpForFree">
-						<input type="text" id="uname" name="uname" placeholder="Username" oninput="singUpForFreeCheckUsername()" required>
-						<p id="username" class="form" ></p>
+						<input type="text" id="username" name="uname" placeholder="Username" oninput="singUpForFreeCheckUsername()" required>
+						<p id="uname1" class="form" ></p>
 						<input type="password" id="password" name="password" placeholder="Password" oninput="singUpForFreeCheckPassword()" required>
 						<p id="passw" class="form" ></p>
 					</form> 
