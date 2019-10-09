@@ -1,26 +1,26 @@
-		function createAccountCheckUsername(){	
-			document.getElementById("username1").innerHTML = "";
+		function createAccountReviewInputUsername(){	
+			document.getElementById("usernameCreateAccount").innerHTML = "";
 			document.forms["FormCreateAccount"]["username"].style.border=" 1px solid gray ";
 		}
-		function createAccountCheckPassword(){	
-			document.getElementById("passw1").innerHTML = "";
+		function createAccountReviewInputPassword(){	
+			document.getElementById("passwordCreateAccount").innerHTML = "";
 			document.forms["FormCreateAccount"]["password"].style.border=" 1px solid gray ";
 		}
 		function createAccount() {
 			var username = document.forms["FormCreateAccount"]["username"].value;
 			var password = document.forms["FormCreateAccount"]["password"].value;
-			document.getElementById("passw1").innerHTML =  "";
-			document.getElementById("username1").innerHTML =  "";
+			document.getElementById("passwordCreateAccount").innerHTML =  "";
+			document.getElementById("usernameCreateAccount").innerHTML =  "";
 			if (username == null || username == "") 
 			{
-				document.getElementById("username1").innerHTML =  "Enter a username";
+				document.getElementById("usernameCreateAccount").innerHTML =  "Enter a username";
 				document.forms["FormCreateAccount"]["username"].style.border=" 1px solid red ";
 				document.forms["FormCreateAccount"]["password"].style.border=" 1px solid gray ";
 				return true;
 			}		 
 			else if(password == null || password == "") 
 			{
-				document.getElementById("passw1").innerHTML =  "Enter a password";
+				document.getElementById("passwordCreateAccount").innerHTML =  "Enter a password";
 				document.forms["FormCreateAccount"]["password"].style.border=" 1px solid red";
 				document.forms["FormCreateAccount"]["username"].style.border=" 1px solid gray ";
 				return true;
@@ -32,104 +32,88 @@
 				alert("Dear username:  "   +   username   +"  you successfully created account on Sound Cloud.");
 			}
 		}
-		function createAccountCheckUsernameSpanish(){	
-			document.getElementById("username1").innerHTML = "";
-			document.forms["FormCreateAccount"]["uname1"].style.border=" 1px solid gray ";
-		}
-		function createAccountCheckPasswordSpanish(){	
-			document.getElementById("passw1").innerHTML = "";
-			document.forms["FormCreateAccount"]["password1"].style.border=" 1px solid gray ";
-		}
 		function createAccountSpanish() {
-			var username = document.forms["FormCreateAccount"]["uname1"].value;
-			var password = document.forms["FormCreateAccount"]["password1"].value;
-			document.getElementById("passw1").innerHTML =  "";
-			document.getElementById("username1").innerHTML =  "";
+			var username = document.forms["FormCreateAccount"]["username"].value;
+			var password = document.forms["FormCreateAccount"]["password"].value;
+			document.getElementById("passwordCreateAccount").innerHTML =  "";
+			document.getElementById("usernameCreateAccount").innerHTML =  "";
 			if (username == null || username == "") 
 			{
-				document.getElementById("username1").innerHTML =  "Introduzca un nombre de usuario";
-				document.forms["FormCreateAccount"]["uname1"].style.border=" 1px solid red ";
-				document.forms["FormCreateAccount"]["password1"].style.border=" 1px solid gray ";
+				document.getElementById("usernameCreateAccount").innerHTML =  "Introduzca un nombre de usuario";
+				document.forms["FormCreateAccount"]["username"].style.border=" 1px solid red ";
+				document.forms["FormCreateAccount"]["password"].style.border=" 1px solid gray ";
 				return true;
 			}		 
 			else if(password == null || password == "") 
 			{
-				document.getElementById("passw1").innerHTML =  "Ingrese una contraseña";
-				document.forms["FormCreateAccount"]["password1"].style.border=" 1px solid red";
-				document.forms["FormCreateAccount"]["uname1"].style.border=" 1px solid gray ";
+				document.getElementById("passwordCreateAccount").innerHTML =  "Ingrese una contraseña";
+				document.forms["FormCreateAccount"]["password"].style.border=" 1px solid red";
+				document.forms["FormCreateAccount"]["username"].style.border=" 1px solid gray ";
 				return true;
 			} 
 			else  
 			{
-				var username=document.forms["FormCreateAccount"]["uname1"].value;
-				var password=document.forms["FormCreateAccount"]["password1"].value;
+				var username=document.forms["FormCreateAccount"]["username"].value;
+				var password=document.forms["FormCreateAccount"]["password"].value;
 				alert("querido nombre de usuario:  "   +   username   +  "   has creado una cuenta con éxito en Sound Cloud.");
 			}
 		}
-		function singUpForFreeCheckUsername() {
-			document.getElementById("uname1").innerHTML =  "";
+		function singUpForFreeReviewInputUsername() {
+			document.getElementById("usernameSingUpForFree").innerHTML =  "";
 			document.forms["FormSingUpForFree"]["username"].style.border="";
 		}
-		function singUpForFreeCheckPassword() {
-			document.getElementById("passw").innerHTML =  "";
+		function singUpForFreeReviewInputPassword() {
+			document.getElementById("passwordSingUpForFree").innerHTML =  "";
 			document.forms["FormSingUpForFree"]["password"].style.border="";
 		}
 		function singUpForFree() {
 				var username = document.forms["FormSingUpForFree"]["username"].value;
 				var password = document.forms["FormSingUpForFree"]["password"].value;
-				document.getElementById("passw").innerHTML =  "";
-				document.getElementById("uname1").innerHTML =  "";
+				document.getElementById("passwordSingUpForFree").innerHTML =  "";
+				document.getElementById("usernameSingUpForFree").innerHTML =  "";
 			if (username == null || username == "") 
 			{
-				document.getElementById("uname1").innerHTML =  "Enter a username";
+				document.getElementById("usernameSingUpForFree").innerHTML =  "Enter a username";
 				document.forms["FormSingUpForFree"]["username"].style.border=" 1px solid red";
 				document.forms["FormSingUpForFree"]["password"].style.border="";
 				return true;
 			}		 
 			else if(password == null || password == "") 
 			{
-				document.getElementById("passw").innerHTML =  "Enter a password";
+				document.getElementById("passwordSingUpForFree").innerHTML =  "Enter a password";
 				document.forms["FormSingUpForFree"]["password"].style.border=" 1px solid red";
 				document.forms["FormSingUpForFree"]["username"].style.border="";
 				return true;
 			} 
 			else  
 			{
-				var username=document.forms["FormSingUpForFree"]["uname"].value;
+				var username=document.forms["FormSingUpForFree"]["username"].value;
 				var password= document.forms["FormSingUpForFree"]["password"].value;
 				alert("Welcome  username:  " + username +"  password:  "+ password +" ");
 			}
 		}
-		function singUpForFreeCheckUsernameSpanish() {
-			document.getElementById("username").innerHTML =  "";
-			document.forms["FormSingUpForFree"]["uname"].style.border="";
-		}
-		function singUpForFreeCheckPasswordSpanish() {
-			document.getElementById("passw").innerHTML =  "";
-			document.forms["FormSingUpForFree"]["password"].style.border="";
-		}
 		function singUpForFreeSpanish() {
-				var username = document.forms["FormSingUpForFree"]["uname"].value;
+				var username = document.forms["FormSingUpForFree"]["username"].value;
 				var password = document.forms["FormSingUpForFree"]["password"].value;
-				document.getElementById("passw").innerHTML =  "";
-				document.getElementById("username").innerHTML =  "";
+				document.getElementById("passwordSingUpForFree").innerHTML =  "";
+				document.getElementById("usernameSingUpForFree").innerHTML =  "";
 			if (username == null || username == "") 
 			{
-				document.getElementById("username").innerHTML =  "Introduzca un nombre de usuario";
-				document.forms["FormSingUpForFree"]["uname"].style.border=" 1px solid red";
+				document.getElementById("usernameSingUpForFree").innerHTML =  "Introduzca un nombre de usuario";
+				document.forms["FormSingUpForFree"]["username"].style.border=" 1px solid red";
 				document.forms["FormSingUpForFree"]["password"].style.border="";
 				return true;
 			}		 
 			else if(password == null || password == "") 
 			{
-				document.getElementById("passw").innerHTML =  "Ingrese una contraseña";
+				document.getElementById("passwordSingUpForFree").innerHTML =  "Ingrese una contraseña";
 				document.forms["FormSingUpForFree"]["password"].style.border=" 1px solid red";
-				document.forms["FormSingUpForFree"]["uname"].style.border="";
+				document.forms["FormSingUpForFree"]["username"].style.border="";
 				return true;
 			} 
 			else  
 			{
-				var username=document.forms["FormSingUpForFree"]["uname"].value;
+				var username=document.forms["FormSingUpForFree"]["username"].value;
 				var password= document.forms["FormSingUpForFree"]["password"].value;
 				alert("Bienvenidas  nombre de usuario:  " + username +"  contraseña:  "+ password +" ");
 			}
@@ -261,9 +245,9 @@
 		function backward() {
 			document.getElementById("forward").disabled = false;
 			var backwardVideo = document.getElementById("previousVideoId").innerHTML;
-			var previousVideo = new removeImageAndPlayYouTubeVideo(backwardVideo);
+			var previousVideo =  removeImageAndPlayYouTubeVideo(backwardVideo);
 		}
 		function forward() {
 			forwardVideo = document.getElementById("nextVideoId").innerHTML;
-			var nextVideo = new removeImageAndPlayYouTubeVideo(forwardVideo);
+			var nextVideo =  removeImageAndPlayYouTubeVideo(forwardVideo);
 		};
