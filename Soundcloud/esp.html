@@ -88,12 +88,14 @@
 				<div class="modal-body1">
 					<h1 >Crea tu cuenta de SoundCloud</h1>
 					<form name="FormCreateAccount">
-						<input type="text" id="username"  placeholder="Nombre de usuario" oninput="createAccountReviewInputUsername()" required>
-						<p id="usernameCreateAccount" class="form"></p>
-						<input type="password" id="password"  placeholder="Contraseña" oninput="createAccountReviewInputPassword()" required>
-						<p id="passwordCreateAccount" class="form" ></p>
+						<input type="text" id="username"  placeholder="Nombre de usuario" oninput="createAccountResetInput()" required>
+						<p id="usernameCreateAccount" class="form" style="display: none;">Introduzca un nombre de usuario</p>
+						<input type="password" id="password"  placeholder="Contraseña" oninput="createAccountResetInput()" required>
+						<p id="passwordCreateAccount" class="form"style="display: none;" >Ingrese una contraseña</p>
 					</form> 
-					<button onclick="createAccountSpanish()">Aceptar y continuar</button>
+					<p id="createAccountCheck" style="display: none;" >Login</p>
+
+					<button id="createAccountBtn" onclick="createAccount()">Aceptar y continuar</button>
 					<div class="help">
 					<a href="https://help.soundcloud.com/hc/en-us"  target="_blank">¿Necesitas ayuda? </a>
 					</div>
@@ -116,12 +118,13 @@
 				<div class="modal-body1">
 					<h1>Crea tu cuenta de SoundCloud</h1>
 					<form name="FormSingUpForFree">
-						<input type="text" id="username"  placeholder="Nombre de usuario" oninput="singUpForFreeReviewInputUsername()" required>
-						<p id="usernameSingUpForFree" class="form" ></p>
-						<input type="password" id="password" placeholder="Contraseña" oninput="singUpForFreeReviewInputPassword()" required>
-						<p id="passwordSingUpForFree" class="form" ></p>
+						<input type="text" id="username"  placeholder="Nombre de usuario" oninput="singUpForFreeResetInput()" required>
+						<p id="usernameSingUpForFree" class="form" style="display: none;" >Introduzca un nombre de usuario</p>
+						<input type="password" id="password" placeholder="Contraseña" oninput="singUpForFreeResetInput()" required>
+						<p id="passwordSingUpForFree" class="form" style="display: none;" >Ingrese una contraseña</p>
 					</form> 
-					<button onclick="singUpForFreeSpanish()"> Iniciar sesión</button>
+					<p id="singUpForFreeChechAlert" style="display: none;" >Create account</p>
+					<button id="singUpForFreeBtn"  onclick="singUpForFree()"> Iniciar sesión</button>
 					<div class="help">
 					<a href="https://help.soundcloud.com/hc/en-us"  target="_blank">¿Necesitas ayuda?</a>
 					</div>
@@ -158,7 +161,7 @@
 					</table>    
 				</div>
 				<div class="modal-language-footer">
-					<button  onclick="closeButtonLanguageModal()">Cancelar</button>
+					<button  onclick="closeLanguageModal()">Cancelar</button>
 				</div>
 			</div>
 		</div>
