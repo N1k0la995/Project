@@ -1,118 +1,69 @@
-		function createAccountReviewInputUsername(){	
-			document.getElementById("usernameCreateAccount").innerHTML = "";
-			document.forms["FormCreateAccount"]["username"].style.border=" 1px solid gray ";
-		}
-		function createAccountReviewInputPassword(){	
-			document.getElementById("passwordCreateAccount").innerHTML = "";
-			document.forms["FormCreateAccount"]["password"].style.border=" 1px solid gray ";
+		function createAccountResetInput(){	
+				document.getElementById("usernameCreateAccount").style.display =  "none";
+				document.forms["FormCreateAccount"]["username"].style.border=" 1px solid gray ";
+				document.getElementById("passwordCreateAccount").style.display =  "none";
+				document.forms["FormCreateAccount"]["password"].style.border=" 1px solid gray ";
 		}
 		function createAccount() {
 			var username = document.forms["FormCreateAccount"]["username"].value;
 			var password = document.forms["FormCreateAccount"]["password"].value;
-			document.getElementById("passwordCreateAccount").innerHTML =  "";
-			document.getElementById("usernameCreateAccount").innerHTML =  "";
 			if (username == null || username == "") 
 			{
-				document.getElementById("usernameCreateAccount").innerHTML =  "Enter a username";
+				document.getElementById("usernameCreateAccount").style.display = "block";				
 				document.forms["FormCreateAccount"]["username"].style.border=" 1px solid red ";
 				document.forms["FormCreateAccount"]["password"].style.border=" 1px solid gray ";
 				return true;
 			}		 
 			else if(password == null || password == "") 
 			{
-				document.getElementById("passwordCreateAccount").innerHTML =  "Enter a password";
+				document.getElementById("passwordCreateAccount").style.display = "block";
 				document.forms["FormCreateAccount"]["password"].style.border=" 1px solid red";
 				document.forms["FormCreateAccount"]["username"].style.border=" 1px solid gray ";
 				return true;
 			} 
-			else  
+			else  if( document.getElementById("createAccountBtn").innerHTML ==  document.getElementById("createAccountCheck").innerHTML  )
 			{
 				var username=document.forms["FormCreateAccount"]["username"].value;
 				var password=document.forms["FormCreateAccount"]["password"].value;
 				alert("Dear username:  "   +   username   +"  you successfully created account on Sound Cloud.");
 			}
-		}
-		function createAccountSpanish() {
-			var username = document.forms["FormCreateAccount"]["username"].value;
-			var password = document.forms["FormCreateAccount"]["password"].value;
-			document.getElementById("passwordCreateAccount").innerHTML =  "";
-			document.getElementById("usernameCreateAccount").innerHTML =  "";
-			if (username == null || username == "") 
-			{
-				document.getElementById("usernameCreateAccount").innerHTML =  "Introduzca un nombre de usuario";
-				document.forms["FormCreateAccount"]["username"].style.border=" 1px solid red ";
-				document.forms["FormCreateAccount"]["password"].style.border=" 1px solid gray ";
-				return true;
-			}		 
-			else if(password == null || password == "") 
-			{
-				document.getElementById("passwordCreateAccount").innerHTML =  "Ingrese una contraseña";
-				document.forms["FormCreateAccount"]["password"].style.border=" 1px solid red";
-				document.forms["FormCreateAccount"]["username"].style.border=" 1px solid gray ";
-				return true;
-			} 
-			else  
-			{
+			else{
 				var username=document.forms["FormCreateAccount"]["username"].value;
 				var password=document.forms["FormCreateAccount"]["password"].value;
 				alert("querido nombre de usuario:  "   +   username   +  "   has creado una cuenta con éxito en Sound Cloud.");
+
 			}
 		}
-		function singUpForFreeReviewInputUsername() {
-			document.getElementById("usernameSingUpForFree").innerHTML =  "";
-			document.forms["FormSingUpForFree"]["username"].style.border="";
-		}
-		function singUpForFreeReviewInputPassword() {
-			document.getElementById("passwordSingUpForFree").innerHTML =  "";
-			document.forms["FormSingUpForFree"]["password"].style.border="";
+		function singUpForFreeResetInput() {
+			document.getElementById("usernameSingUpForFree").style.display =  "none";
+			document.forms["FormSingUpForFree"]["username"].style.border="1px solid gray";
+			document.getElementById("passwordSingUpForFree").style.display =  "none";
+			document.forms["FormSingUpForFree"]["password"].style.border="1px solid gray";
 		}
 		function singUpForFree() {
 				var username = document.forms["FormSingUpForFree"]["username"].value;
 				var password = document.forms["FormSingUpForFree"]["password"].value;
-				document.getElementById("passwordSingUpForFree").innerHTML =  "";
-				document.getElementById("usernameSingUpForFree").innerHTML =  "";
 			if (username == null || username == "") 
 			{
-				document.getElementById("usernameSingUpForFree").innerHTML =  "Enter a username";
-				document.forms["FormSingUpForFree"]["username"].style.border=" 1px solid red";
+				document.getElementById("usernameSingUpForFree").style.display = "block";
+				document.forms["FormSingUpForFree"]["username"].style.border= "1px solid red";
 				document.forms["FormSingUpForFree"]["password"].style.border="";
 				return true;
 			}		 
 			else if(password == null || password == "") 
 			{
-				document.getElementById("passwordSingUpForFree").innerHTML =  "Enter a password";
-				document.forms["FormSingUpForFree"]["password"].style.border=" 1px solid red";
+				document.getElementById("passwordSingUpForFree").style.display = "block";
+				document.forms["FormSingUpForFree"]["password"].style.border= "1px solid red";
 				document.forms["FormSingUpForFree"]["username"].style.border="";
 				return true;
 			} 
-			else  
+			else  if(document.getElementById("singUpForFreeBtn").innerHTML ==  document.getElementById("singUpForFreeChechAlert").innerHTML )
 			{
 				var username=document.forms["FormSingUpForFree"]["username"].value;
 				var password= document.forms["FormSingUpForFree"]["password"].value;
 				alert("Welcome  username:  " + username +"  password:  "+ password +" ");
 			}
-		}
-		function singUpForFreeSpanish() {
-				var username = document.forms["FormSingUpForFree"]["username"].value;
-				var password = document.forms["FormSingUpForFree"]["password"].value;
-				document.getElementById("passwordSingUpForFree").innerHTML =  "";
-				document.getElementById("usernameSingUpForFree").innerHTML =  "";
-			if (username == null || username == "") 
-			{
-				document.getElementById("usernameSingUpForFree").innerHTML =  "Introduzca un nombre de usuario";
-				document.forms["FormSingUpForFree"]["username"].style.border=" 1px solid red";
-				document.forms["FormSingUpForFree"]["password"].style.border="";
-				return true;
-			}		 
-			else if(password == null || password == "") 
-			{
-				document.getElementById("passwordSingUpForFree").innerHTML =  "Ingrese una contraseña";
-				document.forms["FormSingUpForFree"]["password"].style.border=" 1px solid red";
-				document.forms["FormSingUpForFree"]["username"].style.border="";
-				return true;
-			} 
-			else  
-			{
+			else {
 				var username=document.forms["FormSingUpForFree"]["username"].value;
 				var password= document.forms["FormSingUpForFree"]["password"].value;
 				alert("Bienvenidas  nombre de usuario:  " + username +"  contraseña:  "+ password +" ");
@@ -151,10 +102,6 @@
 			document.body.style.overflow="hidden";
 		}
 		function closeLanguageModal() {
-			languageModal.style.display = "none";
-			document.body.style.overflow="auto";
-		}
-		function closeButtonLanguageModal(){
 			languageModal.style.display = "none";
 			document.body.style.overflow="auto";
 		}
@@ -245,9 +192,9 @@
 		function backward() {
 			document.getElementById("forward").disabled = false;
 			var backwardVideo = document.getElementById("previousVideoId").innerHTML;
-			var previousVideo =  removeImageAndPlayYouTubeVideo(backwardVideo);
+			removeImageAndPlayYouTubeVideo(backwardVideo);
 		}
 		function forward() {
 			forwardVideo = document.getElementById("nextVideoId").innerHTML;
-			var nextVideo =  removeImageAndPlayYouTubeVideo(forwardVideo);
+			removeImageAndPlayYouTubeVideo(forwardVideo);
 		};
