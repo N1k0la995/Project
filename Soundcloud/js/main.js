@@ -1,8 +1,3 @@
-		function backward() {
-			document.getElementById("forward").disabled = false;
-			c=document.getElementById("demo").innerHTML;
-			removeImageAndPlayYouTubeVideo(c);
-		}
 		function createAccountCheckUsername(){	
 			document.getElementById("username1").innerHTML = "";
 			document.forms["FormCreateAccount"]["username"].style.border=" 1px solid gray ";
@@ -105,8 +100,6 @@
 				alert("Welcome  username:  " + username +"  password:  "+ password +" ");
 			}
 		}
-
-
 		function singUpForFreeCheckUsernameSpanish() {
 			document.getElementById("username").innerHTML =  "";
 			document.forms["FormSingUpForFree"]["uname"].style.border="";
@@ -227,45 +220,50 @@
 			});
 			videoContainer.innerHTML=output;
 			},
-
 			function(err) { console.error("Execute error", err); });
 		};
-
 		gapi.load("client:auth2", function() {
 			gapi.auth2.init({client_id: "272099904269-22euf40hdr21i671lgjrsrgispea40cg.apps.googleusercontent.com"});
 		})
-
-
-		var imageList=document.getElementsByClassName("VideoImage");
-		var videoList=document.getElementsByClassName("IFrameYoutube");
+		var imageList = document.getElementsByClassName("VideoImage");
+		var videoList = document.getElementsByClassName("IFrameYoutube");
 		var imageClickValue;
-		var controlPanel=0;
+		var controlPanel = 0;
+		var playlist = [];
 		function removeImageAndPlayYouTubeVideo(value) {
 			for(var i = 0; i < imageList.length; i++){
 				if (imageList[i] !== this) {
 					imageList[i].style.display = "block";  
 				}
 				value.style.display = "none";
-				var c=value.getAttribute("id")
-				console.log(c);
-				document.getElementById("demo").innerHTML=c;
 				imageClickValue = value.getAttribute("value"); 
-				console.log(imageClickValue);
 			}
 			for(var u = 0; u < videoList.length; u++){
 				if (u != imageClickValue) {
-					videoList[u].src= document.getElementById("vid" + u).innerHTML;
+				videoList[u].src= document.getElementById("vid" + u).innerHTML;
 				}
 				else{
 					document.getElementById("ifr" + imageClickValue).src +="?autoplay=1";
+					var counter = value.getAttribute("id");
+					playlist.push(counter);
+					document.getElementById("previousVideoId").innerHTML = playlist[playlist.length -2];
+					document.getElementById("nextVideoId").innerHTML = playlist[playlist.length -1];
 				}
-			} 
+			}
 			if (controlPanel==1){
 				var cont =	document.getElementById("control");
 				cont.style.display = "block";
 			}
 			else{
 				controlPanel=controlPanel+1;
-			}
+			} 
 		}
-;
+		function backward() {
+			document.getElementById("forward").disabled = false;
+			var backwardVideo = document.getElementById("previousVideoId").innerHTML;
+			var previousVideo = new removeImageAndPlayYouTubeVideo(backwardVideo);
+		}
+		function forward() {
+			forwardVideo = document.getElementById("nextVideoId").innerHTML;
+			var nextVideo = new removeImageAndPlayYouTubeVideo(forwardVideo);
+		};
