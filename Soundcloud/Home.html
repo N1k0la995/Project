@@ -91,10 +91,10 @@
 				<div class="modal-body1">
 					<h1 >Create your SoundCloud account</h1>
 					<form name="FormCreateAccount">
-						<input type="text" id="username" name="uname" placeholder="Username" oninput="createAccountCheckUsername()" required>
-						<p id="username1" class="form"></p>
-						<input type="password" id="password" name="password" placeholder="Password" oninput="createAccountCheckPassword()" required>
-						<p id="passw1" class="form" ></p>
+						<input type="text" id="username" name="uname" placeholder="Username" oninput="createAccountReviewInputUsername()" required>
+						<p id="usernameCreateAccount" class="form"></p>
+						<input type="password" id="password" name="password" placeholder="Password" oninput="createAccountReviewInputPassword()" required>
+						<p id="passwordCreateAccount" class="form" ></p>
 					</form> 
 					<button onclick="createAccount()">Create account</button>
 					<div class="help">
@@ -115,10 +115,10 @@
 				<div class="modal-body1">
 					<h1>Sign up for free</h1>
 					<form name="FormSingUpForFree">
-						<input type="text" id="username" name="uname" placeholder="Username" oninput="singUpForFreeCheckUsername()" required>
-						<p id="uname1" class="form" ></p>
-						<input type="password" id="password" name="password" placeholder="Password" oninput="singUpForFreeCheckPassword()" required>
-						<p id="passw" class="form" ></p>
+						<input type="text" id="username"  placeholder="Username" oninput="singUpForFreeReviewInputUsername()" required>
+						<p id="usernameSingUpForFree" class="form" ></p>
+						<input type="password" id="password"  placeholder="Password" oninput="singUpForFreeReviewInputPassword()" required>
+						<p id="passwordSingUpForFree" class="form" ></p>
 					</form> 
 					<button onclick="singUpForFree()">Login</button>
 					<div class="help">
